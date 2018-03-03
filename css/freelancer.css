@@ -90,7 +90,7 @@ section h2 {
 .scroll-to-top a {
   width: 3.5rem;
   height: 3.5rem;
-  background-color: rgba(33, 37, 41, 0.5);
+  background-color: rgba(1, 22, 56, 0.5);
   line-height: 3.1rem;
 }
 
@@ -210,7 +210,7 @@ header.masthead h2 {
   -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background-color: rgba(24, 188, 156, 0.9);
+  background-color: rgba(243, 112, 34, 0.9);
 }
 
 .portfolio .portfolio-item .portfolio-item-caption:hover {
