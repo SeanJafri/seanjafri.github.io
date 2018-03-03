@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 7000;
+  font-weight: 700;
   font-family: 'Montserrat';
 }
 
@@ -344,7 +344,7 @@ a:focus, a:hover, a:active {
 }
 
 .bg-primary {
-  background-color: #18BC9C !important;
+  background-color: #F37022 !important;
 }
 
 .bg-secondary {
@@ -352,7 +352,7 @@ a:focus, a:hover, a:active {
 }
 
 .text-primary {
-  color: #18BC9C !important;
+  color: #F37022 !important;
 }
 
 .text-secondary {
@@ -360,8 +360,8 @@ a:focus, a:hover, a:active {
 }
 
 .btn-primary {
-  background-color: #18BC9C;
-  border-color: #18BC9C;
+  background-color: #F37022;
+  border-color: #F37022;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
