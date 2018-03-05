@@ -56,30 +56,30 @@
 	  
 	  <!-- Portfolio 1 Images -->
               <script language="javascript" type="text/javascript">
-                  var timerid1 = 0;
-                  var images1 = new Array(	"img/portfolio/RS_Logo2.png",
+                  var timerid = 0;
+                  var images = new Array(	"img/portfolio/RS_Logo2.png",
                                     			"img/portfolio/Rover_Sean_URC2017.png", 
 					 "img/portfolio/Rover_Team_URC_Competition_2017.png",
 					 "img/portfolio/Rover_Team_URC_Competition_2015.png",
                                     			"img/portfolio/Rover_Prototype.png");
-                  var countimages1 = 0;
+                  var countimages = 0;
                 function startTime() {
-	                    if(timerid1)
+	                    if(timerid)
                       	{
-	                      	timerid1 = 0;
+	                      	timerid = 0;
                        	}
-	              var tDate1 = new Date();
+	              var tDate = new Date();
 	
-                    	if(countimages1 == images1.length)
+                    	if(countimages == images.length)
 	                      {
-                      		countimages1 = 0;
+                      		countimages = 0;
                       	}
-                     	if(tDate1.getSeconds() % 5 == 0)
+                     	if(tDate.getSeconds() % 5 == 0)
 	                      {
-	                      	document1.getElementById("img1").src = images1[countimages1];
+	                      	document.getElementById("img1").src = images[countimages];
                       	}
-	                        countimages1++;
-                        	timerid1 = setTimeout("startTime()", 1000);
+	                        countimages++;
+                        	timerid = setTimeout("startTime()", 1000);
                         }
               </script>
 	  
