@@ -49,39 +49,41 @@
 	                        countimages++;
                         	timerid = setTimeout("startTime()", 1000);
                         }
-              </script>
+              </script> -->
  <!-- <body onload="startTime();"> -->
 	  
 	  
 	  
-	  
+	  <!-- Portfolio 1 Images -->
               <script language="javascript" type="text/javascript">
-                  var timerid = 0;
-                  var images = new Array(	"img/portfolio/RS_Logo2.png",
+                  var timerid1 = 0;
+                  var images1 = new Array(	"img/portfolio/RS_Logo2.png",
                                     			"img/portfolio/Rover_Sean_URC2017.png", 
 					 "img/portfolio/Rover_Team_URC_Competition_2017.png",
 					 "img/portfolio/Rover_Team_URC_Competition_2015.png",
                                     			"img/portfolio/Rover_Prototype.png");
-                  var countimages = 0;
+                  var countimages1 = 0;
                 function startTime() {
-	                    if(timerid)
+	                    if(timerid1)
                       	{
-	                      	timerid = 0;
+	                      	timerid1 = 0;
                        	}
-	              var tDate = new Date();
+	              var tDate1 = new Date();
 	
-                    	if(countimages == images.length)
+                    	if(countimages1 == images1.length)
 	                      {
-                      		countimages = 0;
+                      		countimages1 = 0;
                       	}
-                     	if(tDate.getSeconds() % 5 == 0)
+                     	if(tDate1.getSeconds() % 5 == 0)
 	                      {
-	                      	document.getElementById("img1").src = images[countimages];
+	                      	document1.getElementById("img1").src = images1[countimages1];
                       	}
-	                        countimages++;
-                        	timerid = setTimeout("startTime()", 700);
+	                        countimages1++;
+                        	timerid1 = setTimeout("startTime()", 1000);
                         }
               </script>
+	  
+	  
  <!-- <body onload="startTime();">-->
 
   </head>
