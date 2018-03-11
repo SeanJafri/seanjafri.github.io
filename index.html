@@ -1,3 +1,44 @@
+<!-- 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <script type="text/javascript">
+            var picPaths = ['pic1.jpg','pic2.jpg','pic3.jpg','pic4.jpg','pic5.jpg'];
+            var curPic = -1;
+            //preload the images for smooth animation
+            var imgO = new Array();
+            for(i=0; i < picPaths.length; i++) {
+                imgO[i] = new Image();
+                imgO[i].src = picPaths[i];
+            }
+
+            function swapImage() {
+                curPic = (++curPic > picPaths.length-1)? 0 : curPic;
+                imgCont.src = imgO[curPic].src;
+                setTimeout(swapImage,2000);
+            }
+
+            window.onload=function() {
+                imgCont = document.getElementById('imgBanner');
+                swapImage();
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <div>
+            <img id="imgBanner" src="" alt="" />
+        </div>
+
+    </body>
+</html>
+
+-->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +97,7 @@
 	  
 	  
 	  
-	  <!-- Portfolio 1 Images -->
+	  <!-- Portfolio 1 Images 
               <script language="javascript" type="text/javascript">
                   var timerid = 0;
                   var images = new Array(	"img/portfolio/SD_Logo.png",
@@ -83,7 +124,28 @@
 	                        countimages++;
                         	timerid = setTimeout("startTime()", 1000);
                         }
-              </script>
+              </script> -->
+	  <script type="text/javascript">
+            var picPaths = ['img/portfolio/SD_Logo.png"','img/portfolio/sundog.gif','img/portfolio/SD_Sensor_Housing.png','img/portfolio/SD_Final_Design2.png','img/portfolio/sun.gif'];
+            var curPic = -1;
+            //preload the images for smooth animation
+            var imgO = new Array();
+            for(i=0; i < picPaths.length; i++) {
+                imgO[i] = new Image();
+                imgO[i].src = picPaths[i];
+            }
+
+            function swapImage() {
+                curPic = (++curPic > picPaths.length-1)? 0 : curPic;
+                imgCont.src = imgO[curPic].src;
+                setTimeout(swapImage,2000);
+            }
+
+            window.onload=function() {
+                imgCont = document.getElementById('imgBanner');
+                swapImage();
+            }
+        </script>
 	  
 	  
  <!-- <body onload="startTime();">-->
@@ -404,7 +466,7 @@ required="required" data-validation-required-message="Please enter a message."
               <h2 class="text-secondary mb-0">Sundog Engineering - UTA Research Institute</h2>
               <hr class="star-dark mb-5">
             <!--    <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="https://www.youtube.com/">  --> 
-		    <img class="img-fluid mb-5" id="img1" src="img/portfolio/SD_Logo.png" />
+		    <img class="img-fluid mb-5" id="img0" src="img/portfolio/SD_Logo.png" />
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
