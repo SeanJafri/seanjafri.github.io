@@ -130,18 +130,21 @@
             var curPic = -1;
             //preload the images for smooth animation
             var imgO = new Array();
-            for(i=0; i < picPaths.length; i++) {
+            for(i=0; i < picPaths.length; i++) 
+	    {
                 imgO[i] = new Image();
                 imgO[i].src = picPaths[i];
             }
 
-            function swapImage() {
+            function swapImage()
+		  {
                 curPic = (++curPic > picPaths.length-1)? 0 : curPic;
                 imgCont.src = imgO[curPic].src;
                 setTimeout(swapImage,2000);
             }
 
-            window.onload=function() {
+            window.onload=function() 
+	    {
                 imgCont = document.getElementById('imgBanner');
                 swapImage();
             }
@@ -466,7 +469,7 @@ required="required" data-validation-required-message="Please enter a message."
               <h2 class="text-secondary mb-0">Sundog Engineering - UTA Research Institute</h2>
               <hr class="star-dark mb-5">
             <!--    <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="https://www.youtube.com/">  --> 
-		    <img class="img-fluid mb-5" id="imgBanner" src="img/portfolio/SD_Logo.png" />
+		    <img class="img-fluid mb-5" id='imgBanner' src="img/portfolio/SD_Logo.png" />
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
