@@ -31,7 +31,73 @@
     <!-- Custom styles for this template -->
     <link href="css/freelancer.min.css" rel="stylesheet">
 	
-             <style>
+      
+
+ <!-- <body onload="startTime();"> 
+ "img/portfolio/Rover_Team_URC_Competition_2015.png",
+-->
+	  
+	  
+	  
+	  <!-- Portfolio 1 Images 
+              <script language="javascript" type="text/javascript">
+                  var timerid = 0;
+                  var images = new Array(	"img/portfolio/SD_Logo.png",
+                                    			"img/portfolio/sundog.gif",
+					"img/portfolio/SD_Sensor_Housing.png",
+					 "img/portfolio/SD_Final_Design2.png",
+					);
+                  var countimages = 0;
+                function startTime() {
+	                    if(timerid)
+                      	{
+	                      	timerid = 0;
+                       	}
+	              var tDate = new Date();
+	
+                    	if(countimages == images.length)
+	                      {
+                      		countimages = 0;
+                      	}
+                     	if(tDate.getSeconds() % 5 == 0)
+	                      {
+	                      	document.getElementById("img1").src = images[countimages];
+                      	}
+	                        countimages++;
+                        	timerid = setTimeout("startTime()", 1000);
+                        }
+              </script> -->
+	  <script type="text/javascript">
+            var picPaths = ['img/portfolio/SD_Logo.png','img/portfolio/sundog.gif','img/portfolio/SD_Sensor_Housing.png','img/portfolio/SD_Final_Design2.png','img/portfolio/sun.gif'];
+            var curPic = -1;
+            //preload the images for smooth animation
+            var imgO = new Array();
+            for(i=0; i < picPaths.length; i++) 
+	    {
+                imgO[i] = new Image();
+                imgO[i].src = picPaths[i];
+            }
+
+            function swapImage()
+		  {
+                curPic = (++curPic > picPaths.length-1)? 0 : curPic;
+                imgCont.src = imgO[curPic].src;
+                setTimeout(swapImage,2000);
+            }
+
+            window.onload=function() 
+	    {
+                imgCont = document.getElementById('imgBanner');
+                swapImage();
+            }
+        </script>
+	  
+	  
+ <!-- <body onload="startTime();">-->
+
+  </head>
+
+	       <style>
 body {
   font-family: Arial;
   margin: 0;
@@ -115,7 +181,7 @@ img {
 /* Six columns side by side */
 .column {
   float: left;
-  width: 16.66%;
+  width: 20%;
 }
 
 /* Add a transparency effect for thumnbail images */
@@ -128,71 +194,11 @@ img {
   opacity: 1;
 }
 </style>
-
- <!-- <body onload="startTime();"> 
- "img/portfolio/Rover_Team_URC_Competition_2015.png",
--->
-	  
-	  
-	  
-	  <!-- Portfolio 1 Images 
-              <script language="javascript" type="text/javascript">
-                  var timerid = 0;
-                  var images = new Array(	"img/portfolio/SD_Logo.png",
-                                    			"img/portfolio/sundog.gif",
-					"img/portfolio/SD_Sensor_Housing.png",
-					 "img/portfolio/SD_Final_Design2.png",
-					);
-                  var countimages = 0;
-                function startTime() {
-	                    if(timerid)
-                      	{
-	                      	timerid = 0;
-                       	}
-	              var tDate = new Date();
 	
-                    	if(countimages == images.length)
-	                      {
-                      		countimages = 0;
-                      	}
-                     	if(tDate.getSeconds() % 5 == 0)
-	                      {
-	                      	document.getElementById("img1").src = images[countimages];
-                      	}
-	                        countimages++;
-                        	timerid = setTimeout("startTime()", 1000);
-                        }
-              </script> -->
-	  <script type="text/javascript">
-            var picPaths = ['img/portfolio/SD_Logo.png','img/portfolio/sundog.gif','img/portfolio/SD_Sensor_Housing.png','img/portfolio/SD_Final_Design2.png','img/portfolio/sun.gif'];
-            var curPic = -1;
-            //preload the images for smooth animation
-            var imgO = new Array();
-            for(i=0; i < picPaths.length; i++) 
-	    {
-                imgO[i] = new Image();
-                imgO[i].src = picPaths[i];
-            }
-
-            function swapImage()
-		  {
-                curPic = (++curPic > picPaths.length-1)? 0 : curPic;
-                imgCont.src = imgO[curPic].src;
-                setTimeout(swapImage,2000);
-            }
-
-            window.onload=function() 
-	    {
-                imgCont = document.getElementById('imgBanner');
-                swapImage();
-            }
-        </script>
-	  
-	  
- <!-- <body onload="startTime();">-->
-
-  </head>
-
+	
+	
+	
+	
   <body id="page-top" onload="startTime();">
 
     <!-- Navigation -->
