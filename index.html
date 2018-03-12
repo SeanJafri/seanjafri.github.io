@@ -2,41 +2,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title></title>
-        <script type="text/javascript">
-            var picPaths = ['pic1.jpg','pic2.jpg','pic3.jpg','pic4.jpg','pic5.jpg'];
-            var curPic = -1;
-            //preload the images for smooth animation
-            var imgO = new Array();
-            for(i=0; i < picPaths.length; i++) {
-                imgO[i] = new Image();
-                imgO[i].src = picPaths[i];
-            }
-
-            function swapImage() {
-                curPic = (++curPic > picPaths.length-1)? 0 : curPic;
-                imgCont.src = imgO[curPic].src;
-                setTimeout(swapImage,2000);
-            }
-
-            window.onload=function() {
-                imgCont = document.getElementById('imgBanner');
-                swapImage();
-            }
-        </script>
-
-    </head>
-    <body>
-
-        <div>
-            <img id="imgBanner" src="" alt="" />
-        </div>
-
-    </body>
-</html>
-
 -->
 
 
@@ -65,33 +30,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/freelancer.min.css" rel="stylesheet">
-	  <link rel="stylesheet" href="css/lightbox.css">
-             
- <!--	        <script language="javascript" type="text/javascript">
-                  var timerid = 0;
-                  var images = new Array(	"img/portfolio/cabin.png",
-                                    			"img/portfolio/cake.png",
-                                    			"img/portfolio/game.png");
-                  var countimages = 0;
-                function startTime() {
-	                    if(timerid)
-                      	{
-	                      	timerid = 0;
-                       	}
-	              var tDate = new Date();
 	
-                    	if(countimages == images.length)
-	                      {
-                      		countimages = 0;
-                      	}
-                     	if(tDate.getSeconds() % 5 == 0)
-	                      {
-	                      	document.getElementById("img1").src = images[countimages];
-                      	}
-	                        countimages++;
-                        	timerid = setTimeout("startTime()", 500);
-                        }
-              </script> -->
+             
+
  <!-- <body onload="startTime();"> 
  "img/portfolio/Rover_Team_URC_Competition_2015.png",
 -->
@@ -290,15 +231,9 @@
           </a>
         </div>
       </div>
-	    <img class="jslghtbx-thmb" src="img/lightbox/3-small.jpg" alt="" data-jslghtbx="img/3-big.jpg" data-jslghtbx-group="mygroup1">
-<img class="jslghtbx-thmb" src="img/lightbox/4-small.jpg" alt="" data-jslghtbx="img/4-big.jpg" data-jslghtbx-group="mygroup1">
-<img class="jslghtbx-thmb" src="img/lightbox/6-small.jpg" alt="" data-jslghtbx="img/6-big.jpg" data-jslghtbx-group="mygroup1">
-<img class="jslghtbx-thmb" src="img/lightbox/7-small.jpg" alt="" data-jslghtbx="img/7-big.jpg" data-jslghtbx-group="mygroup1">
-
-    
 	    
 	    
-	    
+	   
 	    
     </section>
 
@@ -552,8 +487,7 @@ required="required" data-validation-required-message="Please enter a message."
 		    <img class="img-fluid mb-5" src="img/portfolio/rover2.gif" alt="">
 		    <img class="img-fluid mb-5" src="img/portfolio/UVS_Team_6.png" alt=""> -->
 		    
-		    <img class="img-fluid mb-5" src="img/lightbox/1.jpg" alt="" data-jslghtbx>
-<a href="img/lightbox/1.jpg"  data-jslghtbx="img/lightbox/1.jpg">Opens lightbox with a no-js fallback link</a>
+		   
 	
 		    
 		    
@@ -612,58 +546,6 @@ required="required" data-validation-required-message="Please enter a message."
 
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
-	
-	<script src="js/lightbox.js" type="text/javascript"></script>
-<script>
-    var lightbox = new Lightbox();
-    lightbox.load({
-        boxId: false,
-        dimensions: true,
-        captions: true,
-        prevImg: false,
-        nextImg: false,
-        hideCloseBtn: false,
-        closeOnClick: true,
-        loadingAnimation: 200,
-        animElCount: 4,
-        preload: true,
-        carousel: true,
-        animation: 400,
-        nextOnClick: true,
-        responsive: true,
-        maxImgSize: 0.8,
-        // callbacks
-        onopen: function (image) {
-            // your code goes here
-            console.log('onopen', image)
-        },
-        onclose: function (image) {
-            // your code goes here
-            console.log('onclose', image)
-        },
-        onload: function (event) {
-            // your code goes here
-            console.log('onload', event)
-        },
-        onresize: function (image) {
-            // your code goes here
-            console.log('onresize', image)
-        },
-        onloaderror: function (event) {
-            // your code goes here
-            console.log('onloaderror', event)
-            // just display next or prev picture on error
-            if (event._happenedWhile === 'prev')
-                lightbox.prev()
-            else
-                lightbox.next()
-        },
-        onimageclick: function (image) {
-            // your code goes here
-            console.log('Image clicked!', image)
-        }
-    });
-</script>
 
 
   </body>
