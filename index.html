@@ -66,7 +66,7 @@
 	                        countimages++;
                         	timerid = setTimeout("startTime()", 1000);
                         }
-              </script> -->
+              </script> 
 	  <script type="text/javascript">
             var picPaths = ['img/portfolio/SD_Logo.png','img/portfolio/sundog.gif','img/portfolio/SD_Sensor_Housing.png','img/portfolio/SD_Final_Design2.png','img/portfolio/sun.gif'];
             var curPic = -1;
@@ -90,7 +90,7 @@
                 imgCont = document.getElementById('imgBanner');
                 swapImage();
             }
-        </script>
+        </script>-->
 	  
 	  
  <!-- <body onload="startTime();">-->
@@ -733,7 +733,7 @@ required="required" data-validation-required-message="Please enter a message."
 </div> -->
 		    
 		    
-		    <div id="wrapper">
+	<div id="wrapper">
             <div class="slideshow w3-container w3-half">
                 <div class="w3-content w3-display-container">
                     <img class="mySlides fade" src="img/portfolio/Rover_Team_URC_Competition_2017.png">
@@ -761,10 +761,10 @@ required="required" data-validation-required-message="Please enter a message."
                 </div>
                 <br>
                 <div style="text-align:center">
+                    <span class="dot" onclick="currentDiv(0, 1)"></span>
                     <span class="dot" onclick="currentDiv(1, 1)"></span>
-                    <span class="dot" onclick="currentDiv(2, 1)"></span>
+			<span class="dot" onclick="currentDiv(2, 1)"></span>
 			<span class="dot" onclick="currentDiv(3, 1)"></span>
-			<span class="dot" onclick="currentDiv(4, 1)"></span>
                 </div>
             </div>
 		    
@@ -793,13 +793,48 @@ required="required" data-validation-required-message="Please enter a message."
               <h2 class="text-secondary text-uppercase mb-0">Test Video</h2>
               <hr class="star-dark mb-5">
 		    
-             <!--  <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt=""> -->
+             <!--  <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt=""> 
 		    <video poster="img/portfolio/RS_Logo2.png" width="618" height="347" controls preload>
 			    <source src="seanjafri.github.io/videos/Test_1.mp4.mp4" media="only screen and (min-device-width: 568px)"></source>
 		   
 		  <source src="seanjafri.github.io/videos/Test_1.webmhd.webm"></source>
-		</video>
+		</video>-->
 		    
+		<div id="wrapper">
+            <div class="slideshow w3-container w3-half">
+                <div class="w3-content w3-display-container">
+                    <img class="mySlides fade" src="img/portfolio/Rover_Team_URC_Competition_2017.png">
+                    <img class="mySlides fade" src="img/portfolio/rover.gif">
+                    <a class="prev" onclick="plusDivs(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusDivs(1, 0)">&#10095;</a>
+                    <!-- Extra plusDivs parameter refers to first (0) slideshow (start from 0) -->
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentDiv(1, 0)"></span>
+                    <span class="dot" onclick="currentDiv(2, 0)"></span>
+                </div>
+            </div>
+            <hr>
+            <div class="slideshow w3-container w3-half">
+                <div class="w3-content w3-display-container">
+                    <img class="mySlides fade" src="img/portfolio/cabin.png">
+                    <img class="mySlides fade" src="img/portfolio/cake.png">
+			<img class="mySlides fade" src="img/portfolio/RS_Logo.png">
+			<img class="mySlides fade" src="seanjafri.github.io/img/portfolio/Rover_Prototype.png">
+                    <a class="prev" onclick="plusDivs(-1, 1)">&#10094;</a>
+                    <a class="next" onclick="plusDivs(1, 1)">&#10095;</a>
+                    <!-- Extra plusDivs parameter refers to second (1) slideshow (start from 0) -->
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentDiv(0, 1)"></span>
+                    <span class="dot" onclick="currentDiv(1, 1)"></span>
+			<span class="dot" onclick="currentDiv(2, 1)"></span>
+			<span class="dot" onclick="currentDiv(3, 1)"></span>
+                </div>
+            </div>
+         </div>
 		    
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
