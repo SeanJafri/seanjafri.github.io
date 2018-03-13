@@ -102,22 +102,5 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
   
-  function showSlides_1(n) {
-  var i;
-  var slides_1 = document.getElementsByClassName("mySlides");
-  var dots_1 = document.getElementsByClassName("demo");
-  var captionText_1 = document.getElementById("caption");
-  if (n > slides_1.length) {slideIndex_1 = 1}
-  if (n < 1) {slideIndex_1 = slides_1.length}
-  for (i = 0; i < slides_1.length; i++) {
-    slides_1[i].style.display = "none";
-  }
-  for (i = 0; i < dots_1.length; i++) {
-    dots_1[i].className = dots_1[i].className.replace(" active", "");
-  }
-  slides_1[slideIndex_1-1].style.display = "block";
-  dots_1[slideIndex_1-1].className += " active";
-  captionText_1.innerHTML = dots_1[slideIndex_1-1].alt;
-}
-  
+ 
 })(jQuery); // End of use strict
