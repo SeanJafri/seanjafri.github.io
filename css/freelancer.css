@@ -395,6 +395,10 @@ a:focus, a:hover, a:active {
   display: none;
 }
 
+/* Hide the images by default */
+.mySlidesOne {
+  display: none;
+}
 /* Add a pointer when hovering over the thumbnail images */
 .cursor {
   cursor: pointer;
@@ -449,6 +453,14 @@ a:focus, a:hover, a:active {
   color: white;
 }
 
+/* Container for image text */
+.captionOne-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
 .row:after {
   content: "";
   display: table;
@@ -463,6 +475,11 @@ a:focus, a:hover, a:active {
 
 /* Add a transparency effect for thumnbail images */
 .demo {
+  opacity: 0.6;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demoOne {
   opacity: 0.6;
 }
 
