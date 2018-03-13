@@ -560,11 +560,13 @@ required="required" data-validation-required-message="Please enter a message."
            
 
 		    <!-- Container for the image gallery -->
-	    <div class="container"> 
+	   
 
-  <!-- Full-width images with number text -->
-		    
-		  
+  <!-- Full-width images with number text  
+ <div class="container"> 
+-->
+		    <div id="wrapper">
+  <div class="slideshow w3-container w3-half">	  
   <div class="mySlides">
     <div class="numbertext">1 / 6</div>
       <img src="seanjafri.github.io/img/portfolio/RS_Logo.png" style="width:100%">
@@ -589,15 +591,15 @@ required="required" data-validation-required-message="Please enter a message."
     <div class="numbertext">5 / 6</div>
       <img src="img/portfolio/rover.gif" style="width:100%">
   </div>
-<div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-      <img src="img/portfolio/Rover_Team_URC_Competition_2017.png" style="width:100%">
-  </div>
+	<div class="mySlides">
+   	 <div class="numbertext">6 / 6</div>
+  	    <img src="img/portfolio/Rover_Team_URC_Competition_2017.png" style="width:100%">
+  	</div>
 
 
   <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
+  <a class="prev" onclick="plusDiv(-1,1)">&#10094;</a>
+  <a class="next" onclick="plusDiv(1,1)">&#10095;</a>
 
   <!-- Image text -->
   <div class="caption-container">
@@ -607,27 +609,29 @@ required="required" data-validation-required-message="Please enter a message."
   <!-- Thumbnail images -->
   <div class="row">
     <div class="column">
-      <img class="demo cursor" src="seanjafri.github.io/img/portfolio/RS_Logo.png" style="width:100%" onclick="currentSlide(1,1)" alt="The Rover">
+      <img class="demo cursor" src="seanjafri.github.io/img/portfolio/RS_Logo.png" style="width:100%" onclick="currentDiv(1,1)" alt="The Rover">
     </div>
     <div class="column"> 
-      <img class="demo cursor" src="img/portfolio/UVS_Team_6.png" style="width:100%" onclick="currentSlide(2,1)" alt="Team 6">
+      <img class="demo cursor" src="img/portfolio/UVS_Team_6.png" style="width:100%" onclick="currentDiv(2,1)" alt="Team 6">
 	     </div>
     <div class="column">
-      <img class="demo cursor" src="img/portfolio/Rover_Sean_URC2017.png" style="width:100%" onclick="currentSlide(3,1)" alt="Me">
+      <img class="demo cursor" src="img/portfolio/Rover_Sean_URC2017.png" style="width:100%" onclick="currentDiv(3,1)" alt="Me">
     </div>
     <div class="column">
-      <img class="demo cursor" src="img/portfolio/SD_Analysis.png" style="width:100%" onclick="currentSlide(4,1)" alt="Sun Doggos">
+      <img class="demo cursor" src="img/portfolio/SD_Analysis.png" style="width:100%" onclick="currentDiv(4,1)" alt="Sun Doggos">
     </div>
     <div class="column">
-      <img class="demo cursor" src="img/portfolio/rover.gif" style="width:100%" onclick="currentSlide(5,1)" alt="rSlogo">
+      <img class="demo cursor" src="img/portfolio/rover.gif" style="width:100%" onclick="currentDiv(5,1)" alt="rSlogo">
     </div> 
      <div class="column">
-      <img class="demo cursor" src="img/portfolio/Rover_Team_URC_Competition_2017.png" style="width:100%" onclick="currentSlide(6,1)" alt="Baba Yaga">
+      <img class="demo cursor" src="img/portfolio/Rover_Team_URC_Competition_2017.png" style="width:100%" onclick="currentDiv(6,1)" alt="Baba Yaga">
     </div> 
   </div>
 </div> 
+</div> 
 		    
 		    
+	<!-- 	    
 	<div id="wrapper">
             <div class="slideshow w3-container w3-half">
                 <div class="w3-content w3-display-container">
@@ -636,7 +640,7 @@ required="required" data-validation-required-message="Please enter a message."
                     <a class="prev" onclick="plusDivs(-1, 0)">&#10094;</a>
                     <a class="next" onclick="plusDivs(1, 0)">&#10095;</a>
                     <!-- Extra plusDivs parameter refers to first (0) slideshow (start from 0) -->
-                </div>
+               <!--  </div>
                 <br>
                 <div style="text-align:center">
                     <span class="dot" onclick="currentDiv(1, 0)"></span>
@@ -653,7 +657,7 @@ required="required" data-validation-required-message="Please enter a message."
                     <a class="prev" onclick="plusDivs(-1, 1)">&#10094;</a>
                     <a class="next" onclick="plusDivs(1, 1)">&#10095;</a>
                     <!-- Extra plusDivs parameter refers to second (1) slideshow (start from 0) -->
-                </div>
+               <!--  </div>
                 <br>
                 <div style="text-align:center">
                     <span class="dot" onclick="currentDiv(0, 1)"></span>
@@ -661,7 +665,7 @@ required="required" data-validation-required-message="Please enter a message."
 			<span class="dot" onclick="currentDiv(2, 1)"></span>
 			<span class="dot" onclick="currentDiv(3, 1)"></span>
                 </div>
-            </div>
+            </div> -->
 		    
 		    
 		    
@@ -723,10 +727,10 @@ required="required" data-validation-required-message="Please enter a message."
                 </div>
                 <br>
                 <div style="text-align:center">
-                    <span class="dot" onclick="currentDiv(0, 1)"></span>
                     <span class="dot" onclick="currentDiv(1, 1)"></span>
-			<span class="dot" onclick="currentDiv(2, 1)"></span>
+                    <span class="dot" onclick="currentDiv(2, 1)"></span>
 			<span class="dot" onclick="currentDiv(3, 1)"></span>
+			<span class="dot" onclick="currentDiv(4, 1)"></span>
                 </div>
             </div>
          </div>
@@ -739,45 +743,7 @@ required="required" data-validation-required-message="Please enter a message."
           </div>
         </div>
       </div>
-	   <script>
-                var slideIndex = 1;
-                var z = document.getElementsByClassName("slideshow");
-                for (i = 0; i < z.length; i++) {
-                    //set custom data attribute to first current image index
-                    z[i].setAttribute("data-currentslide", 1);
-                    showDivs(z[i].getAttribute("data-currentslide"), i);
-                }
-                function plusDivs(n, j) {
-                    //get custom data attribute value of current image index to slideshow class index j
-                    slideIndex = parseInt(z[j].getAttribute("data-currentslide")); //removed the [0]
-                    showDivs(slideIndex += n, j);
-                }
-                function currentDiv(n, j) {
-                    showDivs(slideIndex = n, j); /* showDivs Not showSlides*/
-                }
-                function showDivs(n, j) {
-                    var i;
-                    var z = document.getElementsByClassName("slideshow")[j];
-                    var x = z.getElementsByClassName("mySlides");
-                    var dots = z.getElementsByClassName("dot");
-                    if (n > x.length) {
-                        slideIndex = 1
-                    }
-                    if (n < 1) {
-                        slideIndex = x.length;
-                    }
-                    //set custom data attribute to current image index
-                    z.setAttribute("data-currentslide", slideIndex);
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    x[slideIndex - 1].style.display = "block";
-                    dots[slideIndex - 1].className += " active";
-                }
-            </script>
+	  
 	  
     </div>
 
