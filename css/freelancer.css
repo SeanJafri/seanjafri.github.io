@@ -488,3 +488,7 @@ a:focus, a:hover, a:active {
   opacity: 1;
 }
 
+.active,
+.demoOne:hover {
+  opacity: 1;
+}
