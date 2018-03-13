@@ -734,7 +734,7 @@ required="required" data-validation-required-message="Please enter a message."
                 }
                 function plusDivs(n, j) {
                     //get custom data attribute value of current image index to slideshow class index j
-                    slideIndex = parseInt(z[j].getAttribute("data-currentslide")[0]);
+                    slideIndex = parseInt(z[j].getAttribute("data-currentslide")); //removed [0]
                     showDivs(slideIndex += n, j);
                 }
                 function currentDiv(n, j) {
