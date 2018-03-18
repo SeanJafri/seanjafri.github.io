@@ -664,17 +664,17 @@ required="required" data-validation-required-message="Please enter a message."
                     <img class="mySlides fade" src="https://www.w3schools.com/howto/img_mountains_wide.jpg">
                     <img class="mySlides fade" src="https://www.w3schools.com/howto/img_nature_wide.jpg">
                     <img class="mySlides fade" src="https://www.w3schools.com/howto/img_lights_wide.jpg">
-                    <a class="prev" onclick="plusDivs(-1, 2)">&#10094;</a>
-                    <a class="next" onclick="plusDivs(1, 2)">&#10095;</a>
+                    <a class="prev" onclick="plusDivs(-1, 3)">&#10094;</a>
+                    <a class="next" onclick="plusDivs(1, 3)">&#10095;</a>
                     <!-- Extra plusDivs parameter refers to second (1) slideshow (start from 0) -->
                 </div>
                 <br>
                 <div style="text-align:center">
-                    <span class="dot" onclick="currentDiv(1, 2)"></span>
-                    <span class="dot" onclick="currentDiv(2, 2)"></span>
-                    <span class="dot" onclick="currentDiv(3, 2)"></span>
-                    <span class="dot" onclick="currentDiv(4, 2)"></span>
-                    <span class="dot" onclick="currentDiv(5, 2)"></span>
+                    <span class="dot" onclick="currentDiv(1, 3)"></span>
+                    <span class="dot" onclick="currentDiv(2, 3)"></span>
+                    <span class="dot" onclick="currentDiv(3, 3)"></span>
+                    <span class="dot" onclick="currentDiv(4, 3)"></span>
+                    <span class="dot" onclick="currentDiv(5, 3)"></span>
                 </div>
             </div>
             <hr>
@@ -698,7 +698,7 @@ required="required" data-validation-required-message="Please enter a message."
                 }
                 function plusDivs(n, j) {
                     //get custom data attribute value of current image index to slideshow class index j
-                    slideIndex = parseInt(z[j].getAttribute("data-currentslide")[0]);
+                    slideIndex = parseInt(z[j].getAttribute("data-currentslide")); // removed [0]
                     showDivs(slideIndex += n, j);
                 }
                 function currentDiv(n, j) {
