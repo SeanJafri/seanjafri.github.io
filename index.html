@@ -18,6 +18,92 @@
 	<style>
 	                                   * {box-sizing:border-box}
 	                                   body {font-family: Verdana,sans-serif;margin:0}
+	                                   .mySlides-1 {display:none; width: 100%;}
+
+	                                   /* slideshow-1 container */
+	                                   .slideshow-1 { /*NOT slideshow-1-container*/
+	                                       max-width: 1000px;
+	                                       position: relative;
+	                                       margin: auto;
+	                                   }
+
+	                                   /* Next & previous buttons */
+	                                   .prev, .next {
+	                                       cursor: pointer;
+	                                       position: absolute;
+	                                       top: 40%;
+	                                       width: auto;
+	                                       padding: 16px;
+	                                       margin-top: -22px;
+	                                       color: white;
+	                                       font-weight: bold;
+	                                       font-size: 18px;
+	                                       transition: 0.6s ease;
+	                                       border-radius: 0 3px 3px 0;
+	                                   }
+	                           /* Position the "next button" to the right */
+	                                   .prev {
+	                                       left: 0;
+	                                       
+	                                   }
+	                           
+	                                   /* Position the "next button" to the right */
+	                                   .next {
+	                                       right: 0;
+	                                       border-radius: 3px 0 0 3px;
+	                                   }
+
+	                                   /* On hover, add a black background color with a little bit see-through */
+	                                   .prev:hover, .next:hover {
+	                                       background-color: rgba(0,0,0,0.8);
+	                                   }
+
+	                                   /* Caption text */
+	                                   .text {
+	                                       color: #f2f2f2;
+	                                       font-size: 15px;
+	                                       padding: 8px 12px;
+	                                       position: absolute;
+	                                       bottom: 8px;
+	                                       width: 100%;
+	                                       text-align: center;
+	                                   }
+
+	                                   /* Number text (1/3 etc) */
+	                                   .numbertext {
+	                                       color: #f2f2f2;
+	                                       font-size: 12px;
+	                                       padding: 8px 12px;
+	                                       position: absolute;
+	                                       top: 0;
+	                                   }
+
+	                                   /* The dots-1/bullets/indicators */
+	                                   .dot-1 {
+	                                       cursor:pointer;
+	                                       height: 13px;
+	                                       width: 13px;
+	                                       margin: 0 2px;
+	                                       background-color: #bbb;
+	                                       border-radius: 50%;
+	                                       display: inline-block;
+	                         
+	                                   }
+
+	                                   .active, .dot-1:hover {
+	                                       background-color: #004777;
+	                                   }
+
+	                                  
+
+	                                   /* On smaller screens, decrease text size */
+	                                   @media only screen and (max-width: 300px) {
+	                                       .prev, .next,.text {font-size: 11px}
+	                                   }
+	</style>
+	<style>
+	                                   * {box-sizing:border-box}
+	                                   body {font-family: Verdana,sans-serif;margin:0}
 	                                   .mySlides {display:none; width: 100%;}
 
 	                                   /* Slideshow container */
@@ -540,6 +626,60 @@ required="required" data-validation-required-message="Please enter a message."
 						<hr class="star-dark mb-5">
 						<!--<img alt="" class="img-fluid mb-5" src="img/portfolio/uvs.gif"> -->
 
+<div id="wrapper">
+							<div class="slideshow-1 w3-container w3-half">
+								<div class="w3-content w3-display-container">
+									<img class="mySlides-1" src="https://www.w3schools.com/howto/img_nature_wide.jpg"> <img class="mySlides-1" src="https://www.w3schools.com/howto/img_fjords_wide.jpg"> <img class="mySlides-1" src="https://www.w3schools.com/howto/img_mountains_wide.jpg"> <img class="mySlides-1" src="https://www.w3schools.com/howto/img_nature_wide.jpg"> <img class="mySlides-1" src="https://www.w3schools.com/howto/img_lights_wide.jpg"> <a class="prev" onclick="plusDivs-1(-1, 0)">&#10094;</a> <a class="next" onclick="plusDivs-1(1, 0)">&#10095;</a> <!-- Extra plusDivs-1 parameter refers to second (1) slideshow-1 (start from 0) -->
+								</div>
+								<br>
+
+
+								<div style="text-align:center">
+									<span class=dot-1 onclick="currentDiv-1(1, 0)"></span> <span class=dot-1 onclick="currentDiv-1(2, 0)"></span> <span class=dot-1 onclick="currentDiv-1(3, 0)"></span> <span class=dot-1 onclick="currentDiv-1(4, 0)"></span> <span class=dot-1 onclick="currentDiv-1(5, 0)"></span>
+								</div>
+							</div>
+						</div>
+<div id="wrapper">
+							<div class="slideshow-1 w3-container w3-half">
+							<div class="w3-content w3-display-container">
+									<img class="mySlides-1" src="https://www.w3schools.com/w3images/wedding.jpg"> 
+									<img class="mySlides-1" src="https://www.w3schools.com/w3images/rocks.jpg"> 
+									<img class="mySlides-1" src="https://www.w3schools.com/howto/img_mountains_wide.jpg"> 
+									<img class="mySlides-1" src="https://www.w3schools.com/w3images/underwater.jpg"> 
+									<img class="mySlides-1" src="https://www.w3schools.com/howto/img_lights_wide.jpg"> 
+									<a class="prev" onclick="plusDivs-1(-1, 1)">&#10094;</a> 
+									<a class="next" onclick="plusDivs-1(1, 1)">&#10095;</a> 
+									<!-- Extra plusDivs-1 parameter refers to second (1) slideshow-1 (start from 0) -->
+								</div>
+								<br>
+
+
+								<div style="text-align:center">
+									<span class=dot-1 onclick="currentDiv-1(1, 1)"></span> <span class=dot-1 onclick="currentDiv-1(2, 1)"></span> <span class=dot-1 onclick="currentDiv-1(3, 1)"></span> <span class=dot-1 onclick="currentDiv-1(4, 1)"></span> <span class=dot-1 onclick="currentDiv-1(5, 1)"></span>
+								</div>
+							</div>
+						</div>
+<div id="wrapper">
+							<div class="slideshow-1 w3-container w3-half">
+								<div class="w3-content w3-display-container">
+									<img class="mySlides-1" src="https://www.w3schools.com/w3images/ocean.jpg"> 
+									<img class="mySlides-1" src="https://www.w3schools.com/howto/img_fjords_wide.jpg"> 
+									<img class="mySlides-1" src="https://www.w3schools.com/w3images/mountainskies.jpg"> 
+									<img class="mySlides-1" src="https://www.w3schools.com/howto/img_nature_wide.jpg"> 
+									<img class="mySlides-1" src="https://www.w3schools.com/w3images/paris.jpg"> 
+									<a class="prev" onclick="plusDivs-1(-1, 2)">&#10094;</a> 
+									<a class="next" onclick="plusDivs-1(1, 2)">&#10095;</a> 
+									<!-- Extra plusDivs-1 parameter refers to second (1) slideshow-1 (start from 0) -->
+								</div>
+								<br>
+
+
+								<div style="text-align:center">
+									<span class=dot-1 onclick="currentDiv-1(1, 2)"></span> <span class=dot-1 onclick="currentDiv-1(2, 2)"></span> <span class=dot-1 onclick="currentDiv-1(3, 2)"></span> <span class=dot-1 onclick="currentDiv-1(4, 2)"></span> <span class=dot-1 onclick="currentDiv-1(5, 2)"></span>
+								</div>
+							</div>
+						</div>
+
 
 						
 
@@ -719,6 +859,45 @@ required="required" data-validation-required-message="Please enter a message."
 	                                                                                                                               }
 	                                                                                                                               x[slideIndex - 1].style.display = "block";
 	                                                                                                                               dots[slideIndex - 1].className += " active";
+	                                                                                                                           }
+	</script> 
+	<script>
+	                                                                                                                           var slideindex-1 = 1;
+	                                                                                                                           var z = document.getElementsByClassName("slideshow-1");
+	                                                                                                                           for (i = 0; i < z.length; i++) {
+	                                                                                                                               //set custom data attribute to first current image index
+	                                                                                                                               z[i].setAttribute("data-currentslide-1", 1);
+	                                                                                                                               showDivs-1(z[i].getAttribute("data-currentslide-1"), i);
+	                                                                                                                           }
+	                                                                                                                           function plusDivs-1(n, j) {
+	                                                                                                                               //get custom data attribute value of current image index to slideshow-1 class index j
+	                                                                                                                               slideindex-1 = parseInt(z[j].getAttribute("data-currentslide-1")[0]); //remove [0]
+	                                                                                                                               showDivs-1(slideindex-1 += n, j);
+	                                                                                                                           }
+	                                                                                                                           function currentDiv-1(n, j) {
+	                                                                                                                               showDivs-1(slideindex-1 = n, j); /* showDivs-1 Not showSlides*/
+	                                                                                                                           }
+	                                                                                                                           function showDivs-1(n, j) {
+	                                                                                                                               var i;
+	                                                                                                                               var z = document.getElementsByClassName("slideshow-1")[j];
+	                                                                                                                               var x = z.getElementsByClassName("mySlides-1");
+	                                                                                                                               var dots-1 = z.getElementsByClassName(dot-1);
+	                                                                                                                               if (n > x.length) {
+	                                                                                                                                   slideindex-1 = 1
+	                                                                                                                               }
+	                                                                                                                               if (n < 1) {
+	                                                                                                                                   slideindex-1 = x.length;
+	                                                                                                                               }
+	                                                                                                                               //set custom data attribute to current image index
+	                                                                                                                               z.setAttribute("data-currentslide-1", slideindex-1);
+	                                                                                                                               for (i = 0; i < x.length; i++) {
+	                                                                                                                                   x[i].style.display = "none";
+	                                                                                                                               }
+	                                                                                                                               for (i = 0; i < dots-1.length; i++) {
+	                                                                                                                                   dots-1[i].className = dots-1[i].className.replace(" active", "");
+	                                                                                                                               }
+	                                                                                                                               x[slideindex-1 - 1].style.display = "block";
+	                                                                                                                               dots-1[slideindex-1 - 1].className += " active";
 	                                                                                                                           }
 	</script> 
 </body>
