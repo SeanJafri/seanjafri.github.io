@@ -1,71 +1,145 @@
-# [Start Bootstrap - Freelancer](https://startbootstrap.com/template-overviews/freelancer/)
+# Sean Jafri — Portfolio Site Update (v3)
 
-[Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, and a working PHP contact form.
+A refreshed `index.html` for **seanjafri.github.io** with all your HP Inc.
+work integrated, the original 2018 site archived at `/legacy/`, and a
+**rotating hero background** that crossfades through 5 images every 10
+seconds — the lab anchor plus four photos drawn from your Mars Rover
+competition and personal travel shots.
 
-## Preview
+## What's in this package
 
-[![Freelancer Preview](https://startbootstrap.com/assets/img/templates/freelancer.jpg)](https://blackrockdigital.github.io/startbootstrap-freelancer/)
+```
+index.html                                 New homepage (~62 KB)
+README.md                                  This file
+img/
+  shaad_favicon1.png                       Favicon (carried over)
+  Sean Jafri Resume.pdf                    Resume (carried over)
+  hero/                                    NEW — rotating background images
+    01-lab.jpg                             HP Inc. lab (anchor / first frame)
+    02-rover-desert.jpg                    Mars Rover at URC 2017 competition
+    03-mountains.jpg                       Pikes Peak landscape
+    04-sunset.jpg                          Sunset over the lake
+    05-savannah.jpg                        Savannah riverfront, Sept 2025
+  portfolio/                               Lightweight stills for earlier work
+    2017.jpg                               ← upgraded: URC team photo with rover
+    sundog.jpg                             UTARI Sundog CAD render
+    uvs2.jpg                               ← upgraded: actual UVS ball-tracking demo
+  projects/                                HP project images (~3 MB total)
+    cradle-original · universal-cradle
+    aluminum-frame · ram-mount-render
+    mega-ii-render · mega-original-vs-ii
+    varda-render
+    deep-purple-db0 · deep-purple-fixture-live
+    keyboard-bot-top · keyboard-bot-poster
+    usbc-flip-bot
+    low-power-switch · triage-fixture
+videos/
+  deep-purple-insertion.mp4                40s, 720p (~1.5 MB)
+  keyboard-bot-typing.mp4                  25s, 540p (~1.5 MB)
+legacy/
+  index.html                               Original 2018 portfolio
+  css/ · js/ · scss/ · vendor/             Original Bootstrap "Freelancer" assets
+```
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-freelancer/)**
+## What changed since the last package
 
-## Status
+- ✅ **Rotating hero background** — five images crossfade every 10 seconds
+  (lab → URC rover → Pikes Peak → Texas sunset → Savannah → repeat). Smooth
+  1.6-second crossfade. Pauses automatically when you scroll past the hero
+  or switch tabs (saves CPU/battery). Respects `prefers-reduced-motion`
+  (no rotation if the user has it enabled).
+- ✅ **Upgraded Mars Rover earlier-work card** — replaced the old CAD render
+  with the URC competition team photo (you, the rover, and the team in the
+  Utah desert).
+- ✅ **Upgraded UVS earlier-work card** — replaced the placeholder render
+  with a real frame from the tennis-ball tracking demo, showing the rover
+  actually running its machine-vision/SLAM stack.
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-freelancer/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-freelancer.svg)](https://www.npmjs.com/package/startbootstrap-freelancer)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-freelancer.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-freelancer)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer?type=dev)
+## How to deploy
 
-## Download and Installation
+### Option A — quick drop-in (recommended)
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/freelancer/)
-* Install via npm: `npm i startbootstrap-freelancer`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-freelancer.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-freelancer)
+1. Unzip this archive at the root of your `seanjafri.github.io` repo.
+2. The new `img/hero/` folder is added; the old `img/hero-lab.jpg` from
+   the previous package is no longer referenced — you can delete it.
+3. **Optional cleanup** — once you confirm everything renders:
+   - Old `img/portfolio/*.gif` files (~100 MB total) are still referenced
+     by the legacy site via `../img/portfolio/`. Leave them if you want
+     legacy GIFs to keep animating. Delete if you don't.
+   - Root-level `css/`, `js/`, `vendor/`, `scss/`, `mail/`, `gulpfile.js`,
+     `package.json`, `package-lock.json` aren't used by the new site.
+     The legacy folder has its own copy.
+4. Commit and push.
 
-## Usage
+### Option B — verify locally first
 
-### Basic Usage
+```bash
+cd /path/to/seanjafri.github.io
+unzip ~/Downloads/seanjafri-site-update.zip
+python3 -m http.server 8000
+# Open http://localhost:8000          → new site (watch hero rotate)
+# Open http://localhost:8000/legacy/  → original 2018 site
+```
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+## Project structure on the live site
 
-### Advanced Usage
+1. **Hero** — rotating background (5 images, 10s each), big intro
+2. **About** — three-paragraph intro
+3. **Stats** — 4 headline numbers
+4. **Selected work at HP** (8 featured projects):
+   - Test Fixture Evolution · Mega II · Varda · Deep Purple (+video)
+   - Keyboard Bot (+video) · USB-C Flip Bot · Low Power Switch · Polaris Triage
+5. **The bot family** — 9-card catalogue
+6. **Earlier engineering work** — Mars Rover, Sundog, UVS
+7. **Toolkit** — Mechanical/CAD · Electronics/Software · Manufacturing
+8. **Contact**
+9. **Archive band** — link to legacy site
+10. **Footer**
 
-After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+## How the hero rotation works
 
-#### Gulp Tasks
+Five `<div>` elements stacked behind the hero text, each with a different
+`background-image`. CSS class `.active` on one of them = `opacity: 1` with
+a 1.6-second transition. JavaScript flips which one has `.active` every
+10 seconds. Image #1 (the lab) loads immediately for first paint; the
+other four crossfade in over the next 40 seconds, plenty of time for them
+to finish loading even on slow connections.
 
-- `gulp` the default task that builds everything
-- `gulp dev` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp sass` compiles SCSS files into CSS
-- `gulp minify-css` minifies the compiled CSS file
-- `gulp minify-js` minifies the themes JS file
-- `gulp copy` copies dependencies from node_modules to the vendor directory
+To **change the rotation order**, reorder the `<div class="hero-bg-img">`
+lines inside `<div class="hero-bg-stack">` near the top of `index.html`.
+To **change the timing**, search for `10000` in the `<script>` block
+(milliseconds — currently 10 seconds). To **add or remove an image**,
+add/delete a `.hero-bg-img` div with the appropriate `background-image`
+URL — no other code changes needed, the rotator handles any count ≥ 2.
 
-## Bugs and Issues
+To **disable rotation entirely**, remove all but one `.hero-bg-img` div,
+or remove the `(function(){ ... })();` rotator block from the script.
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/).
+## Things to verify before you push
 
-## Custom Builds
+- [ ] **Original vs Mega II caption** — currently labelled "Original (left)
+  vs Mega II (right)". Swap if you have it backwards.
+- [ ] **"Pelori" vs "Polaris"** — your filename was Pelori, your resume
+  was Polaris. I used Polaris.
+- [ ] **Credits** — Mega II ("Schematic by my manager. PCB layout, mechanical
+  by me.") and Varda ("Schematic by an EE on the team. PCB layout and
+  mechanical by me."). Search `proj-credit` in `index.html` to edit.
+- [ ] **Stat numbers** — −93% / $7.2k/yr / 250+ / 12×.
+- [ ] **"Open to opportunities"** — visible in hero meta + contact section.
+- [ ] **Resume link** — `img/Sean Jafri Resume.pdf`.
+- [ ] **Hero rotation order** — currently lab → rover → mountains → sunset
+  → Savannah. Reorder the divs in `<div class="hero-bg-stack">` if you
+  want a different sequence (or remove some).
 
-You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
+## Total weight
 
-## About
+| Bucket | Size |
+| --- | --- |
+| New site (HTML + inline CSS/JS) | ~62 KB |
+| Hero rotation images (5 × ~400 KB avg) | ~2 MB |
+| HP project images | ~3 MB |
+| Earlier-work stills | ~340 KB |
+| Two embedded videos | ~3 MB |
+| Legacy site assets | ~5 MB |
+| **Total in this package** | **~13 MB** |
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/gh-pages/LICENSE) license.

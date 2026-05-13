@@ -1,827 +1,1687 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-	<meta content="" name="description">
-	<meta content="" name="author">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sean Jafri — Robotics Engineer</title>
+<meta name="description" content="Robotics engineer designing automated test fixtures, custom hardware, and motion-control systems at HP Inc. Portfolio of robotic bots, dock test fixtures, controllers and engineering projects." />
+<meta name="author" content="Sean Jafri" />
+<link rel="icon" href="img/shaad_favicon1.png" type="image/png">
 
-	<title>Sean Jafri</title>
-	<link href="img/shaad_favicon1.png" rel="icon" type="image/png"><!-- Bootstrap core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><!-- Custom fonts for this template -->
-	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css"><!-- Plugin CSS -->
-	<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css"><!-- Custom styles for this template -->
-	<link href="css/freelancer.min.css" rel="stylesheet">
-	
-	<style>
-	                                   * {box-sizing:border-box}
-	                                   body {font-family: Verdana,sans-serif;margin:0}
-	                                   .mySlides {display:none; width: 100%;}
+<meta property="og:title" content="Sean Jafri — Robotics Engineer">
+<meta property="og:description" content="Eight years building automated test fixtures, robotic controllers, and motion-control hardware at HP Inc.">
+<meta property="og:image" content="img/hero/01-lab.jpg">
+<meta property="og:type" content="website">
 
-	                                   /* Slideshow container */
-	                                   .slideshow { /*NOT slideshow-container*/
-	                                       max-width: 1000px;
-	                                       position: relative;
-	                                       margin: auto;
-	                                   }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-	                                   /* Next & previous buttons */
-	                                   .prev, .next {
-	                                       cursor: pointer;
-	                                       position: absolute;
-	                                       top: 40%;
-	                                       width: auto;
-	                                       padding: 16px;
-	                                       margin-top: -22px;
-	                                       color: white;
-	                                       font-weight: bold;
-	                                       font-size: 18px;
-	                                       transition: 0.6s ease;
-	                                       border-radius: 0 3px 3px 0;
-						background-color: rgba(0, 71, 119,0.4)
-	                                   }
-	                           /* Position the "next button" to the right */
-	                                   .prev {
-	                                       left: 0;
-	                                       
-	                                   }
-	                           
-	                                   /* Position the "next button" to the right */
-	                                   .next {
-	                                       right: 0;
-	                                       border-radius: 3px 0 0 3px;
-	                                   }
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --bg:           #050B14;
+  --bg-2:         #0A1422;
+  --surface:      #0E1A2A;
+  --surface-2:    #142337;
+  --line:         #1B2A3D;
+  --line-2:       #243854;
+  --text:         #EEF3F8;
+  --text-2:       #95A4B8;
+  --text-3:       #6A7A91;
+  --accent:       #19E5DA;
+  --accent-2:     #6CCBFF;
+  --magenta:      #D946A6;
+  --max:          1400px;
+  --gut:          clamp(20px, 4vw, 56px);
+}
 
-	                                   /* On hover, add a black background color with a little bit see-through */
-	                                   .prev:hover, .next:hover {
-	                                       background-color: rgba(255, 128, 25, 0.8);
-	                                   }
+*,*::before,*::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01","cv11";
+  overflow-x: hidden;
+}
 
-	                                   /* Caption text */
-	                                   .text {
-	                                       color: #f2f2f2;
-	                                       font-size: 15px;
-	                                       padding: 8px 12px;
-	                                       position: absolute;
-	                                       bottom: 8px;
-	                                       width: 100%;
-	                                       text-align: center;
-	                                   }
+a{ color: inherit; text-decoration: none; }
+img{ display:block; max-width:100%; height:auto; }
+video{ display:block; max-width:100%; }
 
-	                                   /* Number text (1/3 etc) */
-	                                   .numbertext {
-	                                       color: #f2f2f2;
-	                                       font-size: 12px;
-	                                       padding: 8px 12px;
-	                                       position: absolute;
-	                                       top: 0;
-	                                   }
+.mono{ font-family:'JetBrains Mono', ui-monospace, monospace; letter-spacing: 0.02em; }
+.eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before{
+  content:""; width: 28px; height: 1px; background: var(--accent);
+}
+.container{ max-width: var(--max); margin: 0 auto; padding: 0 var(--gut); }
 
-	                                   /* The dots/bullets/indicators */
-	                                   .dot {
-	                                       cursor:pointer;
-	                                       height: 13px;
-	                                       width: 13px;
-	                                       margin: 0 2px;
-	                                       background-color: #bbb;
-	                                       border-radius: 50%;
-	                                       display: inline-block;
-	                         
-	                                   }
+h1,h2,h3,h4{
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 0;
+}
+h2{ font-size: clamp(34px, 4.6vw, 64px); }
+h3{ font-size: clamp(24px, 2.4vw, 34px); letter-spacing: -0.015em; }
+p{ margin: 0 0 1em; color: var(--text-2); max-width: 62ch; }
+p strong{ color: var(--text); font-weight: 500; }
 
-	                                   .active, .dot:hover {
-	                                       background-color: #004777;
-	                                   }
+/* Decorative grid */
+.bg-grid{
+  position: fixed; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, #000 30%, transparent 70%);
+}
 
-	                                  
+/* Nav */
+header.nav{
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  background: rgba(5,11,20,0.65);
+  border-bottom: 1px solid var(--line);
+}
+.nav-row{
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px; padding: 0 var(--gut);
+}
+.brand{
+  display: flex; align-items: center; gap: 12px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700; font-size: 18px; letter-spacing: -0.01em;
+}
+.brand .dot{
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 14px var(--accent);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{ opacity: 1; transform: scale(1); }
+  50%{ opacity: 0.55; transform: scale(0.85); }
+}
+nav ul{
+  display: flex; gap: 28px; list-style: none; padding:0; margin:0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+nav a{ color: var(--text-2); transition: color .2s; }
+nav a:hover{ color: var(--accent); }
+.nav-cta{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 10px 16px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  color: var(--text);
+  transition: all .2s;
+}
+.nav-cta:hover{ border-color: var(--accent); color: var(--accent); }
 
-	                                   /* On smaller screens, decrease text size */
-	                                   @media only screen and (max-width: 300px) {
-	                                       .prev, .next,.text {font-size: 11px}
-	                                   }
-	</style>
+@media (max-width: 760px){
+  nav ul{ display:none; }
+  .nav-cta{ padding: 8px 14px; font-size: 11px; }
+}
+
+/* Hero */
+.hero{
+  position: relative;
+  min-height: 100vh;
+  display: flex; align-items: flex-end;
+  padding: 140px 0 64px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero-bg-stack{
+  position: absolute; inset:0; z-index:-1;
+  overflow: hidden;
+}
+.hero-bg-img{
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  filter: saturate(1.05) contrast(1.05);
+  opacity: 0;
+  transition: opacity 1.6s ease;
+  will-change: opacity;
+}
+.hero-bg-img.active{ opacity: 1; }
+.hero-bg-stack::after{
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(25,229,218,0.08), transparent 55%),
+    linear-gradient(180deg, rgba(5,11,20,0.4) 0%, rgba(5,11,20,0.65) 60%, var(--bg) 100%);
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-bg-img{ transition: none; }
+}
+.hero-grid{
+  position: absolute; inset: 0; z-index:-1;
+  background-image:
+    linear-gradient(rgba(25,229,218,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(25,229,218,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: linear-gradient(180deg, transparent 0%, #000 40%, #000 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 40%, #000 90%, transparent 100%);
+}
+.hero-inner{
+  width: 100%;
+  position: relative;
+}
+.hero-tag{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--accent);
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 28px;
+}
+.hero-tag .ln{ width: 36px; height: 1px; background: var(--accent); }
+.hero h1{
+  font-size: clamp(56px, 9vw, 148px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  max-width: 12ch;
+}
+.hero h1 .ital{ font-style: italic; font-weight: 400; color: var(--accent); }
+.hero-sub{
+  margin-top: 28px;
+  font-size: clamp(16px, 1.4vw, 19px);
+  color: var(--text-2);
+  max-width: 58ch;
+}
+.hero-meta{
+  margin-top: 40px;
+  display: flex; flex-wrap: wrap; gap: 28px 48px;
+  font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-3);
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.hero-meta div span{ display:block; color: var(--text); margin-top: 4px; font-size: 13px; }
+.hero-meta div span.acc{ color: var(--accent); }
+.scroll-hint{
+  position: absolute; bottom: 24px; right: var(--gut);
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text-3);
+  display: flex; align-items: center; gap: 10px;
+  pointer-events: none;
+}
+.scroll-hint::after{
+  content: ""; display:block; width: 1px; height: 36px;
+  background: linear-gradient(180deg, var(--accent), transparent);
+  animation: drop 2s ease-in-out infinite;
+}
+@keyframes drop{ 0%{transform:scaleY(0); transform-origin: top;} 50%{transform:scaleY(1); transform-origin:top;} 51%{transform-origin:bottom;} 100%{transform:scaleY(0); transform-origin:bottom;} }
+
+@media (max-width: 760px){
+  .scroll-hint{ display: none; }
+}
+
+/* Section base */
+section{ position: relative; z-index: 1; }
+.section-pad{ padding: clamp(80px, 10vw, 140px) 0; }
+
+.section-head{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 56px;
+  max-width: 880px;
+}
+.section-head .num{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent);
+}
+.section-head .lede{
+  font-size: clamp(17px, 1.5vw, 20px);
+  color: var(--text-2);
+  max-width: 65ch;
+  margin-top: 8px;
+}
+
+/* About */
+.about{
+  border-top: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(25,229,218,0.045), transparent 60%),
+    var(--bg);
+}
+.about-grid{
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: start;
+}
+.about-grid .label{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent);
+}
+.about-grid h2{ margin-top: 18px; }
+.about-grid .body p{
+  font-size: 18px; color: var(--text);
+  max-width: 60ch;
+}
+.about-grid .body p + p{ margin-top: 1em; }
+@media (max-width: 880px){
+  .about-grid{ grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* Stats */
+.stats{
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-2);
+}
+.stats-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.stat{
+  padding: 56px 32px;
+  border-right: 1px solid var(--line);
+  position: relative;
+}
+.stat:last-child{ border-right: none; }
+.stat .k{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 16px;
+}
+.stat .v{
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: clamp(40px, 4.2vw, 64px);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--text);
+}
+.stat .v .acc{ color: var(--accent); }
+.stat .desc{
+  margin-top: 14px;
+  font-size: 13px; color: var(--text-2);
+  max-width: 28ch;
+}
+@media (max-width: 980px){
+  .stats-grid{ grid-template-columns: repeat(2, 1fr); }
+  .stat{ border-bottom: 1px solid var(--line); }
+  .stat:nth-child(2n){ border-right: none; }
+  .stat:nth-last-child(-n+2){ border-bottom: none; }
+}
+@media (max-width: 560px){
+  .stats-grid{ grid-template-columns: 1fr; }
+  .stat{ border-right: none !important; border-bottom: 1px solid var(--line); padding: 40px 24px; }
+  .stat:last-child{ border-bottom: none; }
+}
+
+/* Work intro */
+.work{ background: var(--bg); }
+
+/* Test fixture evolution */
+.evolution{
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.fixture-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.fixture-card{
+  position: relative;
+  border-right: 1px solid var(--line);
+  background: var(--surface);
+  transition: background .3s;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.fixture-card:last-child{ border-right: none; }
+.fixture-card:hover{ background: var(--surface-2); }
+.fixture-img{
+  aspect-ratio: 4/3;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+.fixture-img img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .8s cubic-bezier(.2,.8,.2,1);
+}
+.fixture-card:hover .fixture-img img{ transform: scale(1.04); }
+.fixture-img::after{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(180deg, transparent 60%, rgba(5,11,20,0.6) 100%);
+}
+.fixture-body{
+  padding: 24px;
+  flex: 1;
+  display:flex; flex-direction:column;
+  border-top: 1px solid var(--line);
+}
+.fixture-iter{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+  display: flex; justify-content: space-between;
+}
+.fixture-iter .cost{ color: var(--text-3); }
+.fixture-card.final .fixture-iter .cost{
+  color: var(--accent); font-weight: 600;
+}
+.fixture-name{
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700; font-size: 19px;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+.fixture-desc{
+  font-size: 13.5px; color: var(--text-2);
+  line-height: 1.55;
+}
+@media (max-width: 1100px){
+  .fixture-grid{ grid-template-columns: repeat(2, 1fr); }
+  .fixture-card:nth-child(2n){ border-right: none; }
+  .fixture-card:nth-child(-n+2){ border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 600px){
+  .fixture-grid{ grid-template-columns: 1fr; }
+  .fixture-card{ border-right: none !important; border-bottom: 1px solid var(--line); }
+  .fixture-card:last-child{ border-bottom: none; }
+}
+
+/* Project block (alternating) */
+.proj-block{
+  border-top: 1px solid var(--line);
+  padding: clamp(60px, 9vw, 120px) 0;
+}
+.proj-row{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(32px, 6vw, 90px);
+  align-items: center;
+}
+.proj-block.flip .proj-row{
+  grid-template-columns: 1fr 1.2fr;
+}
+.proj-block.flip .proj-media{ order: 2; }
+.proj-block.flip .proj-text{ order: 1; }
+.proj-media{
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  overflow: hidden;
+  border-radius: 4px;
+}
+.proj-media.light{ background: #f5f5f0; }
+.proj-media::before{
+  content:""; position: absolute; top: 12px; left: 12px;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 10px var(--accent);
+  z-index: 2;
+}
+.proj-media .frame-label{
+  position: absolute; top: 14px; right: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text-3);
+  background: rgba(5,11,20,0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 5px 10px; border-radius: 3px;
+  border: 1px solid var(--line);
+  z-index: 2;
+}
+.proj-media img, .proj-media video{
+  width: 100%; aspect-ratio: 4/3; object-fit: cover;
+  transition: transform .9s cubic-bezier(.2,.8,.2,1);
+}
+.proj-media.tall img, .proj-media.tall video{ aspect-ratio: auto; height: auto; }
+.proj-media:hover img{ transform: scale(1.025); }
+
+.proj-multi{
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--line);
+}
+.proj-multi img{ aspect-ratio: 1/1; object-fit: cover; }
+
+/* Generation labels overlaid on the Original vs Mega II image */
+.vs-image{ overflow: hidden; }
+.vs-label{
+  position: absolute;
+  bottom: 18px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 9px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(5,11,20,0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--line-2);
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+  pointer-events: none;
+}
+.vs-label-l{ left: 18px; }
+.vs-label-r{ right: 18px; }
+.vs-label-line{
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  font-weight: 500;
+}
+.vs-label-meta{
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.vs-label .vs-gen{
+  color: var(--accent);
+  font-weight: 600;
+}
+@media (max-width: 540px){
+  .vs-label{ padding: 7px 10px; bottom: 10px; }
+  .vs-label-l{ left: 10px; }
+  .vs-label-r{ right: 10px; }
+  .vs-label-line, .vs-label-meta{ font-size: 9px; letter-spacing: 0.12em; }
+}
+
+.proj-text .num{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.proj-text h3{ font-size: clamp(28px, 3vw, 42px); margin-bottom: 22px; }
+.proj-text p{ font-size: 16px; }
+.proj-credit{
+  margin-top: 1.2em;
+  padding: 14px 16px;
+  background: var(--surface);
+  border-left: 2px solid var(--accent);
+  font-size: 13px;
+  color: var(--text-2);
+  border-radius: 0 4px 4px 0;
+}
+.proj-credit strong{ color: var(--accent); font-weight: 500; }
+.spec{
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.spec dl{
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  margin: 0;
+}
+.spec dt, .spec dd{
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.05em;
+}
+.spec dt{
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.spec dd{ color: var(--text); margin: 0; }
+.spec dd .acc{ color: var(--accent); }
+.spec dd .mag{ color: var(--magenta); }
+
+@media (max-width: 880px){
+  .proj-row, .proj-block.flip .proj-row{
+    grid-template-columns: 1fr;
+  }
+  .proj-block.flip .proj-media{ order: 1; }
+  .proj-block.flip .proj-text{ order: 2; }
+}
+
+/* Video player */
+.video-wrap{
+  position: relative;
+  width: 100%;
+  background: #000;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+  overflow: hidden;
+}
+.video-wrap video{
+  width: 100%; height: 100%; object-fit: cover; aspect-ratio: auto;
+}
+.video-wrap .play-btn{
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(180deg, rgba(5,11,20,0.2), rgba(5,11,20,0.5));
+  transition: opacity .3s;
+  pointer-events: none;
+}
+.video-wrap.playing .play-btn{ opacity: 0; }
+.play-btn .play{
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  background: rgba(25,229,218,0.95);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 12px rgba(25,229,218,0.15);
+  transition: transform .3s;
+}
+.video-wrap:hover .play{ transform: scale(1.06); }
+.play svg{ width: 24px; height: 24px; fill: var(--bg); margin-left: 4px; }
+.play-btn .label{
+  position: absolute; bottom: 18px; left: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text); background: rgba(5,11,20,0.7);
+  padding: 6px 10px; border-radius: 3px;
+  border: 1px solid var(--line);
+}
+
+/* Bot grid */
+.bots{
+  border-top: 1px solid var(--line);
+}
+.bot-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 8px;
+}
+.bot-card{
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 28px;
+  display: flex; flex-direction: column;
+  transition: border-color .3s, transform .4s, background .3s;
+  overflow: hidden;
+}
+.bot-card::before{
+  content:""; position: absolute; top:0; left:0; right:0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0; transition: opacity .3s;
+}
+.bot-card:hover{ border-color: var(--line-2); background: var(--surface-2); transform: translateY(-3px); }
+.bot-card:hover::before{ opacity: 1; }
+.bot-id{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.bot-name{
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700; font-size: 24px;
+  letter-spacing: -0.015em;
+  margin-bottom: 12px;
+}
+.bot-desc{
+  font-size: 14px; color: var(--text-2);
+  line-height: 1.55;
+}
+.bot-stat{
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--line);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; color: var(--text-3);
+  letter-spacing: 0.05em;
+}
+.bot-stat strong{ color: var(--text); font-weight: 600; }
+@media (max-width: 980px){ .bot-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px){ .bot-grid{ grid-template-columns: 1fr; } }
+
+/* Earlier work */
+.earlier{
+  border-top: 1px solid var(--line);
+  background: var(--bg-2);
+}
+.earlier-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 8px;
+}
+.early-card{
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform .35s, border-color .35s;
+}
+.early-card:hover{ transform: translateY(-4px); border-color: var(--line-2); }
+.early-img{
+  aspect-ratio: 4/3;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+.early-img img{ width:100%; height:100%; object-fit: cover; opacity: 0.95; }
+.early-img::after{
+  content:""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(5,11,20,0.5));
+}
+.early-body{ padding: 24px; flex: 1; display:flex; flex-direction:column; }
+.early-meta{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+  display:flex; justify-content: space-between;
+}
+.early-meta .yr{ color: var(--text-3); }
+.early-name{
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700; font-size: 22px;
+  letter-spacing: -0.01em; margin-bottom: 10px;
+}
+.early-desc{ font-size: 14px; color: var(--text-2); line-height: 1.55; }
+@media (max-width: 980px){ .earlier-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px){ .earlier-grid{ grid-template-columns: 1fr; } }
+
+/* Skills */
+.skills{ border-top: 1px solid var(--line); }
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.skill-col{
+  padding: 40px 32px;
+  border-right: 1px solid var(--line);
+}
+.skill-col:last-child{ border-right: none; }
+.skill-col h4{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.skill-col ul{
+  list-style: none; padding:0; margin:0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.skill-col li{
+  font-size: 15px; color: var(--text);
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  display: flex; align-items: center; gap: 10px;
+}
+.skill-col li::before{
+  content:"+"; color: var(--accent);
+  font-family: 'JetBrains Mono', monospace; font-size: 12px;
+}
+@media (max-width: 880px){
+  .skills-grid{ grid-template-columns: 1fr; }
+  .skill-col{ border-right: none; border-bottom: 1px solid var(--line); }
+  .skill-col:last-child{ border-bottom: none; }
+}
+
+/* Beyond engineering — personal interests sub-section */
+.beyond{
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px dashed var(--line);
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) 3fr;
+  gap: clamp(24px, 5vw, 60px);
+  align-items: start;
+}
+.beyond-tag{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex; align-items: center; gap: 12px;
+}
+.beyond-tag::before{
+  content:""; width: 28px; height: 1px; background: var(--accent);
+}
+.beyond-text{
+  margin: 0;
+  font-size: clamp(15px, 1.3vw, 17px);
+  color: var(--text-2);
+  max-width: 62ch;
+}
+@media (max-width: 720px){
+  .beyond{ grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* Contact */
+.contact{
+  border-top: 1px solid var(--line);
+  padding: clamp(80px, 12vw, 160px) 0 clamp(60px, 8vw, 100px);
+  background:
+    radial-gradient(ellipse at 30% 100%, rgba(25,229,218,0.06), transparent 60%),
+    var(--bg);
+}
+.contact-inner{
+  max-width: 980px;
+}
+.contact .eyebrow{ margin-bottom: 32px; }
+.contact h2{
+  font-size: clamp(40px, 6vw, 88px);
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin-bottom: 32px;
+}
+.contact h2 .ital{ font-style: italic; font-weight: 400; color: var(--accent); }
+.contact-row{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: end;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+.contact-links{
+  display: flex; flex-direction: column; gap: 18px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 500;
+}
+.contact-links a{
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  transition: color .25s, padding .25s;
+  color: var(--text);
+}
+.contact-links a:hover{ color: var(--accent); padding-left: 8px; }
+.contact-links a .arr{
+  font-family: 'JetBrains Mono', monospace; font-size: 16px; color: var(--text-3);
+  transition: transform .3s, color .25s;
+}
+.contact-links a:hover .arr{ transform: translateX(4px); color: var(--accent); }
+.contact-meta{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-3);
+  display: grid; gap: 8px;
+}
+.contact-meta div{ display:flex; justify-content: space-between; gap: 16px; }
+.contact-meta div span:last-child{ color: var(--text); text-align: right; }
+@media (max-width: 720px){
+  .contact-row{ grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* Archive band */
+.archive-band{
+  border-top: 1px solid var(--line);
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(108,203,255,0.03) 0,
+      rgba(108,203,255,0.03) 2px,
+      transparent 2px,
+      transparent 14px
+    ),
+    var(--bg-2);
+  padding: 28px 0;
+}
+.archive-row{
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+}
+.archive-tag{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-3);
+  display: flex; align-items: center; gap: 12px;
+}
+.archive-tag::before{
+  content:""; width: 28px; height: 1px; background: var(--text-3);
+}
+.archive-msg{
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(15px, 1.4vw, 17px);
+  color: var(--text-2);
+  font-weight: 400;
+  margin: 0;
+  flex: 1;
+  min-width: 240px;
+}
+.archive-msg em{ color: var(--text); font-style: normal; font-weight: 500; }
+.archive-link{
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent-2);
+  padding: 10px 18px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  transition: all .25s;
+  white-space: nowrap;
+}
+.archive-link:hover{
+  border-color: var(--accent-2);
+  color: var(--bg);
+  background: var(--accent-2);
+}
+.archive-link .arr{ transition: transform .25s; }
+.archive-link:hover .arr{ transform: translateX(3px); }
+@media (max-width: 720px){
+  .archive-row{ flex-direction: column; align-items: flex-start; }
+}
+
+/* Footer */
+footer{
+  border-top: 1px solid var(--line);
+  padding: 32px 0;
+  background: var(--bg);
+}
+.foot-row{
+  display:flex; align-items: center; justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-3);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.foot-row a:hover{ color: var(--accent); }
+.foot-social{
+  display: flex; gap: 16px;
+}
+.foot-social a{
+  width: 32px; height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color .25s, color .25s;
+}
+.foot-social a:hover{ border-color: var(--accent); color: var(--accent); }
+.foot-social svg{ width: 14px; height: 14px; fill: currentColor; }
+
+/* Reveal animation (progressive enhancement) */
+.js .reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .8s ease, transform .8s ease;
+  will-change: opacity, transform;
+}
+.js .reveal.in{
+  opacity: 1; transform: none;
+}
+.js .reveal.d1{ transition-delay: .08s; }
+.js .reveal.d2{ transition-delay: .16s; }
+.js .reveal.d3{ transition-delay: .24s; }
+.js .reveal.d4{ transition-delay: .32s; }
+@media (prefers-reduced-motion: reduce){
+  .js .reveal{ opacity: 1 !important; transform: none !important; transition: none; }
+}
+
+::selection{ background: var(--accent); color: var(--bg); }
+</style>
 </head>
-
-<body id="page-top" onload="startTime();">
-	<!-- Navigation -->
-
-
-	<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-		<div class="container">
-			<a class="navbar-brand js-scroll-trigger" href="#page-top">Sean Jafri</a> <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" data-target="#navbarResponsive" data-toggle="collapse" type="button">Menu <i class="fa fa-bars"></i></button>
-
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item mx-0 mx-lg-1">
-						<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
-					</li>
-
-
-					<li class="nav-item mx-0 mx-lg-1">
-						<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-					</li>
-
-
-					<li class="nav-item mx-0 mx-lg-1">
-						<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- Header -->
-
-
-	<header class="masthead bg-primary text-white text-center">
-		<div class="container">
-			<img alt="" class="img-fluid mb-5 d-block mx-auto" src="img/profile2.png">
-
-			<h1 class="text-uppercase mb-0">Sean Jafri</h1>
-
-			<hr class="star-light">
-
-
-			<h2 class="font-weight-light mb-0">Mechanical Engineer - CAD Designer</h2>
-		</div>
-	</header>
-	<!-- Portfolio Grid Section -->
-
-
-	<section class="portfolio" id="portfolio">
-		<div class="container">
-			<h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-
-			<hr class="star-dark mb-5">
-
-
-			<div class="row">
-				<div class="col-md-6 col-lg-4">
-					<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
-					<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-						<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-							<i class="fa fa-search-plus fa-3x"></i>
-						</div>
-					</div>
-					<img alt="RS_Logo.png" class="img-fluid" src="img/portfolio/RS_Logo2.png"></a>
-				</div>
-
-
-				<div class="col-md-6 col-lg-4">
-					<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
-					<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-						<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-							<i class="fa fa-search-plus fa-3x"></i>
-						</div>
-					</div>
-					<img alt="" class="img-fluid" src="img/portfolio/SD_Logo.png"></a>
-				</div>
-
-
-				<div class="col-md-6 col-lg-4">
-					<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-					<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-						<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-							<i class="fa fa-search-plus fa-3x"></i>
-						</div>
-					</div>
-					<img alt="" class="img-fluid" src="img/portfolio/UVS_Final_Design.png"></a>
-				</div>
-
-
-				<div class="col-md-6 col-lg-4">
-					<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
-					<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-						<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-							<i class="fa fa-search-plus fa-3x"></i>
-						</div>
-					</div>
-					<img alt="" class="img-fluid" src="img/portfolio/game.png"></a>
-				</div>
-
-
-				<div class="col-md-6 col-lg-4">
-					<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
-					<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-						<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-							<i class="fa fa-search-plus fa-3x"></i>
-						</div>
-					</div>
-					<img alt="" class="img-fluid" src="img/portfolio/safe.png"></a>
-				</div>
-
-
-				<div class="col-md-6 col-lg-4">
-					<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-					<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-						<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-							<i class="fa fa-search-plus fa-3x"></i>
-						</div>
-					</div>
-					<img alt="" class="img-fluid" src="img/portfolio/submarine.png"></a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- About Section -->
-
-
-	<section class="bg-primary text-white mb-0" id="about">
-		<div class="container">
-			<h2 class="text-center text-uppercase text-white">About</h2>
-
-			<hr class="star-light mb-5">
-
-
-			<div class="row">
-				<div class="col-lg-4 ml-auto">
-					<p class="lead">I'm a recent graduate from the <a href="https://www.uta.edu/uta/">University of Texas at Arlington (UTA)</a> with a Bachelor of Science in Mechanical Engineering, which is detailed in the attached resume. I have developed my abilities in 3D CAD design and modeling, a strong understanding of materials, dynamic simulations, and experience with different manufacturing methods.</p>
-				</div>
-
-
-				<div class="col-lg-4 mr-auto">
-					<p class="lead">The projects I've worked on have given me hands-on experience working with electromechanical systems, from project inception through engineering design and manufacture to the operation and maintenance of the system. Proven ability to coordinate technical teams, manage budgets, and approach complex problems with cost-effective solutions.</p>
-				</div>
-			</div>
-
-
-			<div class="text-center mt-4">
-				<a class="btn btn-xl btn-outline-light" href="img/Sean%20Jafri%20Resume.pdf"><i class="fa fa-download mr-2"></i> Download My Resume!</a>
-			</div>
-		</div>
-	</section>
-	<!-- Contact Section -->
-
-
-	<section id="contact">
-		<div class="container">
-			<h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-
-			<hr class="star-dark mb-5">
-
-
-			<div class="row">
-				<div class="col-lg-8 mx-auto">
-					<!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-					<!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-
-
-					<form action="https://formspree.io/sean.jafri@gmail.com" method="post">
-						<div class="control-group">
-							<div class="form-group floating-label-form-group controls mb-0 pb-2">
-								<label>Name</label> <input class="form-control" data-validation-required-message="Please enter your name." name="name" placeholder="Name" required="required" type="text">
-
-								<p class="help-block text-danger">
-								</p>
-							</div>
-						</div>
-
-
-						<div class="control-group">
-							<div class="form-group floating-label-form-group controls mb-0 pb-2">
-								<label>Email Address</label> <input class="form-control" data-validation-required-message="Please enter your email address." name="email" placeholder="Email Address" required="required" type="email">
-
-								<p class="help-block text-danger">
-								</p>
-							</div>
-						</div>
-
-
-						<div class="control-group">
-							<div class="form-group floating-label-form-group controls mb-0 pb-2">
-								<label>Phone Number</label> <input class="form-control" data-validation-required-message="Please enter your phone number." name="phone" placeholder="Phone Number" required="required" type="tel">
-
-								<p class="help-block text-danger">
-								</p>
-							</div>
-						</div>
-
-
-						<div class="control-group">
-							<div class="form-group floating-label-form-group controls mb-0 pb-2">
-								<label>Message</label> 
-
-								<textarea class="form-control" data-validation-required-message="Please enter a message." name="Message" placeholder="Message" required="required" rows="5"></textarea>
-
-								<p class="help-block text-danger">
-								</p>
-							</div>
-						</div>
-						<br>
-
-
-						<div id="success">
-						</div>
-
-
-						<div class="form-group">
-							<button class="btn btn-primary btn-xl" type="submit">Send</button>
-						</div>
-					</form>
-					<!-- <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
-
-<form method="POST" action="https://formspree.io/sean.jafri@gmail.com">
-         <!==   <input type="email" name="Email" placeholder="Your email"> -->
-					<!-- <textarea name="Message" placeholder="Your message"></textarea>-->
-					<!--<button type="submit">Send</button>-->
-					<!-- <input name="Email" type="email" placeholder="Email Address">
-        <textarea name="Message" class="form-control"  rows="5" placeholder="Message" ></textarea>
-         <button type="submit" class="btn btn-primary btn-xl">Send</button>
-               </form>-->
-					<!-- <input type="text" name="name">
-            <input type="email" name="_replyto">
-           <input type="submit" value="Send">
-id="sendMessageButton"
-id="email"
-class="form-control" 
-required="required" data-validation-required-message="Please enter your email address."
-required="required" data-validation-required-message="Please enter a message."
-        </form>-->
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Footer -->
-
-
-	<footer class="footer text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 mb-5 mb-lg-0">
-					<h4 class="text-uppercase mb-4">Location</h4>
-
-
-					<p class="lead mb-0"><br>
-					Houston, TX 77355</p>
-				</div>
-
-
-				<div class="col-md-4 mb-5 mb-lg-0">
-					<h4 class="text-uppercase mb-4">Around the Web</h4>
-
-
-					<ul class="list-inline mb-0">
-						<li class="list-inline-item">
-							<a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/seanjafri"><i class="fa fa-fw fa-facebook"></i></a>
-						</li>
-
-
-						<li class="list-inline-item">
-							<a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://plus.google.com/u/3/102499390842824785319"><i class="fa fa-fw fa-google-plus"></i></a>
-						</li>
-
-
-						<li class="list-inline-item">
-							<a class="btn btn-outline-light btn-social text-center rounded-circle" href="#"><i class="fa fa-fw fa-twitter"></i></a>
-						</li>
-
-
-						<li class="list-inline-item">
-							<a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/seanjafri/"><i class="fa fa-fw fa-linkedin"></i></a>
-						</li>
-
-
-						<li class="list-inline-item">
-							<a class="btn btn-outline-light btn-social text-center rounded-circle" href="#"><i class="fa fa-fw fa-dribbble"></i></a>
-						</li>
-					</ul>
-				</div>
-
-
-				<div class="col-md-4">
-					<h4 class="text-uppercase mb-4">About the ROVER Society</h4>
-
-
-					<p class="lead mb-0">This team is always growing and improving, so check out their progress on <a href="https://www.facebook.com/RoverSocietyUTA/">Facebook</a>.</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-
-	<div class="copyright py-4 text-center text-white">
-		<div class="container">
-			<small>Sean Jafri 2018</small>
-		</div>
-	</div>
-	<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-
-
-	<div class="scroll-to-top d-lg-none position-fixed">
-		<a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
-	</div>
-	<!-- Portfolio Modals -->
-	<!-- Portfolio Modal 1 -->
-
-
-	<div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
-		<div class="portfolio-modal-dialog bg-white">
-			<a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#"><i class="fa fa-3x fa-times"></i></a>
-
-			<div class="container text-center">
-				<div class="row">
-					<div class="col-lg-8 mx-auto">
-						<h2 class="text-uppercase mb-0">ROVER Society</h2>
-
-
-						<h2 class="text-secondary mb-0">Texas Mars Rover Team</h2>
-
-						<hr class="star-dark mb-5">
-						<!--<img alt="img/portfolio/RS_Logo2.png" class="img-fluid mb-5" src="img/portfolio/rover.gif"> -->
-						<!-- <img class="img-fluid mb-5" id="img1" src="img/portfolio/RS_Logo2.png" />-->
-
-
-						<div id="wrapper">
-							<div class="slideshow w3-container w3-half">
-								<div class="w3-content w3-display-container">
-									<img class="mySlides" src="img/portfolio/RS_Logo2.png"> 
-									<img class="mySlides" src="img/portfolio/2017.gif"> 
-									<img class="mySlides" src="img/portfolio/Rover_Team_URC_Competition_2017.png">
-									<img class="mySlides" src="img/portfolio/Rover_Sean_URC2017.png"> 
-									<img class="mySlides" src="img/portfolio/Rover_Team_URC_Competition_2015.png"> 
-									<img class="mySlides" src="img/portfolio/2015.gif"> 
-								<img class="mySlides" src="img/portfolio/Rover_Prototype.png"> 
-									<img class="mySlides" src="portfolio/2016.gif"> 
-									
-									<a class="prev" onclick="plusDivs(-1, 0)">&#10094;</a> 
-									<a class="next" onclick="plusDivs(1, 0)">&#10095;</a> 
-									<!-- Extra plusDivs parameter refers to second (1) slideshow (start from 0) -->
-								</div>
-								<br>
-
-
-								<div style="text-align:center">
-									<span class="dot" onclick="currentDiv(1, 0)"></span> 
-									<span class="dot" onclick="currentDiv(2, 0)"></span> 
-									<span class="dot" onclick="currentDiv(3, 0)"></span> 
-									<span class="dot" onclick="currentDiv(4, 0)"></span> 
-									<span class="dot" onclick="currentDiv(5, 0)"></span>
-									<span class="dot" onclick="currentDiv(6, 0)"></span> 
-									<span class="dot" onclick="currentDiv(7, 0)"></span>
-									<span class="dot" onclick="currentDiv(8, 0)"></span> 
-								</div>
-							</div>
-						</div>
-						<p class="mb-5">The Rover Society at UTA is a student run robotics team that competes annually in the International <a href="http://urc.marssociety.org/home/about-urc">University Rover Challenge (URC)</a> and providing UTA students the opportunity to develop their skills as part of a large interdisciplinary science and engineering project.</p>
-			<p class="mb-5">Team Advisor: <a href="http://www.uta.edu/faculty/bowling/">Dr. Alan Bowling</a></p>
-						
-						<a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#"><i class="fa fa-close"></i> Close Project</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Portfolio Modal 2 -->
-
-
-	<div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
-		<div class="portfolio-modal-dialog bg-white">
-			<a class="close-button d-none d-md-block portfolio-modal-dismiss" href="https://www.linkedin.com/in/seanjafri/"><i class="fa fa-3x fa-times"></i></a>
-
-			<div class="container text-center">
-				<div class="row">
-					<div class="col-lg-8 mx-auto">
-						<h2 class="text-uppercase mb-0">Active Sun Tracking Device</h2>
-
-
-
-
-						<h2 class="text-secondary mb-0">Sundog Engineering - UTARI</h2>
-
-						<hr class="star-dark mb-5">
-
-<div id="wrapper">
-							<div class="slideshow w3-container w3-half">
-								<div class="w3-content w3-display-container">
-									<img class="mySlides" src="img/portfolio/SD_Logo.png"> 
-									<img class="mySlides" src="img/portfolio/sundog.gif"> 
-									<img class="mySlides" src="img/portfolio/SD_Sensor_Housing.png"> 
-									<img class="mySlides" src="img/portfolio/SD_Final_Design2.png"> 
-									<img class="mySlides" src="img/portfolio/SD_Analysis.png"> 
-									<img class="mySlides" src="img/portfolio/SD_Electrical_Layout.png"> 
-									<img class="mySlides" src="https://drive.google.com/open?id=1LeSLguupFg5lY3r91cYgId5DJUK0PkYB"> 
-									<a class="prev" onclick="plusDivs(-1, 0)">&#10094;</a> 
-									<a class="next" onclick="plusDivs(1, 0)">&#10095;</a> 
-									<!-- Extra plusDivs parameter refers to second (1) slideshow (start from 0) -->
-								</div>
-								<br>
-
-
-								<div style="text-align:center">
-									<span class="dot" onclick="currentDiv(1, 0)"></span>
-									<span class="dot" onclick="currentDiv(2, 0)"></span>
-									<span class="dot" onclick="currentDiv(3, 0)"></span>
-									<span class="dot" onclick="currentDiv(4, 0)"></span>
-									<span class="dot" onclick="currentDiv(5, 0)"></span>
-									<span class="dot" onclick="currentDiv(6, 0)"></span>
-									<span class="dot" onclick="currentDiv(7, 0)"></span>
-								</div>
-							</div>
-						</div>
-						
-
-
-						<p class="mb-5">The Sundog Engineering team was tasked by <a href="https://www.uta.edu/news/releases/2017/07/reifsnider-icces-award.php">Dr. Kenneth Reifsnider</a> of the <a href="https://www.uta.edu/utari/">UTA Research Institute (UTARI)</a> to design and build a sun tracking device for solar powered streetlights. Our team succesfully created a two-axis positioning system for the solar panel, outfitted with an array of photocells, to accurately find the center position of the sun throughout the day. The positioning system orients itself using a linear actuator and a chain drive, controlled by a low power Arduino microcontroller, and can withstand normal environmental operating conditions. The device is capable of fully charging the battery, keeps the streetlight on all night (11+ hours), and rotates overnight to face the next sunrise.</p>
-						<a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#"><i class="fa fa-close"></i> Close Project</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Portfolio Modal 3 -->
-
-
-	<div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
-		<div class="portfolio-modal-dialog bg-white">
-			<a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#"><i class="fa fa-3x fa-times"></i></a>
-
-			<div class="container text-center">
-				<div class="row">
-					<div class="col-lg-8 mx-auto">
-						<h2 class="text-uppercase mb-0">Unmanned Vehicle Systems</h2>
-
-
-						<h2 class="text-secondary mb-0">Team Six</h2>
-
-						<hr class="star-dark mb-5">
-						<!--<img alt="" class="img-fluid mb-5" src="img/portfolio/uvs.gif"> -->
-
-<div id="wrapper">
-							<div class="slideshow w3-container w3-half">
-								<div class="w3-content w3-display-container">
-					<img class="mySlides" src="img/portfolio/uvs2.gif"> 
-					<img class="mySlides" src="img/portfolio/UVS_Final_Design.png"> 
-					<img class="mySlides" src="img/portfolio/UVS_Team_6.png"> 
-					
-								<a class="prev" onclick="plusDivs(-1, 0)">&#10094;</a> 
-								<a class="next" onclick="plusDivs(1, 0)">&#10095;</a> 
-									<!-- Extra plusDivs parameter refers to second (1) slideshow (start from 0) -->
-								</div>
-								<br>
-
-
-								<div style="text-align:center">
-									<span class="dot" onclick="currentDiv(1, 0)"></span> 
-									<span class="dot" onclick="currentDiv(2, 0)"></span> 
-									<span class="dot" onclick="currentDiv(3, 0)"></span> 
-									
-								</div>
-							</div>
-						</div>
-
-						
-
-
-						<p class="mb-5">Updating soon.</p>
-						<a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#"><i class="fa fa-close"></i> Close Project</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Portfolio Modal 4 -->
-
-
-	<div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
-		<div class="portfolio-modal-dialog bg-white">
-			<a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#"><i class="fa fa-3x fa-times"></i></a>
-
-			<div class="container text-center">
-				<div class="row">
-					<div class="col-lg-8 mx-auto">
-						<h2 class="text-secondary text-uppercase mb-0">Gear Box Design Project</h2>
-<h2 class="text-secondary mb-0">Machine Design II</h2>
-						<hr class="star-dark mb-5">
-
-
-						<<div id="wrapper">
-							<div class="slideshow w3-container w3-half">
-								<div class="w3-content w3-display-container">
-									<img class="mySlides" src="img/portfolio/Gearbox_Assembly_View.PNG"> 
-									<img class="mySlides" src="img/portfolio/Gearbox_Exploded_View.PNG"> 
-									<img class="mySlides" src="img/portfolio/Gearbox_Final Design Example.png"> 
-									<img class="mySlides" src="https://drive.google.com/open?id=1WuqSK-T6WoB2ooGhM8m9VFZcis-_0hc5"> 
-									
-									
-									
-									<a class="prev" onclick="plusDivs(-1, 0)">&#10094;</a> 
-									<a class="next" onclick="plusDivs(1, 0)">&#10095;</a> 
-									<!-- Extra plusDivs parameter refers to second (1) slideshow (start from 0) -->
-								</div>
-								<br>
-
-
-								<div style="text-align:center">
-									<span class="dot" onclick="currentDiv(1, 0)"></span>
-									<span class="dot" onclick="currentDiv(2, 0)"></span>
-									<span class="dot" onclick="currentDiv(3, 0)"></span>
-									<span class="dot" onclick="currentDiv(4, 0)"></span>
-								</div>
-							</div>
-						</div>
-
-
-						<p class="mb-5">The end goal of this project was to design a prototype gear box to be used in conjunction of a hoist drum to lift a load of up to 7.5 tons at a speed of 30 ft/min. The setting that this device would be used is in an industrial factory on an overhead crane. The gear box was required to accomplish this by being powered by an electric motor capable of an output of 15 HP at 1800 RPM. </p>
-						<a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#"><i class="fa fa-close"></i> Close Project</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Portfolio Modal 5 -->
-
-
-	<div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
-		<div class="portfolio-modal-dialog bg-white">
-			<a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#"><i class="fa fa-3x fa-times"></i></a>
-
-			<div class="container text-center">
-				<div class="row">
-					<div class="col-lg-8 mx-auto">
-						<h2 class="text-secondary text-uppercase mb-0">Car Radiator Analysis</h2>
-<h2 class="text-secondary mb-0">Computer Aided Engineering (CAE)</h2>
-						<hr class="star-dark mb-5">
-
-
-						<div id="wrapper">
-							<div class="slideshow w3-container w3-half">
-								<div class="w3-content w3-display-container">
-									<img class="mySlides" src="https://www.w3schools.com/w3images/paris.jpg"> 
-									<img class="mySlides" src="https://www.w3schools.com/howto/img_fjords_wide.jpg"> 
-									<img class="mySlides" src="https://www.w3schools.com/howto/img_mountains_wide.jpg"> 
-									<img class="mySlides" src="https://www.w3schools.com/howto/img_nature_wide.jpg"> 
-									<img class="mySlides" src="https://www.w3schools.com/howto/img_lights_wide.jpg">  
-									<a class="prev" onclick="plusDivs(-1, 0)">&#10094;</a> 
-									<a class="next" onclick="plusDivs(1, 0)">&#10095;</a> 
-									<!-- Extra plusDivs parameter refers to second (1) slideshow (start from 0) -->
-								</div>
-								<br>
-
-
-								<div style="text-align:center">
-									<span class="dot" onclick="currentDiv(1, 0)"></span>
-									<span class="dot" onclick="currentDiv(2, 0)"></span>
-									<span class="dot" onclick="currentDiv(3, 0)"></span>
-									<span class="dot" onclick="currentDiv(4, 0)"></span>
-									<span class="dot" onclick="currentDiv(5, 0)"></span>
-								</div>
-							</div>
-						</div>
-
-						<hr>
-
-
-						<p class="mb-5">Updating soon.</p>
-						<a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#"><i class="fa fa-close"></i> Close Project</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Portfolio Modal 6 -->
-
-
-	<div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
-		<div class="portfolio-modal-dialog bg-white">
-			<a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#"><i class="fa fa-3x fa-times"></i></a>
-
-			<div class="container text-center">
-				<div class="row">
-					<div class="col-lg-8 mx-auto">
-						<h2 class="text-secondary text-uppercase mb-0">Project </h2>
-
-						<hr class="star-dark mb-5">
-
-
-						<div id="wrapper">
-							<div class="slideshow w3-container w3-half">
-								<div class="w3-content w3-display-container">
-									<img class="mySlides" src="https://www.w3schools.com/w3images/notebook.jpg"> 
-									<img class="mySlides" src="https://www.w3schools.com/howto/img_fjords_wide.jpg"> 
-									<img class="mySlides" src="https://www.w3schools.com/howto/img_mountains_wide.jpg"> 
-									<img class="mySlides" src="https://www.w3schools.com/howto/img_nature_wide.jpg"> 
-									<img class="mySlides" src="https://www.w3schools.com/howto/img_lights_wide.jpg"> 
-									<a class="prev" onclick="plusDivs(-1, 0)">&#10094;</a> 
-									<a class="next" onclick="plusDivs(1, 0)">&#10095;</a> 
-									<!-- Extra plusDivs parameter refers to second (1) slideshow (start from 0) -->
-								</div>
-								<br>
-
-
-								<div style="text-align:center">
-									<span class="dot" onclick="currentDiv(1, 0)"></span>
-									<span class="dot" onclick="currentDiv(2, 0)"></span>
-									<span class="dot" onclick="currentDiv(3, 0)"></span>
-									<span class="dot" onclick="currentDiv(4, 0)"></span>
-									<span class="dot" onclick="currentDiv(5, 0)"></span>
-								</div>
-							</div>
-						</div>
-
-						<p class="mb-5">Updating soon.</p>
-						<a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#"><i class="fa fa-close"></i> Close Project</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.min.js">
-	</script> 
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js">
-	</script> <!-- Plugin JavaScript -->
-	 
-	<script src="vendor/jquery-easing/jquery.easing.min.js">
-	</script> 
-	<script src="vendor/magnific-popup/jquery.magnific-popup.min.js">
-	</script> <!-- Contact Form JavaScript -->
-	 
-	<script src="js/jqBootstrapValidation.js">
-	</script> 
-	<script src="js/contact_me.js">
-	</script> <!-- Custom scripts for this template -->
-	 
-	<script src="js/freelancer.min.js">
-	</script> 
-	<script>
-	                                                                                                                           var slideIndex = 1;
-	                                                                                                                           var z = document.getElementsByClassName("slideshow");
-	                                                                                                                           for (i = 0; i < z.length; i++) {
-	                                                                                                                               //set custom data attribute to first current image index
-	                                                                                                                               z[i].setAttribute("data-currentslide", 1);
-	                                                                                                                               showDivs(z[i].getAttribute("data-currentslide"), i);
-	                                                                                                                           }
-	                                                                                                                           function plusDivs(n, j) {
-	                                                                                                                               //get custom data attribute value of current image index to slideshow class index j
-	                                                                                                                               slideIndex = parseInt(z[j].getAttribute("data-currentslide")[0]); //remove [0]
-	                                                                                                                               showDivs(slideIndex += n, j);
-	                                                                                                                           }
-	                                                                                                                           function currentDiv(n, j) {
-	                                                                                                                               showDivs(slideIndex = n, j); /* showDivs Not showSlides*/
-	                                                                                                                           }
-	                                                                                                                           function showDivs(n, j) {
-	                                                                                                                               var i;
-	                                                                                                                               var z = document.getElementsByClassName("slideshow")[j];
-	                                                                                                                               var x = z.getElementsByClassName("mySlides");
-	                                                                                                                               var dots = z.getElementsByClassName("dot");
-	                                                                                                                               if (n > x.length) {
-	                                                                                                                                   slideIndex = 1
-	                                                                                                                               }
-	                                                                                                                               if (n < 1) {
-	                                                                                                                                   slideIndex = x.length;
-	                                                                                                                               }
-	                                                                                                                               //set custom data attribute to current image index
-	                                                                                                                               z.setAttribute("data-currentslide", slideIndex);
-	                                                                                                                               for (i = 0; i < x.length; i++) {
-	                                                                                                                                   x[i].style.display = "none";
-	                                                                                                                               }
-	                                                                                                                               for (i = 0; i < dots.length; i++) {
-	                                                                                                                                   dots[i].className = dots[i].className.replace(" active", "");
-	                                                                                                                               }
-	                                                                                                                               x[slideIndex - 1].style.display = "block";
-	                                                                                                                               dots[slideIndex - 1].className += " active";
-	                                                                                                                           }
-	</script> 
-	<script>
-	                                                                                                                           var slideindex-1 = 1;
-	                                                                                                                           var z = document.getElementsByClassName("slideshow-1");
-	                                                                                                                           for (i = 0; i < z.length; i++) {
-	                                                                                                                               //set custom data attribute to first current image index
-	                                                                                                                               z[i].setAttribute("data-currentslide-1", 1);
-	                                                                                                                               showDivs-1(z[i].getAttribute("data-currentslide-1"), i);
-	                                                                                                                           }
-	                                                                                                                           function plusDivs-1(n, j) {
-	                                                                                                                               //get custom data attribute value of current image index to slideshow-1 class index j
-	                                                                                                                               slideindex-1 = parseInt(z[j].getAttribute("data-currentslide-1")[0]); //remove [0]
-	                                                                                                                               showDivs-1(slideindex-1 += n, j);
-	                                                                                                                           }
-	                                                                                                                           function currentDiv-1(n, j) {
-	                                                                                                                               showDivs-1(slideindex-1 = n, j); /* showDivs-1 Not showSlides*/
-	                                                                                                                           }
-	                                                                                                                           function showDivs-1(n, j) {
-	                                                                                                                               var i;
-	                                                                                                                               var z = document.getElementsByClassName("slideshow-1")[j];
-	                                                                                                                               var x = z.getElementsByClassName("mySlides-1");
-	                                                                                                                               var dots-1 = z.getElementsByClassName(dot-1);
-	                                                                                                                               if (n > x.length) {
-	                                                                                                                                   slideindex-1 = 1
-	                                                                                                                               }
-	                                                                                                                               if (n < 1) {
-	                                                                                                                                   slideindex-1 = x.length;
-	                                                                                                                               }
-	                                                                                                                               //set custom data attribute to current image index
-	                                                                                                                               z.setAttribute("data-currentslide-1", slideindex-1);
-	                                                                                                                               for (i = 0; i < x.length; i++) {
-	                                                                                                                                   x[i].style.display = "none";
-	                                                                                                                               }
-	                                                                                                                               for (i = 0; i < dots-1.length; i++) {
-	                                                                                                                                   dots-1[i].className = dots-1[i].className.replace(" active", "");
-	                                                                                                                               }
-	                                                                                                                               x[slideindex-1 - 1].style.display = "block";
-	                                                                                                                               dots-1[slideindex-1 - 1].className += " active";
-	                                                                                                                           }
-	</script> 
+<body>
+
+<div class="bg-grid" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-row">
+    <a class="brand" href="#top">
+      <span class="dot"></span>
+      Sean Jafri
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#earlier">Earlier</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="img/Sean Jafri Resume.pdf" class="nav-cta">Resume ↗</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg-stack" aria-hidden="true">
+    <div class="hero-bg-img active" style="background-image: url('img/hero/01-lab.jpg')" data-label="Lab"></div>
+    <div class="hero-bg-img" style="background-image: url('img/hero/02-rover-desert.jpg')" data-label="URC 2017"></div>
+    <div class="hero-bg-img" style="background-image: url('img/hero/03-mountains.jpg')" data-label="Pikes Peak"></div>
+    <div class="hero-bg-img" style="background-image: url('img/hero/04-sunset.jpg')" data-label="Texas"></div>
+    <div class="hero-bg-img" style="background-image: url('img/hero/05-savannah.jpg')" data-label="Savannah"></div>
+  </div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div>
+      <div class="hero-tag"><span class="ln"></span>Robotics Engineer · HP Inc. Print &amp; Personal Systems</div>
+      <h1>
+        Building the<br>
+        <span class="ital">robots</span> that<br>
+        test the machines.
+      </h1>
+      <p class="hero-sub">
+        I design and build automated test fixtures, custom motion-control hardware,
+        and 3D-printed bots that put HP&apos;s laptops, docks, and accessories through
+        tens of thousands of cycles — replacing manual testing with reliable, repeatable systems.
+      </p>
+      <div class="hero-meta">
+        <div>Based<span>Magnolia, TX</span></div>
+        <div>Discipline<span>Mechanical &middot; Robotics</span></div>
+        <div>Tools<span>SolidWorks &middot; C++ &middot; KiCad</span></div>
+        <div>Status<span class="acc">Open to opportunities</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section-pad" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="label">/ 01 — About</span>
+        <h2 class="reveal">A mechanical engineer who works in motion.</h2>
+      </div>
+      <div class="body reveal d1">
+        <p>
+          I&apos;m a robotics engineer with a BSME from the University of Texas at Arlington,
+          currently designing automated test hardware at <strong>HP Inc.</strong> in the Print
+          and Personal Systems lab. My work sits at the intersection of mechanical design,
+          electronics, and motion control — the unglamorous-but-essential layer that lets
+          software teams ship hardware confidently.
+        </p>
+        <p>
+          Over the last seven years I&apos;ve led the team&apos;s transition from manual to
+          automated testing: drafting fixtures in SolidWorks, prototyping with HP&apos;s Multi
+          Jet Fusion 3D printers, laying out the PCBs that drive each fixture, and writing
+          the firmware that ties it all together. Along the way I&apos;ve cut per-unit fixture
+          costs by 93%, doubled lab capacity, and shipped a catalogue of bots that now run
+          continuously across our test floors.
+        </p>
+        <p>
+          Before HP, I led the UT Arlington Mars Rover team to international competition,
+          built solar-tracking streetlights for UTARI, and developed an autonomous ground vehicle
+          using SLAM and dead-reckoning navigation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<!-- WORK -->
+<section class="work" id="work">
+  <div class="container section-pad" style="padding-bottom: 0;">
+    <div class="section-head reveal">
+      <span class="num">/ 02 — Selected work at HP</span>
+      <h2>Eight years of fixtures, controllers and bench-top robotics.</h2>
+      <p class="lede">
+        A walk through the systems I&apos;ve designed and shipped for HP&apos;s
+        compatibility lab — from the first machined prototype to a fleet of
+        servo-driven bots running thousands of unattended cycles every night.
+      </p>
+    </div>
+  </div>
+
+  <!-- TEST FIXTURE EVOLUTION -->
+  <div class="evolution">
+    <div class="container" style="padding-top: 0; padding-bottom: 56px;">
+      <div class="proj-text reveal">
+        <div class="num">Project / 01 · Test Fixture Evolution · 2018—2024</div>
+        <h3>From a $4,100 machined prototype to a $250 production fixture.</h3>
+        <p>
+          The compatibility lab&apos;s test fixture went through four major iterations under my
+          design ownership. Each generation refined what really mattered, stripped over-engineered
+          components, replaced machined parts with off-the-shelf aluminum framing and in-house
+          Multi Jet Fusion 3D prints, and ultimately produced a unit that costs <strong>93% less</strong>
+          while running the same — and in many cases more demanding — test routines.
+        </p>
+      </div>
+    </div>
+    <div class="fixture-grid">
+      <article class="fixture-card reveal">
+        <div class="fixture-img"><img src="img/projects/cradle-original.jpg" alt="Original test fixture with custom laptop cradle, 2018" loading="lazy"></div>
+        <div class="fixture-body">
+          <div class="fixture-iter"><span>Gen 01 · 2018</span><span class="cost">$4,100</span></div>
+          <div class="fixture-name">Original Custom Cradle</div>
+          <div class="fixture-desc">Steel breadboard, fully machined components, single-laptop custom cradle. The starting point.</div>
+        </div>
+      </article>
+      <article class="fixture-card reveal d1">
+        <div class="fixture-img"><img src="img/projects/universal-cradle.jpg" alt="Universal cradle with 3D printed bot hardware" loading="lazy"></div>
+        <div class="fixture-body">
+          <div class="fixture-iter"><span>Gen 02 · 2020</span><span class="cost">$3,000</span></div>
+          <div class="fixture-name">Universal Cradle + 3D&#8209;Printed Bots</div>
+          <div class="fixture-desc">Universal laptop cradle replaces annual custom builds. MJF 3D-printed bot hardware lands.</div>
+        </div>
+      </article>
+      <article class="fixture-card reveal d2">
+        <div class="fixture-img"><img src="img/projects/aluminum-frame.jpg" alt="Aluminum-frame test fixture" loading="lazy"></div>
+        <div class="fixture-body">
+          <div class="fixture-iter"><span>Gen 03 · 2022</span><span class="cost">$1,650</span></div>
+          <div class="fixture-name">Aluminum Frame Build</div>
+          <div class="fixture-desc">Off-the-shelf aluminum framing, halved footprint — two fixtures fit on one bench.</div>
+        </div>
+      </article>
+      <article class="fixture-card final reveal d3">
+        <div class="fixture-img"><img src="img/projects/ram-mount-render.jpg" alt="RAM Mount fixture V4 with Mega II controller" loading="lazy"></div>
+        <div class="fixture-body">
+          <div class="fixture-iter"><span>Gen 04 · 2024</span><span class="cost">$250</span></div>
+          <div class="fixture-name">RAM Mount · Mega II Driven</div>
+          <div class="fixture-desc">RAM Mount cradle, servo-driven bots, and the Mega II controller. Design simplified to the essentials.</div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- MEGA II CONTROLLER -->
+  <div class="proj-block">
+    <div class="container">
+      <div class="proj-row">
+        <div class="proj-media light reveal">
+          <span class="frame-label">SW · Assembly</span>
+          <img src="img/projects/mega-ii-render.jpg" alt="Mega II robotic controller — SolidWorks render with touchscreen and 12 actuator outputs" loading="lazy">
+        </div>
+        <div class="proj-text reveal d1">
+          <div class="num">Project / 02 · Mega II Controller · 2023—2024</div>
+          <h3>The brain that drives 12 bots from a single touchscreen.</h3>
+          <p>
+            Mega II is our second-generation robotic controller. It drives <strong>up to 12
+            bots per fixture</strong> through dedicated terminal blocks and exposes a
+            touchscreen UI so technicians can configure runs at the bench instead of
+            tethering to a host PC. It&apos;s the command-and-control layer underneath
+            most of the other projects on this page.
+          </p>
+          <p>
+            I owned the PCB layout and the mechanical enclosure design — the green MJF-printed
+            housing, the integrated touchscreen mount, the actuator terminal arrangement,
+            and the routing for cooling, power and I/O.
+          </p>
+          <div class="proj-credit"><strong>Credit:</strong> Schematic design by my manager. PCB layout, mechanical design and integration by me.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORIGINAL VS MEGA II -->
+  <div class="proj-block flip" style="padding-top: 0;">
+    <div class="container">
+      <div class="proj-row">
+        <div class="proj-media reveal vs-image">
+          <span class="vs-label vs-label-l">
+            <span class="vs-label-line">Robotics Controller</span>
+            <span class="vs-label-meta"><span class="vs-gen">1st Gen</span> &middot; 2017</span>
+          </span>
+          <span class="vs-label vs-label-r">
+            <span class="vs-label-line">Robotics Controller</span>
+            <span class="vs-label-meta"><span class="vs-gen">2nd Gen</span> &middot; 2026</span>
+          </span>
+          <img src="img/projects/mega-original-vs-ii.jpg" alt="The 1st-generation robotic controller (left, blue HP-branded production housing) next to the 2nd-generation Mega II controller in prototype form (right, Arduino Mega with custom daughterboard and touchscreen)" loading="lazy">
+        </div>
+        <div class="proj-text reveal d1">
+          <div class="num">Detail &middot; Two generations, eight years apart</div>
+          <h3>Engineering the next generation of our robotic automation controllers.</h3>
+          <p>
+            On the left, the 1st-generation controller in its blue HP-branded production housing &mdash;
+            a 4-channel unit with an LCD readout and status LEDs that drove the early bots from 2017
+            onward. On the right, the 2nd-generation <strong>Mega II</strong> in prototype form: an
+            Arduino Mega 2560 carrying a custom daughterboard with twelve actuator outputs and a
+            separate touchscreen module that&apos;ll eventually live inside the green production
+            housing shown above.
+          </p>
+          <p>
+            Same job, three times the channel count, a touchscreen UI in place of an LCD,
+            and a single integrated PCB instead of stacked daughterboards.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VARDA -->
+  <div class="proj-block">
+    <div class="container">
+      <div class="proj-row">
+        <div class="proj-media light reveal">
+          <span class="frame-label">SW · Varda</span>
+          <img src="img/projects/varda-render.jpg" alt="Varda software-validation board — SolidWorks render with display, debug connector, status indicators" loading="lazy">
+        </div>
+        <div class="proj-text reveal d1">
+          <div class="num">Project / 03 · Varda Board · 2024</div>
+          <h3>One small board babysitting 250 laptops at once.</h3>
+          <p>
+            Varda is the team&apos;s software-validation harness — a compact RP2040 Pico 2 board
+            that plugs into each unit-under-test&apos;s debug connector, monitors system state,
+            and automatically issues a hardware reset whenever the UUT throws a fault like a
+            <strong>blue-screen, hang or watchdog event</strong>. We currently have
+            <strong>250+ Varda boards deployed</strong> across the lab, supervising overnight
+            soak tests without anyone walking the floor.
+          </p>
+          <p>
+            I owned the board layout and the housing design — including the molded HP logo,
+            the &quot;OWN THE AUTOMATION / OWN THE OUTCOME&quot; tagline cut into the lid, the
+            display window cutout and the tabbed slide-in chassis.
+          </p>
+          <div class="proj-credit"><strong>Credit:</strong> Schematic design by an EE on the team. PCB layout and mechanical design by me.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEEP PURPLE — with embedded video -->
+  <div class="proj-block flip">
+    <div class="container">
+      <div class="proj-row">
+        <div class="proj-media reveal">
+          <span class="frame-label">DB0 · Top View</span>
+          <img src="img/projects/deep-purple-db0.jpg" alt="Deep Purple DB0 dock test fixture — magenta MJF-printed chassis with 12 Actuonix linear actuators arranged in a top-and-bottom array around the dock" loading="lazy">
+        </div>
+        <div class="proj-text reveal d1">
+          <div class="num">Project / 04 · Deep Purple Dock Test System · 2022—2024</div>
+          <h3>Twelve linear actuators. Every port. Every cycle.</h3>
+          <p>
+            The Deep Purple program tests HP&apos;s docking stations the way they&apos;re actually
+            used — by plugging things in, over and over, into every port simultaneously. The fixture
+            houses a custom 12-channel control PCB driving a stack of <strong>Actuonix linear
+            actuators</strong>, each carrying a colour-coded plug for a specific port type
+            (USB-A, USB-C, DisplayPort, Ethernet). The signature magenta chassis is a single MJF-printed part.
+          </p>
+          <p>
+            Designing the dock fixtures filled a gap on our team where no dedicated electrical
+            engineer was available — I owned the PCB design, the mechanical chassis, and the
+            actuator-to-port alignment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEEP PURPLE VIDEO + LIVE FIXTURE -->
+  <div class="proj-block" style="padding-top: 0;">
+    <div class="container">
+      <div class="proj-row">
+        <div class="proj-media reveal" style="aspect-ratio: 16/9;">
+          <span class="frame-label">Live · Plug Insertion</span>
+          <div class="video-wrap" id="videoWrap">
+            <video id="dpVideo" muted playsinline preload="metadata" poster="img/projects/deep-purple-fixture-live.jpg" loop>
+              <source src="videos/deep-purple-insertion.mp4" type="video/mp4">
+            </video>
+            <div class="play-btn" id="playBtn">
+              <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="label">▶ Play insertion sequence</div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-text reveal d1">
+          <div class="num">Detail · Motion study</div>
+          <h3>What 40 seconds of automated dock testing looks like.</h3>
+          <p>
+            A short clip showing the SolidWorks motion study of the plug-insertion mechanism alongside
+            macro footage of the live fixture in action. Each cycle: extend, contact, hold, retract.
+            Scaled across 12 channels per fixture, that&apos;s thousands of insertions per night, every night.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEYBOARD BOT -->
+  <div class="proj-block">
+    <div class="container">
+      <div class="proj-row">
+        <div class="proj-media reveal">
+          <span class="frame-label">KB-Bot · Top View</span>
+          <img src="img/projects/keyboard-bot-top.jpg" alt="Keyboard Bot top-down view — full QWERTY layout with one solenoid actuator per key, letters etched into the MJF-printed housing" loading="lazy">
+        </div>
+        <div class="proj-text reveal d1">
+          <div class="num">Project / 05 · Keyboard Bot</div>
+          <h3>130 unique keystrokes, every cycle.</h3>
+          <p>
+            The Keyboard Bot mounts over a laptop and drives an array of solenoid actuators down
+            onto the keys, simulating up to <strong>130 unique keystrokes</strong> on command.
+            It verifies keyboard behavior across power states, detects stuck or dead keys, and
+            stress-tests new keyboard designs over hundreds of thousands of activations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEYBOARD BOT VIDEO + side detail -->
+  <div class="proj-block flip" style="padding-top: 0;">
+    <div class="container">
+      <div class="proj-row">
+        <div class="proj-media reveal" style="aspect-ratio: 16/9;">
+          <span class="frame-label">Live · Typing Test</span>
+          <div class="video-wrap" id="kbVideoWrap">
+            <video id="kbVideo" muted playsinline preload="metadata" poster="img/projects/keyboard-bot-poster.jpg" loop>
+              <source src="videos/keyboard-bot-typing.mp4" type="video/mp4">
+            </video>
+            <div class="play-btn" id="kbPlayBtn">
+              <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="label">▶ Play typing demo</div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-text reveal d1">
+          <div class="num">Detail · Live demo</div>
+          <h3>Watch it actually type a test pattern.</h3>
+          <p>
+            A clip from the V12 prototype running a typing-speed sweep. The bot cycles through
+            different hold-times — 80 ms, 50 ms, 40 ms, 30 ms — printing a labelled line into
+            Notepad on each pass, while alternating shift-keys to verify modifier behaviour. The
+            staccato of solenoids you can almost <em>hear</em> through the screen is what
+            thousands of overnight cycles look like.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- USB-C FLIP BOT -->
+  <div class="proj-block flip">
+    <div class="container">
+      <div class="proj-row">
+        <div class="proj-media reveal">
+          <span class="frame-label">FB-USBC · 02</span>
+          <img src="img/projects/usbc-flip-bot.jpg" alt="USB-C Flip Bot — geared mechanism that plugs in, removes and flips a USB-C connector autonomously" loading="lazy">
+        </div>
+        <div class="proj-text reveal d1">
+          <div class="num">Project / 06 · USB-C Flip Bot</div>
+          <h3>Tens of thousands of plug-flip cycles, zero hands.</h3>
+          <p>
+            USB-C is reversible — and that reversibility is exactly what needs testing. The Flip Bot
+            performs the entire plug / unplug / rotate-180° / re-plug cycle autonomously, allowing
+            firmware teams to validate USB-C port behavior across <strong>both connector orientations</strong>
+            for tens of thousands of cycles per build, fully unattended.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOW POWER SWITCH -->
+  <div class="proj-block">
+    <div class="container">
+      <div class="proj-row">
+        <div class="proj-media reveal">
+          <span class="frame-label">LPS · v4 · Live</span>
+          <img src="img/projects/low-power-switch.jpg" alt="Four Low Power Switch modules — Network, Bluetooth, USB-C and Relay enablers — sitting on the optical breadboard with blue and green status LEDs lit, RA-02514 fixture barcode visible between them" loading="lazy">
+        </div>
+        <div class="proj-text reveal d1">
+          <div class="num">Project / 07 · Low Power Switch · 2023</div>
+          <h3>Four little boxes that own every power state.</h3>
+          <p>
+            Each Low Power Switch is a self-contained MJF-printed module that gates a specific
+            interface — <strong>Network, Bluetooth, USB-C, and Relay</strong> — independently
+            from the host. The host can enable or disable each domain at will, which is what
+            makes detailed power-state validation possible: simulating sleep, AC, DC, S0i3,
+            modern-standby, and every weird transition in between, with the same fixture, repeatably.
+          </p>
+          <p>
+            They&apos;re visually small but functionally critical — most charging-IC and power-adapter
+            validation across the lab runs through some combination of these four bots.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POLARIS / PELORI TRIAGE FIXTURE -->
+  <div class="proj-block flip">
+    <div class="container">
+      <div class="proj-row">
+        <div class="proj-media reveal">
+          <span class="frame-label">Triage · Live</span>
+          <img src="img/projects/triage-fixture.jpg" alt="Polaris Triage developer fixture in production — seven HP laptops mounted vertically in aluminum cradles on a single bench, displays exposed and labeled H1 through H7, with a status monitor on the left running test mode" loading="lazy">
+        </div>
+        <div class="proj-text reveal d1">
+          <div class="num">Project / 08 · Polaris Triage Fixture</div>
+          <h3>Ten units on one bench, instead of ten benches.</h3>
+          <p>
+            The Polaris Triage Fixture is a vertical-stacking frame for developer-stage units —
+            laptops in mid-disassembly, exposed motherboards, the messy iterative work of bringing
+            a new platform up. Instead of one bench per unit, it lets a single technician supervise
+            <strong>up to 10 devices on the same fixture</strong>, all running test routines in
+            parallel. Pure space utilization, but the pay-off was enormous: doubled lab capacity
+            without a square inch more of bench space.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTS GRID -->
+  <div class="bots section-pad">
+    <div class="container">
+      <div class="section-head reveal" style="margin-bottom: 48px;">
+        <span class="num">/ 03 — The bot family</span>
+        <h2>A catalogue of small machines.</h2>
+        <p class="lede">Each bot replaces a manual test step. Together — orchestrated by Mega II and watched by Varda — they let one technician supervise dozens of devices through thousands of overnight cycles.</p>
+      </div>
+
+      <div class="bot-grid">
+        <article class="bot-card reveal">
+          <div class="bot-id">BOT_01</div>
+          <div class="bot-name">Cable Bot</div>
+          <div class="bot-desc">Automates device connect / disconnect cycles. Replaces manual cable swaps with consistent insertion force across software-hardware integration tests.</div>
+        </article>
+
+        <article class="bot-card reveal d1">
+          <div class="bot-id">BOT_02</div>
+          <div class="bot-name">LED Bot</div>
+          <div class="bot-desc">Optical monitor for status indicators. Reads laptop LEDs through a calibrated photodiode array to verify on / off / sleep / charging states report correctly.</div>
+        </article>
+
+        <article class="bot-card reveal d2">
+          <div class="bot-id">BOT_03</div>
+          <div class="bot-name">USB-C Flip Bot</div>
+          <div class="bot-desc">Plugs, unplugs, flips and re-plugs USB-C connectors autonomously to validate both connector orientations under firmware test.</div>
+        </article>
+
+        <article class="bot-card reveal">
+          <div class="bot-id">BOT_04</div>
+          <div class="bot-name">Keyboard Bot</div>
+          <div class="bot-desc">Solenoid array drives up to 130 unique keystrokes for keyboard validation under variable power conditions. Detects stuck, dead, or chattering keys.</div>
+        </article>
+
+        <article class="bot-card reveal d1">
+          <div class="bot-id">BOT_05</div>
+          <div class="bot-name">Push-Button &amp; Lid Switch</div>
+          <div class="bot-desc">Compact actuator pair that triggers power buttons and lid sensors. Replaces the most repetitive manual step on every fixture.</div>
+        </article>
+
+        <article class="bot-card reveal d2">
+          <div class="bot-id">BOT_06</div>
+          <div class="bot-name">Multi-Port Bot</div>
+          <div class="bot-desc">Coordinated motion-control system that tests multiple ports on a single device with different peripherals — built around the 12-channel Mega II.</div>
+        </article>
+
+        <article class="bot-card reveal">
+          <div class="bot-id">BOT_07</div>
+          <div class="bot-name">Low-Power Switch</div>
+          <div class="bot-desc">Precision power-cycling controller for evaluating power-adapter and battery behavior across simulated power states. Critical for charging-IC validation.</div>
+        </article>
+
+        <article class="bot-card reveal d1">
+          <div class="bot-id">BOT_08</div>
+          <div class="bot-name">Polaris Triage Fixture</div>
+          <div class="bot-desc">Vertical stacking frame — up to 10 units on a single fixture instead of one bench per device. A pure space-utilization play that paid off enormously.</div>
+        </article>
+
+        <article class="bot-card reveal d2">
+          <div class="bot-id">BOT_09</div>
+          <div class="bot-name">Repaint Templates</div>
+          <div class="bot-desc">Custom MJF-printed masks for refurbishing laptop chassis. Protect keys and vents during repainting without disassembly. Cut refurb time substantially.</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EARLIER WORK -->
+<section class="earlier section-pad" id="earlier">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">/ 04 — Earlier engineering work</span>
+      <h2>Before the lab.</h2>
+      <p class="lede">Undergraduate and student-team projects from the University of Texas at Arlington — the work that shaped how I approach hardware design today.</p>
+    </div>
+
+    <div class="earlier-grid">
+      <article class="early-card reveal">
+        <div class="early-img"><img src="img/portfolio/2017.jpg" alt="Mars Rover prototype" loading="lazy"></div>
+        <div class="early-body">
+          <div class="early-meta"><span>ROVER Society</span><span class="yr">2014—2017</span></div>
+          <div class="early-name">Texas Mars Rover</div>
+          <div class="early-desc">Engineered a precision soil-sampling drill for the University Rover Challenge. Led the team as Team Lead → VP → President. Secured $16,000 in sponsorship.</div>
+        </div>
+      </article>
+
+      <article class="early-card reveal d1">
+        <div class="early-img"><img src="img/portfolio/sundog.jpg" alt="Sundog UTARI sun-tracking solar streetlight" loading="lazy"></div>
+        <div class="early-body">
+          <div class="early-meta"><span>Sundog · UTARI</span><span class="yr">2016—2017</span></div>
+          <div class="early-name">Sun-Tracking Streetlight</div>
+          <div class="early-desc">Two-axis solar tracker for off-grid streetlights, sponsored by UTARI. Linear actuator + chain drive on Arduino. Charged battery, kept light on 11+ hours, reset to face sunrise.</div>
+        </div>
+      </article>
+
+      <article class="early-card reveal d2">
+        <div class="early-img"><img src="img/portfolio/uvs2.jpg" alt="Unmanned Vehicle Systems autonomous ground vehicle" loading="lazy"></div>
+        <div class="early-body">
+          <div class="early-meta"><span>Team Six · UTA</span><span class="yr">2017</span></div>
+          <div class="early-name">Unmanned Ground Vehicle</div>
+          <div class="early-desc">Autonomous ground vehicle with GPS, machine vision and SLAM. Led mechanical design and software validation through dead-reckoning navigation of obstacle courses.</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills section-pad" id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">/ 05 — Toolkit</span>
+      <h2>What I work with.</h2>
+    </div>
+  </div>
+  <div class="container" style="padding-left:0; padding-right:0;">
+    <div class="skills-grid">
+      <div class="skill-col">
+        <h4>Mechanical &amp; CAD</h4>
+        <ul>
+          <li>SolidWorks</li>
+          <li>AutoCAD &middot; EAGLE PCB Design</li>
+          <li>3D CAD modeling &amp; assembly</li>
+          <li>Finite element analysis</li>
+          <li>Tolerance &amp; stress analysis</li>
+          <li>DFM / DFA</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Electronics &amp; Software</h4>
+        <ul>
+          <li>PCB layout &amp; routing</li>
+          <li>C++ for embedded control</li>
+          <li>RP2040 / Arduino / STM32</li>
+          <li>Sensor &amp; actuator calibration</li>
+          <li>Motion-control systems</li>
+          <li>KVM &amp; remote test infrastructure</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Manufacturing &amp; Process</h4>
+        <ul>
+          <li>HP Multi Jet Fusion 3D printing</li>
+          <li>FDM rapid prototyping</li>
+          <li>Aluminum framing systems</li>
+          <li>Product lifecycle management</li>
+          <li>Cross-functional collaboration</li>
+          <li>Technical documentation</li>
+          <li>Video user guides &mdash; bot assembly &amp; operation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="beyond reveal">
+      <span class="beyond-tag">Beyond engineering</span>
+      <p class="beyond-text">
+        Outside the lab I&apos;m a photographer and videographer &mdash; the same instinct
+        for documenting how things work that drives the bot user-guides at HP shows up
+        in landscape work from the Texas hill country to Pikes Peak.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <span class="eyebrow">/ 06 — Contact</span>
+      <h2>Have a hard hardware<br>problem? <span class="ital">Let&apos;s talk.</span></h2>
+      <p style="font-size: 18px; max-width: 56ch;">
+        I&apos;m most interested in robotics, automated test systems, and product engineering
+        problems where mechanical, electrical and software all have to play nicely together.
+        The fastest way to reach me is email — Houston timezone, US Central.
+      </p>
+
+      <div class="contact-row">
+        <div class="contact-links">
+          <a href="mailto:sean.jafri@gmail.com">sean.jafri@gmail.com<span class="arr">→</span></a>
+          <a href="https://www.linkedin.com/in/seanjafri/" target="_blank" rel="noopener">LinkedIn / seanjafri<span class="arr">→</span></a>
+          <a href="tel:+18324728968">+1 (832) 472-8968<span class="arr">→</span></a>
+        </div>
+        <div class="contact-meta">
+          <div><span>Location</span><span>Magnolia, TX</span></div>
+          <div><span>Timezone</span><span>UTC-6 / Central</span></div>
+          <div><span>Availability</span><span>Open</span></div>
+          <div><span>Education</span><span>UTA, BSME · 2017</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHIVE LINK -->
+<section class="archive-band">
+  <div class="container">
+    <div class="archive-row">
+      <span class="archive-tag">Archive</span>
+      <p class="archive-msg">Looking for the <em>original 2018 portfolio?</em> The version of this site I built right out of UTA is still live and fully functional.</p>
+      <a class="archive-link" href="legacy/" target="_self">
+        View original site<span class="arr">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-row">
+      <div>© <span id="yr"></span> Sean Jafri · Built in Magnolia, TX</div>
+      <div class="foot-social">
+        <a href="https://www.linkedin.com/in/seanjafri/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <a href="https://www.facebook.com/seanjafri" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+        <a href="mailto:sean.jafri@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z"/></svg></a>
+      </div>
+      <div>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll - safe progressive enhancement
+  (function(){
+    const reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+    if (!('IntersectionObserver' in window)){
+      reveals.forEach(el => el.classList.add('in'));
+      return;
+    }
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e => {
+        if (e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+    reveals.forEach(el => io.observe(el));
+    // Reveal anything within 1 viewport on initial paint immediately
+    requestAnimationFrame(()=>{
+      const vh = window.innerHeight;
+      reveals.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top < vh * 1.1) el.classList.add('in');
+      });
+    });
+    // Belt-and-suspenders: nothing should ever stay hidden after 5s
+    setTimeout(()=>{ reveals.forEach(el => el.classList.add('in')); }, 5000);
+  })();
+
+  // Hero background rotator — every 10s, crossfade to next image
+  // Pauses when hero is offscreen (scroll past) to save CPU/battery.
+  // Respects prefers-reduced-motion (single static image, no rotation).
+  (function(){
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    const slides = document.querySelectorAll('.hero-bg-img');
+    if (slides.length < 2) return;
+    let i = 0;
+    let timer = null;
+    const advance = () => {
+      slides[i].classList.remove('active');
+      i = (i + 1) % slides.length;
+      slides[i].classList.add('active');
+    };
+    const start = () => { if (!timer) timer = setInterval(advance, 10000); };
+    const stop  = () => { if (timer) { clearInterval(timer); timer = null; } };
+    // Pause when hero is fully out of view
+    const hero = document.querySelector('.hero');
+    if (hero && 'IntersectionObserver' in window){
+      const io = new IntersectionObserver(([e]) => {
+        if (e.isIntersecting) start(); else stop();
+      }, { threshold: 0 });
+      io.observe(hero);
+    } else {
+      start();
+    }
+    // Pause when tab is hidden
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stop();
+      else if (hero && hero.getBoundingClientRect().bottom > 0) start();
+    });
+  })();
+
+  // Video play / pause toggle (handles all .video-wrap elements)
+  document.querySelectorAll('.video-wrap').forEach(wrap => {
+    const vid = wrap.querySelector('video');
+    if (!vid) return;
+    wrap.addEventListener('click', ()=>{
+      if (vid.paused){ vid.play(); wrap.classList.add('playing'); }
+      else           { vid.pause(); wrap.classList.remove('playing'); }
+    });
+    vid.addEventListener('ended', ()=> wrap.classList.remove('playing'));
+  });
+
+  // Footer year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
