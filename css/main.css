@@ -127,22 +127,26 @@ a {
 .nav-resume {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 7px 14px;
-  border: 1px solid var(--accent);
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1.5px solid var(--accent);
   color: var(--accent);
-  font-weight: 600;
-  transition: background 0.2s ease, color 0.2s ease;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  line-height: 1;
 }
 
 .nav-resume:hover {
   background: var(--accent);
   color: var(--bg);
+  transform: translateY(-1px);
 }
 
 .nav-resume-icon {
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -212,6 +216,12 @@ a {
   max-width: var(--max-w);
   width: 100%;
   color: var(--bg);
+  padding: 36px 40px 32px;
+  background: rgba(15, 15, 15, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-left: 2px solid var(--accent);
+  max-width: 1100px;
 }
 
 .hero-tag {
@@ -251,11 +261,10 @@ a {
 }
 .hero-title-line:nth-child(1) { animation-delay: 0.2s; }
 .hero-title-line:nth-child(2) { animation-delay: 0.35s; }
-.hero-title-line:nth-child(3) { animation-delay: 0.5s; padding-left: 6vw; }
+.hero-title-line:nth-child(3) { animation-delay: 0.5s; }
 .hero-title-line:nth-child(4) {
   animation-delay: 0.65s;
   color: var(--accent);
-  padding-left: 3vw;
 }
 
 @keyframes heroLineIn {
@@ -926,11 +935,15 @@ a.contact-link:hover { color: var(--accent); }
   }
 
   .nav { padding: 16px var(--pad-x-mobile); }
-  .nav-links { gap: 16px; font-size: 11px; }
-  .nav-resume { padding: 5px 10px; gap: 4px; }
+  .nav-links { gap: 14px; font-size: 10px; }
+  .nav-resume { padding: 7px 12px; gap: 5px; font-size: 10px; letter-spacing: 0.1em; }
   .nav-brand { font-size: 24px; }
 
   .hero { padding: 0 var(--pad-x-mobile) 60px; min-height: 540px; }
+  .hero-content {
+    padding: 24px 20px 20px;
+    border-left-width: 2px;
+  }
   .hero-title-line:nth-child(3),
   .hero-title-line:nth-child(4) { padding-left: 0; }
   .hero-meta { gap: 24px; }
