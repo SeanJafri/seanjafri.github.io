@@ -1,5 +1,5 @@
 // Sean Jafri Portfolio — main.js
-// Hero slide rotation, project modal with carousel, reveal-on-scroll, video pause-when-offscreen.
+// Hero slide rotation, project modal with carousel, tooltips, profile lightbox, reveal-on-scroll.
 
 (function () {
   'use strict';
@@ -31,7 +31,7 @@
       });
     }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
 
-    document.querySelectorAll('.project-card, .skill-col, .intro-grid')
+    document.querySelectorAll('.project-card, .skill-col, .intro-grid, .process-block')
       .forEach((el) => io.observe(el));
   }
 
@@ -60,7 +60,6 @@
     if (!activeProject) return;
     const item = activeProject.media[mediaIndex];
 
-    // Clear previous content (pause any playing video first)
     const prevVideo = modalSlide.querySelector('video');
     if (prevVideo) prevVideo.pause();
     modalSlide.innerHTML = '';
@@ -85,12 +84,10 @@
     modalCaption.textContent = item.caption || '';
     modalCounter.textContent = `${mediaIndex + 1} / ${activeProject.media.length}`;
 
-    // Update dots
     modalDots.querySelectorAll('.modal-dot').forEach((dot, i) => {
       dot.classList.toggle('active', i === mediaIndex);
     });
 
-    // Hide arrows if only one media item
     const single = activeProject.media.length <= 1;
     arrowPrev.style.display = single ? 'none' : '';
     arrowNext.style.display = single ? 'none' : '';
@@ -101,13 +98,11 @@
     activeProject = window.PROJECT_DATA[projectId];
     if (!activeProject) return;
 
-    // Header
     modalNum.textContent = activeProject.number || '';
     modalTags.textContent = activeProject.tags || '';
     modalTitle.textContent = activeProject.title || '';
     modalSub.textContent = activeProject.sub || '';
 
-    // Stats
     if (activeProject.stats && activeProject.stats.length) {
       modalStats.innerHTML = activeProject.stats.map(s => `
         <div class="stat">
@@ -121,25 +116,20 @@
       modalStats.innerHTML = '';
     }
 
-    // Prose
     modalProse.innerHTML = (activeProject.description || [])
       .map(p => `<p>${p}</p>`).join('');
 
-    // Dots
     modalDots.innerHTML = activeProject.media.map((_, i) =>
       `<button class="modal-dot${i === 0 ? ' active' : ''}" data-index="${i}" aria-label="Go to slide ${i + 1}"></button>`
     ).join('');
 
-    // Reset to first slide
     mediaIndex = 0;
     renderMedia();
 
-    // Show modal
     modal.hidden = false;
     document.body.classList.add('modal-open');
     requestAnimationFrame(() => modal.classList.add('is-open'));
 
-    // Scroll modal-dialog to top in case last opened position was deep
     modalDialog.scrollTop = 0;
   }
 
@@ -166,21 +156,17 @@
     renderMedia();
   }
 
-  // Card click -> open
   document.querySelectorAll('.project-card[data-project]').forEach(card => {
     card.addEventListener('click', () => openModal(card.dataset.project));
   });
 
-  // Close on backdrop, ×, or any [data-close]
   modal.querySelectorAll('[data-close]').forEach(el => {
     el.addEventListener('click', closeModal);
   });
 
-  // Arrows
   arrowPrev.addEventListener('click', prev);
   arrowNext.addEventListener('click', next);
 
-  // Dots (delegated)
   modalDots.addEventListener('click', (e) => {
     const dot = e.target.closest('.modal-dot');
     if (!dot) return;
@@ -188,12 +174,206 @@
     renderMedia();
   });
 
+  // ============================================================
+  // PROFILE PHOTO LIGHTBOX
+  // ============================================================
+  const photoBox = document.getElementById('photo-lightbox');
+  const navPhoto = document.getElementById('nav-photo');
+
+  function openPhoto(e) {
+    if (e) e.preventDefault();
+    photoBox.hidden = false;
+    requestAnimationFrame(() => photoBox.classList.add('is-open'));
+    document.body.classList.add('modal-open');
+  }
+  function closePhoto() {
+    photoBox.classList.remove('is-open');
+    setTimeout(() => { photoBox.hidden = true; }, 220);
+    document.body.classList.remove('modal-open');
+  }
+
+  if (navPhoto) {
+    navPhoto.addEventListener('click', openPhoto);
+    // Also intercept the parent .nav-brand link to prevent jump-to-top when clicking the photo
+    navPhoto.parentElement.addEventListener('click', (e) => {
+      if (e.target === navPhoto) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    });
+  }
+  photoBox.querySelectorAll('[data-photo-close]').forEach(el => {
+    el.addEventListener('click', closePhoto);
+  });
+
+  // ============================================================
+  // TOOLTIP / POPOVER SYSTEM
+  // ============================================================
+  const popover = document.getElementById('tooltip-popover');
+  const popImgWrap = popover.querySelector('.popover-img-wrap');
+  const popImg = popover.querySelector('.popover-img');
+  const popTerm = popover.querySelector('.popover-term');
+  const popExp = popover.querySelector('.popover-expansion');
+  const popDef = popover.querySelector('.popover-def');
+
+  let popoverPinned = false; // true after click; false during hover
+  let popoverTimer = null;
+
+  function showPopover(triggerEl, key) {
+    const data = window.TOOLTIP_DATA && window.TOOLTIP_DATA[key];
+    if (!data) return;
+
+    popTerm.textContent = data.term || '';
+    popExp.textContent = data.expansion || '';
+    popDef.textContent = data.def || '';
+
+    // Image: hidden by default. Show only after successful load.
+    popImgWrap.hidden = true;
+    if (data.img) {
+      popImg.onerror = () => { popImgWrap.hidden = true; };
+      popImg.onload = () => { popImgWrap.hidden = false; };
+      popImg.src = data.img;
+      popImg.alt = data.imgAlt || data.term || '';
+    } else {
+      popImg.src = '';
+    }
+
+    popover.hidden = false;
+    requestAnimationFrame(() => {
+      popover.classList.add('is-visible');
+      positionPopover(triggerEl);
+    });
+  }
+
+  function hidePopover() {
+    popover.classList.remove('is-visible');
+    popoverPinned = false;
+    setTimeout(() => {
+      if (!popover.classList.contains('is-visible')) {
+        popover.hidden = true;
+      }
+    }, 180);
+  }
+
+  function positionPopover(triggerEl) {
+    const r = triggerEl.getBoundingClientRect();
+    const pop = popover.getBoundingClientRect();
+    const pad = 12;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    // Default: below the term, horizontally centered
+    let left = r.left + r.width / 2 - pop.width / 2;
+    let top = r.bottom + 10;
+
+    // Flip above if no room below
+    if (top + pop.height > vh - pad) {
+      top = r.top - pop.height - 10;
+    }
+    // Clamp horizontally to viewport
+    left = Math.max(pad, Math.min(left, vw - pop.width - pad));
+    // Clamp top in case very tall popover doesn't fit either way
+    top = Math.max(pad, Math.min(top, vh - pop.height - pad));
+
+    popover.style.left = left + 'px';
+    popover.style.top = top + 'px';
+  }
+
+  // Wire up all .tip elements
+  document.querySelectorAll('.tip[data-tip]').forEach(el => {
+    el.setAttribute('tabindex', '0'); // keyboard-focusable
+    el.setAttribute('role', 'button');
+    el.setAttribute('aria-haspopup', 'true');
+
+    el.addEventListener('mouseenter', () => {
+      if (popoverPinned) return;
+      clearTimeout(popoverTimer);
+      popoverTimer = setTimeout(() => {
+        showPopover(el, el.dataset.tip);
+      }, 80);
+    });
+
+    el.addEventListener('mouseleave', () => {
+      if (popoverPinned) return;
+      clearTimeout(popoverTimer);
+      popoverTimer = setTimeout(() => {
+        hidePopover();
+      }, 140);
+    });
+
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (popoverPinned && popover.dataset.activeKey === el.dataset.tip) {
+        // Clicking the same active term — close it
+        hidePopover();
+        popover.dataset.activeKey = '';
+      } else {
+        popoverPinned = true;
+        popover.dataset.activeKey = el.dataset.tip;
+        showPopover(el, el.dataset.tip);
+      }
+    });
+
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        el.click();
+      }
+    });
+  });
+
+  // Keep popover open while hovering it (so user can click links/read)
+  popover.addEventListener('mouseenter', () => {
+    clearTimeout(popoverTimer);
+  });
+  popover.addEventListener('mouseleave', () => {
+    if (popoverPinned) return;
+    popoverTimer = setTimeout(hidePopover, 140);
+  });
+
+  // Close popover when clicking elsewhere
+  document.addEventListener('click', (e) => {
+    if (!popoverPinned) return;
+    if (popover.contains(e.target)) return;
+    if (e.target.closest('.tip[data-tip]')) return;
+    hidePopover();
+    popover.dataset.activeKey = '';
+  });
+
+  // Close popover button
+  const popClose = popover.querySelector('[data-popover-close]');
+  if (popClose) {
+    popClose.addEventListener('click', () => {
+      hidePopover();
+      popover.dataset.activeKey = '';
+    });
+  }
+
+  // ============================================================
   // Keyboard
+  // ============================================================
   document.addEventListener('keydown', (e) => {
-    if (modal.hidden) return;
-    if (e.key === 'Escape') closeModal();
-    else if (e.key === 'ArrowRight') next();
-    else if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'Escape') {
+      if (!modal.hidden) { closeModal(); return; }
+      if (!photoBox.hidden) { closePhoto(); return; }
+      if (popoverPinned) { hidePopover(); popover.dataset.activeKey = ''; return; }
+    }
+    if (!modal.hidden) {
+      if (e.key === 'ArrowRight') next();
+      else if (e.key === 'ArrowLeft') prev();
+    }
+  });
+
+  // Reposition popover on scroll/resize while visible
+  ['scroll', 'resize'].forEach(evt => {
+    window.addEventListener(evt, () => {
+      if (popover.hidden || !popover.classList.contains('is-visible')) return;
+      const activeKey = popover.dataset.activeKey;
+      if (!activeKey) return;
+      const trig = document.querySelector(`.tip[data-tip="${activeKey}"]`);
+      if (trig) positionPopover(trig);
+    }, { passive: true });
   });
 
 })();
