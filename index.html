@@ -12,13 +12,14 @@
 </head>
 <body>
 
-<div class="frame-top">
-  <div class="frame-left">SEAN JAFRI / ROBOTICS HARDWARE ENGINEER</div>
-  <div class="frame-right">MAGNOLIA, TX · EST. 2017</div>
-</div>
-
 <nav class="nav">
-  <a href="#top" class="nav-brand">SJ</a>
+  <a href="#top" class="nav-brand">
+    <img src="img/profile_nav.png" alt="Sean Jafri" class="nav-photo" id="nav-photo">
+    <span class="nav-name-block">
+      <span class="nav-name">Sean Jafri</span>
+      <span class="nav-role">Robotics Hardware Engineer</span>
+    </span>
+  </a>
   <div class="nav-links">
     <a href="#work">Work</a>
     <a href="#about">About</a>
@@ -60,7 +61,7 @@
       </div>
       <div class="hero-meta-item">
         <span class="hero-meta-label">DISCIPLINE</span>
-        <span class="hero-meta-value">SolidWorks · GD&amp;T · DFM</span>
+        <span class="hero-meta-value"><span class="tip" data-tip="solidworks">SolidWorks</span> · <span class="tip" data-tip="gdt">GD&amp;T</span> · <span class="tip" data-tip="dfm">DFM</span></span>
       </div>
     </div>
   </div>
@@ -76,10 +77,13 @@
         I design and build robotic test fixtures and automated validation systems for HP Inc.&apos;s Commercial Systems group — the machines that test the laptops and docks you may already use.
       </p>
       <p>
-        Over eight years on a small, in-house validation team, I&apos;ve owned the mechanical design of fourteen+ fixtures: from a 120-solenoid keyboard actuator that types every key on a laptop, to a 12-actuator dock-cycler that plugs and unplugs USB-C, USB-A, HDMI, and DisplayPort cables thousands of times. The fourth generation of our laptop test fixture cost <strong>87% less</strong> than the original ($3,500 → $450), with setup time cut from ten minutes to two and double the deployment density.
+        Over eight years on a small, in-house validation team, I&apos;ve owned the mechanical design of fourteen+ fixtures: from a 120-solenoid keyboard actuator that types every key on a laptop, to a 12-actuator dock-cycler that plugs and unplugs <span class="tip" data-tip="usbc">USB-C</span>, USB-A, HDMI, and DisplayPort cables thousands of times. The fourth generation of our laptop test fixture cost <strong>87% less</strong> than the original ($3,500 → $450), with setup time cut from ten minutes to two and double the deployment density.
       </p>
       <p>
-        I work end-to-end: concept sketch, SolidWorks CAD with GD&amp;T, MJF/SLA/FDM prototyping on HP&apos;s own Multi Jet Fusion 4200, vendor-supplied CNC parts, in-house manual machining, electronics integration (Eagle PCB layout, Arduino, servos, steppers, linear actuators), and the actual factory-floor deployment with our test technicians.
+        I work end-to-end: concept sketch, <span class="tip" data-tip="solidworks">SolidWorks</span> <span class="tip" data-tip="cad">CAD</span> with <span class="tip" data-tip="gdt">GD&amp;T</span>, <span class="tip" data-tip="mjf">MJF</span>/<span class="tip" data-tip="sla">SLA</span>/<span class="tip" data-tip="fdm">FDM</span> prototyping on HP&apos;s own <span class="tip" data-tip="mjf-4200">Multi Jet Fusion 4200</span>, vendor-supplied <span class="tip" data-tip="cnc">CNC</span> parts, in-house manual machining, electronics integration (<span class="tip" data-tip="eagle">Eagle</span> <span class="tip" data-tip="pcb">PCB</span> layout, <span class="tip" data-tip="arduino-mega">Arduino</span>, servos, steppers, <span class="tip" data-tip="linear-actuator">linear actuators</span>), and direct factory-floor deployment with our test technicians.
+      </p>
+      <p>
+        I collaborate across HP&apos;s commercial-PC ecosystem — partnering with teams in <strong>Spring, TX</strong> (my home office), <strong>Fort Collins, CO</strong>, the <strong>Taipei TDC</strong> team, and the <span class="tip" data-tip="odm">ODMs</span> that depend on the test hardware I deploy.
       </p>
     </div>
   </div>
@@ -186,9 +190,54 @@
   </div>
 </section>
 
+<!-- ============================================================
+     Process & Operations
+     ============================================================ -->
+<section class="process">
+  <div class="section-header">
+    <div class="section-marker">004 / PROCESS &amp; OPERATIONS</div>
+    <h2 class="section-title">How I work, beyond the bench</h2>
+  </div>
+
+  <div class="process-grid">
+    <div class="process-block">
+      <div class="process-num">01</div>
+      <h3 class="process-title">Documentation &amp; Media</h3>
+      <p class="process-body">
+        Every fixture I design ships with a complete written user guide and a step-by-step video walkthrough. I treat documentation as a first-class deliverable — the technician on the lab floor has to be able to operate, maintain, and troubleshoot the hardware without coming back to me.
+      </p>
+      <p class="process-body">
+        I&apos;m also the team&apos;s photographer and videographer by choice. The photos and videos you see across this portfolio — and the ones the team uses in internal presentations, training, and stakeholder reviews — I shoot and edit personally.
+      </p>
+    </div>
+
+    <div class="process-block">
+      <div class="process-num">02</div>
+      <h3 class="process-title">Cross-Site Collaboration</h3>
+      <p class="process-body">
+        My home office is HP&apos;s Spring, TX site, but the hardware I build gets used across a broader ecosystem. I attend meetings and partner with engineering teams in <strong>Fort Collins, CO</strong> and the <strong>Taipei TDC</strong> team, plus the <span class="tip" data-tip="odm">ODMs</span> that depend on the test fixtures running reliably in their facilities.
+      </p>
+      <p class="process-body">
+        Working across time zones, manufacturing partners, and language boundaries has shaped how I design — clearer documentation, more standardized parts, and fewer fixture variants that require shipping a different SKU to each site.
+      </p>
+    </div>
+
+    <div class="process-block">
+      <div class="process-num">03</div>
+      <h3 class="process-title">Manufacturing Operations</h3>
+      <p class="process-body">
+        I own the manufacturing side of the work I design. That means <span class="tip" data-tip="bom">Bill of Materials</span> creation and maintenance, ordering parts from vendors, and managing inventory across the lab.
+      </p>
+      <p class="process-body">
+        When I joined the team the parts inventory was effectively a pile. I restructured the storage system end-to-end: every item now has a part number, labeled bin, and a clear association with the assemblies that use it. The technicians on the floor can now find what they need in seconds instead of minutes.
+      </p>
+    </div>
+  </div>
+</section>
+
 <section class="skills">
   <div class="section-header">
-    <div class="section-marker">004 / DISCIPLINE</div>
+    <div class="section-marker">005 / DISCIPLINE</div>
     <h2 class="section-title">What I do, end to end</h2>
   </div>
 
@@ -196,9 +245,9 @@
     <div class="skill-col">
       <div class="skill-label">MECHANICAL DESIGN</div>
       <ul class="skill-list">
-        <li>SolidWorks (8+ yrs daily)</li>
-        <li>GD&amp;T per ASME Y14.5</li>
-        <li>DFM / DFA for in-house MJF</li>
+        <li><span class="tip" data-tip="solidworks">SolidWorks</span> (8+ yrs daily)</li>
+        <li><span class="tip" data-tip="gdt">GD&amp;T</span> per <span class="tip" data-tip="asme">ASME</span> Y14.5</li>
+        <li><span class="tip" data-tip="dfm">DFM</span> / <span class="tip" data-tip="dfa">DFA</span> for in-house <span class="tip" data-tip="mjf">MJF</span></li>
         <li>Tolerance stack-ups</li>
         <li>Mechanism &amp; linkage design</li>
       </ul>
@@ -206,21 +255,21 @@
     <div class="skill-col">
       <div class="skill-label">FABRICATION</div>
       <ul class="skill-list">
-        <li>HP Multi Jet Fusion 4200 operator</li>
-        <li>FDM &amp; SLA prototyping</li>
-        <li>80/20 extrusion assemblies</li>
+        <li><span class="tip" data-tip="mjf-4200">HP Multi Jet Fusion 4200</span> operator</li>
+        <li><span class="tip" data-tip="fdm">FDM</span> &amp; <span class="tip" data-tip="sla">SLA</span> prototyping</li>
+        <li><span class="tip" data-tip="extrusion">80/20 extrusion</span> assemblies</li>
         <li>Manual mill machining</li>
-        <li>Vendor-supplied CNC parts</li>
+        <li>Vendor-supplied <span class="tip" data-tip="cnc">CNC</span> parts</li>
       </ul>
     </div>
     <div class="skill-col">
       <div class="skill-label">MECHATRONICS</div>
       <ul class="skill-list">
-        <li>Servo, stepper, linear actuators</li>
-        <li>Solenoids &amp; coil drivers</li>
+        <li>Servo, stepper, <span class="tip" data-tip="linear-actuator">linear actuators</span></li>
+        <li><span class="tip" data-tip="solenoid">Solenoids</span> &amp; coil drivers</li>
         <li>Sensor integration</li>
-        <li>Arduino firmware</li>
-        <li>PCB layout (Eagle)</li>
+        <li><span class="tip" data-tip="arduino-mega">Arduino</span> firmware</li>
+        <li><span class="tip" data-tip="pcb">PCB</span> layout (<span class="tip" data-tip="eagle">Eagle</span>)</li>
       </ul>
     </div>
   </div>
@@ -228,7 +277,7 @@
 
 <section id="contact" class="contact">
   <div class="section-header">
-    <div class="section-marker">005 / GET IN TOUCH</div>
+    <div class="section-marker">006 / GET IN TOUCH</div>
     <h2 class="section-title">Looking for a hardware engineer who ships?</h2>
   </div>
 
@@ -262,7 +311,7 @@
   </div>
 </footer>
 
-<!-- Modal -->
+<!-- Project Modal -->
 <div class="modal" id="project-modal" hidden>
   <div class="modal-backdrop" data-close></div>
   <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -296,7 +345,26 @@
   </div>
 </div>
 
+<!-- Profile photo lightbox -->
+<div class="photo-lightbox" id="photo-lightbox" hidden>
+  <div class="photo-lightbox-backdrop" data-photo-close></div>
+  <button class="photo-lightbox-close" data-photo-close aria-label="Close">×</button>
+  <img class="photo-lightbox-img" src="img/profile_large.png" alt="Sean Jafri">
+</div>
+
+<!-- Tooltip / popover container (populated by JS) -->
+<div class="popover" id="tooltip-popover" hidden>
+  <button class="popover-close" data-popover-close aria-label="Close">×</button>
+  <div class="popover-content">
+    <div class="popover-img-wrap" hidden><img class="popover-img" alt=""></div>
+    <div class="popover-term"></div>
+    <div class="popover-expansion"></div>
+    <div class="popover-def"></div>
+  </div>
+</div>
+
 <script src="js/projects-data.js"></script>
+<script src="js/tooltips-data.js"></script>
 <script src="js/main.js"></script>
 
 </body>
