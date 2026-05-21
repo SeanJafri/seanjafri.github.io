@@ -215,9 +215,20 @@
   const popTerm = popover.querySelector('.popover-term');
   const popExp = popover.querySelector('.popover-expansion');
   const popDef = popover.querySelector('.popover-def');
+  const popSource = popover.querySelector('.popover-source');
 
   let popoverPinned = false; // true after click; false during hover
   let popoverTimer = null;
+
+  // Extract a clean domain name from a URL (e.g. "store.arduino.cc" → "Arduino")
+  function sourceLabel(url) {
+    try {
+      const u = new URL(url);
+      // Drop subdomains like "www.", "store.", etc. for nicer display
+      let host = u.hostname.replace(/^www\./, '');
+      return host;
+    } catch (e) { return url; }
+  }
 
   function showPopover(triggerEl, key) {
     const data = window.TOOLTIP_DATA && window.TOOLTIP_DATA[key];
@@ -231,11 +242,27 @@
     popImgWrap.hidden = true;
     if (data.img) {
       popImg.onerror = () => { popImgWrap.hidden = true; };
-      popImg.onload = () => { popImgWrap.hidden = false; };
+      popImg.onload  = () => { popImgWrap.hidden = false; };
       popImg.src = data.img;
       popImg.alt = data.imgAlt || data.term || '';
     } else {
       popImg.src = '';
+    }
+
+    // Source link (only if a source URL was provided)
+    if (data.source) {
+      const sources = Array.isArray(data.source) ? data.source : [data.source];
+      popSource.innerHTML = sources.map(s => {
+        const url = typeof s === 'string' ? s : s.url;
+        const label = (typeof s === 'object' && s.label) ? s.label : sourceLabel(url);
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+      }).join('<span class="popover-source-sep"> · </span>');
+      // Prefix line label
+      popSource.innerHTML = `<span class="popover-source-label">Source:</span> ${popSource.innerHTML}`;
+      popSource.hidden = false;
+    } else {
+      popSource.innerHTML = '';
+      popSource.hidden = true;
     }
 
     popover.hidden = false;
