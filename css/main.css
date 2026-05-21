@@ -555,6 +555,32 @@ section + section { border-top: var(--rule-w) solid var(--rule); }
 }
 
 /* ============================================================
+   Earlier Projects (University) — uses small-card grid;
+   subtle muted treatment to signal historical/student work
+   ============================================================ */
+
+.earlier-work {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: var(--bg);
+}
+
+.earlier-work .work-hint {
+  margin-top: -32px;
+  margin-bottom: 48px;
+}
+
+/* U-prefix cards: slightly muted number color */
+.earlier-work .project-card-num {
+  color: var(--accent);
+  opacity: 0.85;
+}
+
+.earlier-work .project-card-title {
+  font-weight: 500;
+}
+
+/* ============================================================
    Modal
    ============================================================ */
 
