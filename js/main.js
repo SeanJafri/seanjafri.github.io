@@ -66,8 +66,27 @@
 
     if (item.type === 'image') {
       const img = document.createElement('img');
-      img.src = item.src;
       img.alt = item.caption || '';
+      img.onerror = () => {
+        // Replace failed image with a clean placeholder card showing the caption
+        modalSlide.innerHTML = '';
+        const placeholder = document.createElement('div');
+        placeholder.className = 'modal-slide-fallback';
+        placeholder.innerHTML = `
+          <div class="modal-slide-fallback-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+          </div>
+          <div class="modal-slide-fallback-text">Image unavailable</div>
+          <div class="modal-slide-fallback-caption">${item.caption || ''}</div>
+        `;
+        modalSlide.appendChild(placeholder);
+        console.warn('Modal image failed to load:', item.src);
+      };
+      img.src = item.src;
       modalSlide.appendChild(img);
     } else if (item.type === 'video') {
       const video = document.createElement('video');
