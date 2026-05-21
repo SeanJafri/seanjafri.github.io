@@ -23,7 +23,9 @@ window.PROJECT_DATA = {
       { type: "image", src: "img/portfolio/ram_fixture_uut2.jpg",                    caption: "Gen 4 — loaded with USB-C, keyboard, and lid actuators" },
       { type: "image", src: "img/portfolio/ram_fixture_mega.jpg",                    caption: "Gen 4 — Mega II touchscreen controller integration" },
       { type: "image", src: "img/portfolio/ram_fixture_brackets.jpg",                caption: "Gen 4 — MJF-printed bracket detail" },
+      { type: "image", src: "img/portfolio/RAM-Fixture-Assembly.png",                caption: "Gen 4 — SolidWorks assembly render" },
       { type: "video", src: "videos/ram_fixture_demo.mp4",                           caption: "Demo: full plug-in / type / cycle sequence (Gen 4)" },
+      { type: "image", src: "img/portfolio/Frame-Fixture-Assembly.png",              caption: "Gen 3 — SolidWorks assembly render" },
       { type: "image", src: "img/portfolio/frame_fixture_1.jpg",                     caption: "Gen 3 — 80/20 aluminum Frame Fixture" },
       { type: "image", src: "img/portfolio/frame_fixture_2.jpg",                     caption: "Gen 3 — production-deployed configuration" },
       { type: "image", src: "img/portfolio/frame_fixture_3.jpg",                     caption: "Gen 3 — with lid-open and USB-C actuators" },
@@ -46,8 +48,9 @@ window.PROJECT_DATA = {
       "The touchscreen UI gives the technician on the lab floor direct control over each actuator: engage / disengage individually, flip plug orientation (USB-C is reversible, USB-A isn't), run full cycle profiles, and dock-swap mid-test. The firmware speaks a simple serial protocol so the same controller works with our automated test harness."
     ],
     media: [
-      { type: "image", src: "img/portfolio/mega_ii.jpg",         caption: "Mega II controller with touchscreen and Arduino Mega shield" },
-      { type: "image", src: "img/portfolio/mega_comparison.jpg", caption: "Original Mega (L) vs Mega II (R)" }
+      { type: "image", src: "img/portfolio/mega_ii.jpg",                  caption: "Mega II controller with touchscreen and Arduino Mega shield" },
+      { type: "image", src: "img/portfolio/Mega-II-Assembly.png",         caption: "SolidWorks assembly — Mega II enclosure + touchscreen + shield" },
+      { type: "image", src: "img/portfolio/mega_comparison.jpg",          caption: "Original Mega (L) vs Mega II (R)" }
     ]
   },
 
@@ -61,13 +64,15 @@ window.PROJECT_DATA = {
       "The control PCB — a custom Eagle-designed shield over an Arduino Mega — drives twelve independent actuators with current-sensed homing and per-port error detection. The fixture went through several iterations: early prototypes used a DB0 board mounted on an optical breadboard, validating the mechanism before I redesigned the chassis into the dock-form-factor production fixture shown here. Reconfigurable plug-carrier modules let the same chassis test 8-, 9-, or 12-port dock variants without re-tooling."
     ],
     media: [
-      { type: "image", src: "img/portfolio/deep_purple_front.jpg",     caption: "Final version — front view, 12 actuators in indexed pairs" },
-      { type: "image", src: "img/portfolio/deep_purple_back.jpg",      caption: "Final version — back view, cable routing & frame" },
-      { type: "image", src: "img/portfolio/deep_purple_pcb.jpg",       caption: "DB1 Shield Board v3 — Eagle PCB layout" },
-      { type: "image", src: "img/portfolio/deep_purple_monitors.jpg",  caption: "Early DB0 prototype — optical-breadboard mounted with triple-monitor bench" },
-      { type: "image", src: "img/portfolio/deep_purple_db0_open.jpg",  caption: "DB0 prototype — internal view, twelve Actuonix actuators" },
-      { type: "image", src: "img/portfolio/deep_purple_db0_pcb.jpg",   caption: "DB0 PCB close-up" },
-      { type: "video", src: "videos/deep_purple_insertion.mp4",        caption: "Plug insertion cycle — single port detail" }
+      { type: "image", src: "img/portfolio/deep_purple_front.jpg",          caption: "Final version — front view, 12 actuators in indexed pairs" },
+      { type: "image", src: "img/portfolio/deep_purple_back.jpg",           caption: "Final version — back view, cable routing & frame" },
+      { type: "image", src: "img/portfolio/Deep-Purple-SI1-Assembly.png",   caption: "Final version (SI1) — SolidWorks assembly render" },
+      { type: "image", src: "img/portfolio/deep_purple_pcb.jpg",            caption: "DB1 Shield Board v3 — Eagle PCB layout" },
+      { type: "image", src: "img/portfolio/Deep-Purple-DB0-Assembly.png",   caption: "DB0 prototype — SolidWorks assembly render" },
+      { type: "image", src: "img/portfolio/deep_purple_monitors.jpg",       caption: "Early DB0 prototype — optical-breadboard mounted with triple-monitor bench" },
+      { type: "image", src: "img/portfolio/deep_purple_db0_open.jpg",       caption: "DB0 prototype — internal view, twelve Actuonix actuators" },
+      { type: "image", src: "img/portfolio/deep_purple_db0_pcb.jpg",        caption: "DB0 PCB close-up" },
+      { type: "video", src: "videos/deep_purple_insertion.mp4",             caption: "Plug insertion cycle — single port detail" }
     ]
   },
 
@@ -118,8 +123,9 @@ window.PROJECT_DATA = {
       "The Varda Reviver is a small USB-attached device that revives soft-bricked laptops during validation. I designed the custom MJF-printed enclosure, laid out the Eagle PCB integrating an Adafruit 0.96\" TFT for status, and worked with our firmware engineer on the host-side protocol so the Reviver could be deployed across the lab."
     ],
     media: [
-      { type: "image", src: "img/portfolio/varda_reviver.jpg", caption: "Final assembly with TFT display showing status" },
-      { type: "image", src: "img/portfolio/varda_rev_c.jpg",   caption: "Rev C with PCB exposed" }
+      { type: "image", src: "img/portfolio/varda_reviver.jpg",       caption: "Final assembly with TFT display showing status" },
+      { type: "image", src: "img/portfolio/Varda-Assembly.png",      caption: "SolidWorks assembly — MJF enclosure + PCB + TFT" },
+      { type: "image", src: "img/portfolio/varda_rev_c.jpg",         caption: "Rev C with PCB exposed" }
     ]
   },
 
@@ -161,6 +167,68 @@ window.PROJECT_DATA = {
     ],
     media: [
       { type: "image", src: "img/portfolio/automation_lab.jpg", caption: "HP Commercial Systems automation lab" }
+    ]
+  },
+
+  // ============================================================
+  // UNIVERSITY WORK (UT Arlington · 2013–2017)
+  // ============================================================
+
+  "mars-rover": {
+    number: "U · 01",
+    tags: "Team leadership · Mechanical design · Mechatronic integration · 2014–2017",
+    title: "Texas Mars Rover Team — University Rover Challenge",
+    sub: "Led a 40+ member university team designing a planetary rover for The Mars Society's University Rover Challenge.",
+    description: [
+      "As President, Vice President, and Team Lead at different points across 2014–2017, I led the University of Texas at Arlington's Mars Rover team — an interdisciplinary group of mechanical, electrical, software, and aerospace students designing and competing with a planetary rover at The Mars Society's <strong>University Rover Challenge</strong> in Utah's desert. The team competed in 2014, 2015, and 2017.",
+      "Beyond hands-on mechanical design — drivetrain, suspension, sample-collection arm — I owned team operations: project planning, sponsorship fundraising (<strong>$19,000+</strong> raised from corporate and academic sponsors), recruiting, and competition logistics. This was the project that taught me everything about leading a hardware team toward a deadline."
+    ],
+    media: [
+      { type: "image", src: "legacy/img/portfolio/Rover_Sean_URC2017.png",            caption: "URC 2017 — competing in Utah's Mars Desert Research Station" },
+      { type: "image", src: "legacy/img/portfolio/Rover_Team_URC_Competition_2015.png", caption: "Team at URC 2015" },
+      { type: "image", src: "legacy/img/portfolio/Rover_Team_URC_Competition_2017.png", caption: "Team at URC 2017" },
+      { type: "image", src: "legacy/img/portfolio/Rover_Prototype.png",                caption: "Rover prototype — full mechanical assembly" },
+      { type: "image", src: "legacy/img/portfolio/rover.gif",                          caption: "Rover in motion — animated view" },
+      { type: "image", src: "legacy/img/portfolio/rover2.gif",                         caption: "Rover sample-collection arm" },
+      { type: "image", src: "legacy/img/portfolio/rover3.gif",                         caption: "Rover drivetrain test" }
+    ]
+  },
+
+  "sundog": {
+    number: "U · 02",
+    tags: "Mechanical design · Gearbox / drivetrain · Senior design · 2016–2017",
+    title: "Sundog Engineering — Senior Capstone",
+    sub: "Senior capstone team designing a multi-stage hoist gearbox under real engineering constraints.",
+    description: [
+      "My senior design project at UT Arlington. Working as a four-person <em>Sundog Engineering</em> team, I led the mechanical design and analysis of a multi-stage hoist gearbox — full SolidWorks modeling, gear-train calculations, bearing and shaft sizing, FEA analysis, and the final design dossier.",
+      "The project was structured like real industry work: engineering requirements documents, design reviews, manufacturing drawings with <span class=\"tip\" data-tip=\"gdt\">GD&amp;T</span>, and a presented design package at the end of the semester. It was the first time I built a hardware deliverable around formal engineering rigor — the kind of process I still use every day at HP."
+    ],
+    media: [
+      { type: "image", src: "legacy/img/portfolio/SD_Final_Design.png",            caption: "Final hoist gearbox design — SolidWorks render" },
+      { type: "image", src: "legacy/img/portfolio/SD_Final_Design2.png",           caption: "Alternate view of final assembly" },
+      { type: "image", src: "legacy/img/portfolio/SD_Analysis.png",                caption: "FEA stress analysis on the housing" },
+      { type: "image", src: "legacy/img/portfolio/Gearbox_Final Design Example.png", caption: "Design example reference image" },
+      { type: "image", src: "legacy/img/portfolio/Gearbox_Hoist_Drum.png",         caption: "Hoist drum subassembly" },
+      { type: "image", src: "legacy/img/portfolio/Gearbox_Assembly_View.PNG",      caption: "Full gearbox assembly view" },
+      { type: "image", src: "legacy/img/portfolio/Gearbox_Exploded_View.PNG",      caption: "Exploded view showing gear train" },
+      { type: "image", src: "legacy/img/portfolio/sundog.gif",                     caption: "Gearbox operation — animated" }
+    ]
+  },
+
+  "uvs": {
+    number: "U · 03",
+    tags: "Robotics · Tracked ground robot · Sensor integration · Wireless telemetry",
+    title: "UVS — Unmanned Vehicle Systems",
+    sub: "Designed and prototyped UT Arlington's first remotely-piloted unmanned ground vehicle.",
+    description: [
+      "A team-of-six student project where we designed and built UT Arlington's first remotely-piloted Unmanned Vehicle System — a tracked ground robot with onboard sensor suite and wireless telemetry. I owned the mechanical design and chassis: tracked drivetrain, sensor mast, hatch and access mechanisms, and the housing for the electronics package.",
+      "The project was both a technical exercise and a teaching moment — most of the team hadn't built anything tracked before, and getting the drivetrain to reliably navigate uneven terrain pushed everyone past the comfortable bench-prototype phase."
+    ],
+    media: [
+      { type: "image", src: "legacy/img/portfolio/UVS_Final_Design.png", caption: "Final UVS design — SolidWorks render" },
+      { type: "image", src: "legacy/img/portfolio/UVS_Team_6.png",       caption: "UVS team — six engineers across mechanical, electrical, and software" },
+      { type: "image", src: "legacy/img/portfolio/uvs.gif",              caption: "UVS in motion — animated" },
+      { type: "image", src: "legacy/img/portfolio/uvs2.gif",             caption: "UVS sensor mast deployment" }
     ]
   }
 
