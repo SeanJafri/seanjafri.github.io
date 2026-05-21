@@ -149,8 +149,8 @@ a {
 .nav-resume {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
+  gap: 10px;
+  padding: 11px 22px;
   border: 1.5px solid var(--accent);
   color: var(--accent);
   font-weight: 700;
@@ -166,10 +166,11 @@ a {
 }
 
 .nav-resume-icon {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
 }
 
 /* ============================================================
@@ -1095,19 +1096,19 @@ a.contact-link:hover { color: var(--accent); }
 .popover-img-wrap {
   margin: -18px -20px 14px;
   padding: 0;
-  background: var(--ink);
+  background: #f5f3ee;
   height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 .popover-img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .popover-term {
@@ -1133,6 +1134,34 @@ a.contact-link:hover { color: var(--accent); }
   line-height: 1.55;
   color: var(--ink-soft);
 }
+
+.popover-source {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.popover-source-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  margin-right: 6px;
+}
+.popover-source a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+  word-break: break-word;
+}
+.popover-source a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+.popover-source-sep { color: rgba(0,0,0,0.25); }
 
 /* ============================================================
    Profile photo lightbox
