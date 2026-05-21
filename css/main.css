@@ -131,7 +131,7 @@ a {
   padding: 4px 0;
 }
 
-.nav-links a:not(.nav-resume)::after {
+.nav-links a:not(.nav-resume):not(.nav-status)::after {
   content: '';
   position: absolute;
   left: 0;
@@ -142,8 +142,47 @@ a {
   transition: width 0.3s ease;
 }
 
-.nav-links a:not(.nav-resume):hover::after { width: 100%; }
-.nav-links a:not(.nav-resume):hover { color: var(--accent); }
+.nav-links a:not(.nav-resume):not(.nav-status):hover::after { width: 100%; }
+.nav-links a:not(.nav-resume):not(.nav-status):hover { color: var(--accent); }
+
+/* "Open to new roles" status badge */
+.nav-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(34, 139, 34, 0.08);
+  border: 1px solid rgba(34, 139, 34, 0.4);
+  border-radius: 999px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: #2d7a2d;
+  font-weight: 600;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  line-height: 1;
+}
+.nav-status:hover {
+  background: rgba(34, 139, 34, 0.14);
+  border-color: rgba(34, 139, 34, 0.6);
+}
+.nav-status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3aae3a;
+  box-shadow: 0 0 0 0 rgba(58, 174, 58, 0.6);
+  animation: status-pulse 2.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes status-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(58, 174, 58, 0.6); }
+  50%      { box-shadow: 0 0 0 6px rgba(58, 174, 58, 0); }
+}
+.nav-status-text { display: inline-block; }
+@media (prefers-reduced-motion: reduce) {
+  .nav-status-dot { animation: none; }
+}
 
 /* Resume button — outlined, orange accent */
 .nav-resume {
@@ -430,11 +469,135 @@ section + section { border-top: var(--rule-w) solid var(--rule); }
 .intro-body p:last-child { margin-bottom: 0; }
 .intro-body strong { color: var(--accent); font-weight: 600; }
 
+.intro-body p.intro-personal {
+  margin-top: 32px;
+  padding-top: 24px;
+  padding-left: 18px;
+  border-top: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--ink);
+  font-style: italic;
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+.intro-body p.intro-personal::before {
+  content: 'WHY I DO THIS';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
 /* ============================================================
    Work / Project cards (thumbnail grid)
    ============================================================ */
 
 .work { padding-bottom: 80px; }
+
+/* ============================================================
+   Lab establishing-shot band (full-width, above Selected Work)
+   ============================================================ */
+
+.lab-band {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 480px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: var(--ink);
+  cursor: pointer;
+  overflow: hidden;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  font-family: var(--font-body);
+}
+.lab-band-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 8s ease;
+}
+.lab-band:hover .lab-band-img { transform: scale(1.04); }
+
+.lab-band-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 15, 15, 0.78) 0%,
+    rgba(15, 15, 15, 0.55) 40%,
+    rgba(15, 15, 15, 0.15) 100%
+  );
+}
+.lab-band-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 90px var(--pad-x-desktop);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  color: var(--bg);
+}
+.lab-band-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.lab-band-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-feature-settings: "ss01";
+  margin: 0 0 18px;
+  max-width: 600px;
+  color: var(--bg);
+}
+.lab-band-sub {
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 0 28px;
+  max-width: 540px;
+  color: rgba(245, 243, 238, 0.92);
+}
+.lab-band-cta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 1.5px solid var(--accent);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.lab-band:hover .lab-band-cta {
+  background: var(--accent);
+  color: var(--bg);
+}
 
 .work-hint {
   max-width: var(--max-w);
@@ -456,6 +619,12 @@ section + section { border-top: var(--rule-w) solid var(--rule); }
 
 .project-grid-small {
   grid-template-columns: repeat(3, 1fr);
+}
+
+/* When Also In Rotation has only 2 cards, center them and limit width */
+.more-work .project-grid-small {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
 }
 
 .project-card {
@@ -917,6 +1086,17 @@ body.modal-open { overflow: hidden; }
 
 .contact .section-title { color: var(--bg); }
 
+.contact-lead {
+  max-width: var(--max-w);
+  margin: 0 auto 48px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: rgba(245, 243, 238, 0.85);
+  font-family: var(--font-body);
+  max-width: 720px;
+  padding-left: 0;
+}
+
 .contact-grid {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -1104,6 +1284,7 @@ a.contact-link:hover { color: var(--accent); }
   overflow: hidden;
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
+.popover-img-wrap[hidden] { display: none; }
 .popover-img {
   width: 100%;
   height: 100%;
@@ -1145,6 +1326,7 @@ a.contact-link:hover { color: var(--accent); }
   color: var(--muted);
   line-height: 1.4;
 }
+.popover-source[hidden] { display: none; }
 .popover-source-label {
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -1238,13 +1420,33 @@ a.contact-link:hover { color: var(--accent); }
     --pad-x-desktop: var(--pad-x-mobile);
   }
 
-  .nav { padding: 12px var(--pad-x-mobile); gap: 8px; }
-  .nav-links { gap: 12px; font-size: 10px; }
+  .nav { padding: 12px var(--pad-x-mobile); gap: 8px; flex-wrap: wrap; }
+  .nav-links { gap: 12px; font-size: 10px; flex-wrap: wrap; }
   .nav-resume { padding: 6px 10px; gap: 5px; font-size: 10px; letter-spacing: 0.08em; }
   .nav-photo { width: 40px; height: 40px; border-width: 1.5px; }
   .nav-name { font-size: 17px; }
   .nav-role { font-size: 9px; letter-spacing: 0.12em; }
   .nav-brand { gap: 10px; }
+  .nav-status { padding: 5px 10px; font-size: 9px; letter-spacing: 0.1em; gap: 6px; }
+  .nav-status-dot { width: 7px; height: 7px; }
+
+  /* Lab establishing band — slim down for mobile */
+  .lab-band { height: auto; min-height: 360px; }
+  .lab-band-content { padding: 60px var(--pad-x-mobile); }
+  .lab-band-title { font-size: 34px; }
+  .lab-band-sub { font-size: 15px; }
+  .lab-band-label { font-size: 10px; }
+
+  /* Personal paragraph — slightly tighter on mobile */
+  .intro-body p.intro-personal {
+    margin-top: 24px;
+    padding-top: 18px;
+    padding-left: 14px;
+    font-size: 15.5px;
+  }
+
+  /* Contact lead */
+  .contact-lead { font-size: 16px; margin-bottom: 32px; }
 
   .hero { padding: 0 var(--pad-x-mobile) 60px; min-height: 540px; }
   .hero-content {
