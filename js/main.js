@@ -156,7 +156,7 @@
     renderMedia();
   }
 
-  document.querySelectorAll('.project-card[data-project]').forEach(card => {
+  document.querySelectorAll('[data-project]').forEach(card => {
     card.addEventListener('click', () => openModal(card.dataset.project));
   });
 
@@ -238,15 +238,18 @@
     popExp.textContent = data.expansion || '';
     popDef.textContent = data.def || '';
 
-    // Image: hidden by default. Show only after successful load.
+    // Image: hidden by default. Tear down any previous load state first,
+    // then show only after a successful load of the new src.
+    popImg.onerror = null;
+    popImg.onload  = null;
+    popImg.removeAttribute('src');
     popImgWrap.hidden = true;
+
     if (data.img) {
       popImg.onerror = () => { popImgWrap.hidden = true; };
       popImg.onload  = () => { popImgWrap.hidden = false; };
       popImg.src = data.img;
       popImg.alt = data.imgAlt || data.term || '';
-    } else {
-      popImg.src = '';
     }
 
     // Source link (only if a source URL was provided)
