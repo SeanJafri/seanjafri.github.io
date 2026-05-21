@@ -108,9 +108,7 @@ window.PROJECT_DATA = {
     ],
     media: [
       { type: "image", src: "img/portfolio/usbc_flip_bot.jpg", caption: "Geared mechanism with USB-C plug carrier" },
-      { type: "video", src: "videos/usbc_flip_bot_a.mp4",      caption: "Flip Bot mechanism — insert / retract / rotate" },
-      { type: "video", src: "videos/usbc_flip_bot_b.mp4",      caption: "Detail view — gear engagement" },
-      { type: "video", src: "videos/usbc_flip_bot_view.mp4",   caption: "Top-down view of full sequence" }
+      { type: "video", src: "videos/usbc_flip_bot_a.mp4",      caption: "Flip Bot in operation — insert, retract, rotate 180°" }
     ]
   },
 
@@ -184,34 +182,34 @@ window.PROJECT_DATA = {
       "Beyond hands-on mechanical design — drivetrain, suspension, sample-collection arm — I owned team operations: project planning, sponsorship fundraising (<strong>$19,000+</strong> raised from corporate and academic sponsors), recruiting, and competition logistics. This was the project that taught me everything about leading a hardware team toward a deadline."
     ],
     media: [
-      { type: "image", src: "legacy/img/portfolio/Rover_Sean_URC2017.png",            caption: "URC 2017 — competing in Utah's Mars Desert Research Station" },
-      { type: "image", src: "legacy/img/portfolio/Rover_Team_URC_Competition_2015.png", caption: "Team at URC 2015" },
+      { type: "image", src: "legacy/img/portfolio/Rover_Sean_URC2017.png",              caption: "URC 2017 — Mars Desert Research Station, Utah" },
+      { type: "image", src: "legacy/img/portfolio/2017.gif",                            caption: "2017 rover — final URC competition design (animated)" },
       { type: "image", src: "legacy/img/portfolio/Rover_Team_URC_Competition_2017.png", caption: "Team at URC 2017" },
-      { type: "image", src: "legacy/img/portfolio/Rover_Prototype.png",                caption: "Rover prototype — full mechanical assembly" },
-      { type: "image", src: "legacy/img/portfolio/rover.gif",                          caption: "Rover in motion — animated view" },
-      { type: "image", src: "legacy/img/portfolio/rover2.gif",                         caption: "Rover sample-collection arm" },
-      { type: "image", src: "legacy/img/portfolio/rover3.gif",                         caption: "Rover drivetrain test" }
+      { type: "image", src: "legacy/img/portfolio/2015.gif",                            caption: "2015 rover — six-wheel platform (animated)" },
+      { type: "image", src: "legacy/img/portfolio/Rover_Team_URC_Competition_2015.png", caption: "Team at URC 2015" },
+      { type: "image", src: "legacy/img/portfolio/2016.gif",                            caption: "2016 — chassis iteration platform (animated)" },
+      { type: "image", src: "legacy/img/portfolio/Rover_Prototype.png",                 caption: "Rover prototype — mechanical assembly detail" }
     ]
   },
 
   "sundog": {
     number: "U · 02",
-    tags: "Mechanical design · Gearbox / drivetrain · Senior design · 2016–2017",
-    title: "Sundog Engineering — Senior Capstone",
-    sub: "Senior capstone team designing a multi-stage hoist gearbox under real engineering constraints.",
+    tags: "Two-axis positioning · Arduino · Linear actuator · Photocells · 2016–2017",
+    title: "Sundog Engineering — Active Sun Tracking Device",
+    sub: "Two-axis sun-tracking positioning system for solar-powered streetlights, built for UTARI under Dr. Kenneth Reifsnider.",
     description: [
-      "My senior design project at UT Arlington. Working as a four-person <em>Sundog Engineering</em> team, I led the mechanical design and analysis of a multi-stage hoist gearbox — full SolidWorks modeling, gear-train calculations, bearing and shaft sizing, FEA analysis, and the final design dossier.",
-      "The project was structured like real industry work: engineering requirements documents, design reviews, manufacturing drawings with <span class=\"tip\" data-tip=\"gdt\">GD&amp;T</span>, and a presented design package at the end of the semester. It was the first time I built a hardware deliverable around formal engineering rigor — the kind of process I still use every day at HP."
+      "My senior capstone project at UT Arlington. Working as a four-person <em>Sundog Engineering</em> team, we were tasked by <strong>Dr. Kenneth Reifsnider at the UT Arlington Research Institute (UTARI)</strong> to design and build a sun-tracking device for solar-powered streetlights — a real research deliverable, not just a class project.",
+      "Our team built a two-axis positioning system for the solar panel, outfitted with an array of photocells to accurately find the center position of the sun throughout the day. The system orients itself using a <span class=\"tip\" data-tip=\"linear-actuator\">linear actuator</span> and a chain drive, controlled by a low-power Arduino microcontroller, and is built to withstand normal outdoor environmental conditions.",
+      "End-of-project result: the device fully charges the streetlight battery, keeps the light on through the night (11+ hours), and rotates overnight to face the next sunrise. The project gave me a first taste of designing hardware for sustained real-world operation, not just for a one-time demo."
     ],
     media: [
-      { type: "image", src: "legacy/img/portfolio/SD_Final_Design.png",            caption: "Final hoist gearbox design — SolidWorks render" },
-      { type: "image", src: "legacy/img/portfolio/SD_Final_Design2.png",           caption: "Alternate view of final assembly" },
-      { type: "image", src: "legacy/img/portfolio/SD_Analysis.png",                caption: "FEA stress analysis on the housing" },
-      { type: "image", src: "legacy/img/portfolio/Gearbox_Final Design Example.png", caption: "Design example reference image" },
-      { type: "image", src: "legacy/img/portfolio/Gearbox_Hoist_Drum.png",         caption: "Hoist drum subassembly" },
-      { type: "image", src: "legacy/img/portfolio/Gearbox_Assembly_View.PNG",      caption: "Full gearbox assembly view" },
-      { type: "image", src: "legacy/img/portfolio/Gearbox_Exploded_View.PNG",      caption: "Exploded view showing gear train" },
-      { type: "image", src: "legacy/img/portfolio/sundog.gif",                     caption: "Gearbox operation — animated" }
+      { type: "image", src: "legacy/img/portfolio/SD_Final_Design.png",   caption: "Final design — full sun-tracking assembly" },
+      { type: "image", src: "legacy/img/portfolio/SD_Final_Design2.png",  caption: "Alternate view of final assembly" },
+      { type: "image", src: "legacy/img/portfolio/sundog.gif",            caption: "Sensor housing close-up — animated" },
+      { type: "image", src: "legacy/img/portfolio/SD_Sensor_Housing.png", caption: "Photocell sensor housing detail" },
+      { type: "image", src: "legacy/img/portfolio/SD_Analysis.png",       caption: "Structural analysis of the positioning frame" },
+      { type: "image", src: "legacy/img/portfolio/SD_Electrical_Layout.png", caption: "Electrical layout — Arduino, photocell array, actuator drive" },
+      { type: "image", src: "legacy/img/portfolio/SD_Logo.png",           caption: "Sundog Engineering team logo" }
     ]
   },
 
@@ -226,9 +224,8 @@ window.PROJECT_DATA = {
     ],
     media: [
       { type: "image", src: "legacy/img/portfolio/UVS_Final_Design.png", caption: "Final UVS design — SolidWorks render" },
-      { type: "image", src: "legacy/img/portfolio/UVS_Team_6.png",       caption: "UVS team — six engineers across mechanical, electrical, and software" },
-      { type: "image", src: "legacy/img/portfolio/uvs.gif",              caption: "UVS in motion — animated" },
-      { type: "image", src: "legacy/img/portfolio/uvs2.gif",             caption: "UVS sensor mast deployment" }
+      { type: "image", src: "legacy/img/portfolio/uvs2.gif",             caption: "UVS rotating view — animated" },
+      { type: "image", src: "legacy/img/portfolio/UVS_Team_6.png",       caption: "UVS team — six engineers across mechanical, electrical, and software" }
     ]
   }
 
