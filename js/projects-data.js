@@ -92,6 +92,7 @@ window.PROJECT_DATA = {
       { type: "image", src: "img/portfolio/keyboard_bot_uut.jpg",    caption: "Installed on laptop with custom PCB visible" },
       { type: "image", src: "img/portfolio/keyboard_bot_cad.jpg",    caption: "SolidWorks render" },
       { type: "video", src: "videos/keyboard_bot_1.mp4",             caption: "Prototype in operation — typing every key" },
+      { type: "video", src: "videos/keyboard_bot_2.mp4",             caption: "Alternate-angle typing demo" },
       { type: "video", src: "videos/keyboard_bot_3.mp4",             caption: "Key-rollover cycle" },
       { type: "video", src: "videos/keyboard_bot_4.mp4",             caption: "Typing-fatigue test sequence" }
     ]
@@ -108,7 +109,9 @@ window.PROJECT_DATA = {
     ],
     media: [
       { type: "image", src: "img/portfolio/usbc_flip_bot.jpg", caption: "Geared mechanism with USB-C plug carrier" },
-      { type: "video", src: "videos/usbc_flip_bot_a.mp4",      caption: "Flip Bot in operation — insert, retract, rotate 180°" }
+      { type: "video", src: "videos/usbc_flip_bot_a.mp4",      caption: "Flip Bot in operation — insert, retract, rotate 180°" },
+      { type: "video", src: "videos/usbc_flip_bot_b.mp4",      caption: "Flip cycle — alternate angle" },
+      { type: "video", src: "videos/usbc_flip_bot_view.mp4",   caption: "Mechanism detail — close-up view" }
     ]
   },
 

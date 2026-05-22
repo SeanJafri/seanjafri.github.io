@@ -93,7 +93,7 @@ window.TOOLTIP_DATA = {
     term: "HP Multi Jet Fusion 4200",
     expansion: "Industrial 3D printer (HP)",
     def: "HP's flagship MJF printer for functional prototyping and short-run production. Build volume 380 × 284 × 380 mm. I operate one in-house at HP's Spring, TX lab to print fixture parts on demand.",
-    img: "img/tooltip/HP-MJF-4200-system.jpg",
+    img: "img/tooltip/tooltip-mjf-4200.jpg",
     imgAlt: "HP Multi Jet Fusion 4200 3D printer system",
     source: "https://h3d.sk/wp-content/uploads/2023/04/HP-MJF-4200-system.jpg"
   },
