@@ -93,7 +93,7 @@ window.TOOLTIP_DATA = {
     term: "HP Multi Jet Fusion 4200",
     expansion: "Industrial 3D printer (HP)",
     def: "HP's flagship MJF printer for functional prototyping and short-run production. Build volume 380 × 284 × 380 mm. I operate one in-house at HP's Spring, TX lab to print fixture parts on demand.",
-    img: "img/tooltip/tooltip-mjf-4200.jpg",
+    img: "img/tooltip/HP-MJF-4200-system.jpg",
     imgAlt: "HP Multi Jet Fusion 4200 3D printer system",
     source: "https://h3d.sk/wp-content/uploads/2023/04/HP-MJF-4200-system.jpg"
   },
@@ -124,7 +124,7 @@ window.TOOLTIP_DATA = {
   "eagle": {
     term: "Eagle",
     expansion: "Autodesk EAGLE (PCB design)",
-    def: "PCB layout software used to design printed circuit boards — schematic capture and board routing. I designed every custom shield and PCB on this site in Eagle.",
+    def: "PCB layout software used to design printed circuit boards — schematic capture and board routing. The Mega II, Deep Purple, and Varda boards shown on this site are shields I designed in Eagle.",
     img: "img/tooltip/tooltip-eagle.jpg",
     imgAlt: "Autodesk EAGLE PCB layout software interface",
     source: [

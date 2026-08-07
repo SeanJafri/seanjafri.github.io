@@ -5,18 +5,18 @@ window.PROJECT_DATA = {
     number: "P · 01",
     tags: "SolidWorks · MJF · Vendor CNC · Mechanism design · 8-year evolution",
     title: "Robotic Test Fixture",
-    sub: "Four generations of design refinement over eight years — from $3,500 bespoke aluminum prototype to $450 production fixture, deployed across HP Inc.'s commercial validation lab.",
+    sub: "Inherited a $3,500 bespoke aluminum fixture and redesigned it across three generations — down to a ~$400 production fixture, deployed across HP Inc.'s commercial validation lab.",
     stats: [
-      { num: "~87%", label: "Cost reduction per unit" },
+      { num: "~89%", label: "Cost reduction per unit" },
       { num: "5×",   label: "Faster lab setup (10 min → 2 min)" },
       { num: "2×",   label: "Deployment density per bench" }
     ],
     description: [
       "The Robotic Test Fixture is the workhorse of HP Inc.'s commercial validation lab. Each fixture holds a laptop steady and provides a stable platform for the actuator-driven sub-bots — keyboard typers, USB-C plug-in arms, lid-open mechanisms — that exercise the unit under test for thousands of cycles per night. I've designed four generations of the fixture over eight years, with each generation cutting cost and improving deployability.",
-      "<strong>Generation 4 (current, ~$450/unit).</strong> Moved away from a custom frame entirely. Uses an off-the-shelf lightweight plastic laptop holder modified with MJF-printed brackets that adapt it for our automation rigs. Setup time dropped to under two minutes, deployment density doubled, and the bill of materials hit its lowest point yet.",
-      "<strong>Generation 3 (~$900/unit).</strong> The 80/20-extruded aluminum Frame Fixture. Replaced the optical-breadboard mounting with a standardized extrusion frame. First generation any technician could rebuild from a printed BOM without machinist support.",
-      "<strong>Generation 2 (~$1,400/unit).</strong> Introduced the <strong>$25 set of MJF-printed universal corner brackets</strong>, replacing the $350 model-specific cradle. Same optical breadboard base as Gen 1, but no more bespoke cradle per laptop model.",
-      "<strong>Generation 1 (~$3,500/unit).</strong> The original. Vendor-machined aluminum bolted to an optical breadboard, with per-model 3D-printed laptop cradles. Each fixture required ten minutes of careful bolt-down setup per laptop swap. This generation taught me everything that needed to change."
+      "<strong>Generation 4 (current, ~$400/unit).</strong> Moved away from a custom frame entirely. Uses an off-the-shelf lightweight plastic laptop holder modified with MJF-printed brackets that adapt it for our automation rigs. Setup time dropped to under two minutes, deployment density doubled, and the bill of materials hit its lowest point yet.",
+      "<strong>Generation 3 (~$1,500/unit).</strong> The 80/20-extruded aluminum Frame Fixture. Replaced the optical-breadboard mounting with a standardized extrusion frame. First generation any technician could rebuild from a printed BOM without machinist support.",
+      "<strong>Generation 2 (~$2,500/unit).</strong> Introduced the <strong>$25 set of MJF-printed universal corner brackets</strong>, replacing the $250–$350 per-model FDM cradles — 31 of which had been produced across ~34 laptop platforms before this change. Same optical breadboard base as Gen 1, but no more bespoke cradle per laptop model.",
+      "<strong>Generation 1 (~$3,500/unit as deployed).</strong> The original, built before I joined the team: vendor-machined aluminum bolted to an optical breadboard, with large-format FDM per-model laptop cradles ($250–$350 each, two to four per fixture). Each fixture required ten minutes of careful bolt-down setup per laptop swap. This generation taught me everything that needed to change."
     ],
     media: [
       { type: "image", src: "img/portfolio/ram_fixture_uut1.jpg",                    caption: "Gen 4 (current) — off-the-shelf plastic holder with MJF brackets" },
@@ -30,7 +30,7 @@ window.PROJECT_DATA = {
       { type: "image", src: "img/portfolio/frame_fixture_2.jpg",                     caption: "Gen 3 — production-deployed configuration" },
       { type: "image", src: "img/portfolio/frame_fixture_3.jpg",                     caption: "Gen 3 — with lid-open and USB-C actuators" },
       { type: "image", src: "img/portfolio/frame_fixture_4.jpg",                     caption: "Gen 3 — variant with universal corner-bracket cradle" },
-      { type: "image", src: "img/portfolio/original_fixture_universal.jpg",          caption: "Gen 2 — optical breadboard + universal corner-bracket cradle ($25 MJF set replacing $350 cradle)" },
+      { type: "image", src: "img/portfolio/original_fixture_universal.jpg",          caption: "Gen 2 — optical breadboard + universal corner-bracket cradle ($25 MJF set replacing $250–$350 per-model cradles)" },
       { type: "image", src: "img/portfolio/optical_breadboard_cradle.jpg",           caption: "Gen 2 — universal cradle close-up" },
       { type: "image", src: "img/portfolio/original_fixture_lab.jpg",                caption: "Gen 1 (original) — vendor-machined aluminum + per-model 3D-printed cradle" },
       { type: "image", src: "img/portfolio/original_fixture_cradle_with_laptop.jpg", caption: "Gen 1 — with Brando-variant custom cradle" },
@@ -44,7 +44,7 @@ window.PROJECT_DATA = {
     title: "Mega II Robotic Test Controller",
     sub: "$100 robot controller replacing a $300 4-bot unit. Drives twelve actuators per controller with on-board touchscreen UI.",
     description: [
-      "The Mega II replaced an older 4-actuator controller that cost $300 per fixture. By designing a custom Eagle-routed shield over an Arduino Mega 2560 — adding twelve solid-state driver channels, current sense, and an inexpensive 2.4\" touchscreen running custom firmware — I brought controller cost down to roughly $100 while tripling channel count.",
+      "The Mega II replaced an older 4-actuator controller that cost $300 per fixture. By designing a custom Eagle-routed shield over an Arduino Mega 2560 — adding twelve actuator driver channels, per-actuator position-feedback inputs, and an inexpensive touchscreen running firmware developed with our team's software developer — I brought controller cost down to roughly $100 while tripling channel count. All-in, the controller-plus-bot hardware that used to run about $800 per fixture now lands under $300.",
       "The touchscreen UI gives the technician on the lab floor direct control over each actuator: engage / disengage individually, flip plug orientation (USB-C is reversible, USB-A isn't), run full cycle profiles, and dock-swap mid-test. The firmware speaks a simple serial protocol so the same controller works with our automated test harness."
     ],
     media: [
@@ -61,7 +61,7 @@ window.PROJECT_DATA = {
     sub: "Twelve-actuator robotic dock-cycler. Plugs and unplugs every port on an HP docking station — reconfigurable for 8, 9, or 12-port variants.",
     description: [
       "Deep Purple is a 12-actuator robotic fixture that exercises every port on an HP docking station through automated plug/unplug cycles. The mechanism uses linear actuators driving custom 3D-printed plug carriers along precision rails, with port-specific compliance built in to avoid scraping connectors during repeated cycles.",
-      "The control PCB — a custom Eagle-designed shield over an Arduino Mega — drives twelve independent actuators with current-sensed homing and per-port error detection. The fixture went through several iterations: early prototypes used a DB0 board mounted on an optical breadboard, validating the mechanism before I redesigned the chassis into the dock-form-factor production fixture shown here. Reconfigurable plug-carrier modules let the same chassis test 8-, 9-, or 12-port dock variants without re-tooling."
+      "The control PCB — a custom Eagle-designed shield over an Arduino Mega — drives twelve independent actuators, with each actuator's position feedback routed back to the controller for state tracking by the fixture firmware. The fixture went through several iterations: the DB0 version was built on an optical breadboard to validate the mechanism before I redesigned the chassis into the dock-form-factor DB1 production fixture shown here. Reconfigurable plug-carrier modules let the same chassis test 8-, 9-, or 12-port dock variants without re-tooling."
     ],
     media: [
       { type: "image", src: "img/portfolio/deep_purple_front.jpg",          caption: "Final version — front view, 12 actuators in indexed pairs" },
@@ -82,7 +82,7 @@ window.PROJECT_DATA = {
     title: "Keyboard Bot",
     sub: "A 120-solenoid actuator array that presses every key on a laptop keyboard — for typing-fatigue validation, key-rollover testing, and BIOS hotkey verification.",
     description: [
-      "Keyboard Bot solves a deceptively hard problem: pressing every key on a laptop, individually and reliably, at machine speed. The fixture uses 120+ small push-pull solenoids arranged in a precision grid above the keyboard, each one driven by a custom-routed PCB and aligned by an MJF-printed chassis with per-key compliance.",
+      "Keyboard Bot solves a deceptively hard problem: pressing every key on a laptop, individually and reliably, at machine speed. The fixture uses 120+ small push-pull solenoids arranged in a precision grid above the keyboard, each one driven by a dedicated driver PCB and aligned by an MJF-printed chassis with per-key compliance.",
       "Key challenges I worked through: solenoid stroke had to match laptop key travel exactly (too short = misfire, too long = stuck key); the chassis had to register on the laptop without scratching the palmrest; and the mechanical structure had to be light enough to mount on any keyboard layout without re-tooling the frame."
     ],
     media: [
@@ -92,7 +92,6 @@ window.PROJECT_DATA = {
       { type: "image", src: "img/portfolio/keyboard_bot_uut.jpg",    caption: "Installed on laptop with custom PCB visible" },
       { type: "image", src: "img/portfolio/keyboard_bot_cad.jpg",    caption: "SolidWorks render" },
       { type: "video", src: "videos/keyboard_bot_1.mp4",             caption: "Prototype in operation — typing every key" },
-      { type: "video", src: "videos/keyboard_bot_2.mp4",             caption: "Alternate-angle typing demo" },
       { type: "video", src: "videos/keyboard_bot_3.mp4",             caption: "Key-rollover cycle" },
       { type: "video", src: "videos/keyboard_bot_4.mp4",             caption: "Typing-fatigue test sequence" }
     ]
@@ -109,9 +108,7 @@ window.PROJECT_DATA = {
     ],
     media: [
       { type: "image", src: "img/portfolio/usbc_flip_bot.jpg", caption: "Geared mechanism with USB-C plug carrier" },
-      { type: "video", src: "videos/usbc_flip_bot_a.mp4",      caption: "Flip Bot in operation — insert, retract, rotate 180°" },
-      { type: "video", src: "videos/usbc_flip_bot_b.mp4",      caption: "Flip cycle — alternate angle" },
-      { type: "video", src: "videos/usbc_flip_bot_view.mp4",   caption: "Mechanism detail — close-up view" }
+      { type: "video", src: "videos/usbc_flip_bot_a.mp4",      caption: "Flip Bot in operation — insert, retract, rotate 180°" }
     ]
   },
 
@@ -134,9 +131,9 @@ window.PROJECT_DATA = {
     number: "P · 07",
     tags: "Mechanism · Three-port array · Compliance design",
     title: "Multiport Bot",
-    sub: "Three-port USB-A actuator array on a shared rail. Drives three plugs into a dock simultaneously with independent insertion timing.",
+    sub: "Three-port actuator array on a shared rail — USB-C, USB-A, or HDMI in any combination — driving three plugs into a dock simultaneously with independent insertion timing.",
     description: [
-      "The Multiport Bot was a one-off fixture for stress-testing the three USB-A ports on the side of a docking station. Three plugs on a shared linear rail, each on its own Actuonix actuator, with compliance built into each carrier head so any port misalignment doesn't propagate force into the dock."
+      "The Multiport Bot was a one-off fixture for stress-testing three side-by-side ports on a docking station — USB-C, USB-A, or HDMI in any combination. Three plugs on a shared linear rail, each on its own Actuonix actuator, with compliance built into each carrier head so any port misalignment doesn't propagate force into the dock."
     ],
     media: [
       { type: "image", src: "img/portfolio/multiport_close.jpg", caption: "Close-up of the three-plug carrier on shared rail" },
@@ -220,9 +217,9 @@ window.PROJECT_DATA = {
     number: "U · 03",
     tags: "Robotics · Tracked ground robot · Sensor integration · Wireless telemetry",
     title: "UVS — Unmanned Vehicle Systems",
-    sub: "Designed and prototyped UT Arlington's first remotely-piloted unmanned ground vehicle.",
+    sub: "Designed and prototyped a remotely-piloted unmanned ground vehicle at UT Arlington.",
     description: [
-      "A team-of-six student project where we designed and built UT Arlington's first remotely-piloted Unmanned Vehicle System — a tracked ground robot with onboard sensor suite and wireless telemetry. I owned the mechanical design and chassis: tracked drivetrain, sensor mast, hatch and access mechanisms, and the housing for the electronics package.",
+      "A team-of-six student project where we designed and built a remotely-piloted Unmanned Vehicle System — a tracked ground robot with onboard sensor suite and wireless telemetry. I owned the mechanical design and chassis: tracked drivetrain, sensor mast, hatch and access mechanisms, and the housing for the electronics package.",
       "The project was both a technical exercise and a teaching moment — most of the team hadn't built anything tracked before, and getting the drivetrain to reliably navigate uneven terrain pushed everyone past the comfortable bench-prototype phase."
     ],
     media: [
