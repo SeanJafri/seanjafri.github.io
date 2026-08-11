@@ -12,7 +12,7 @@ window.PROJECT_DATA = {
       { num: "2×",   label: "Deployment density per bench" }
     ],
     description: [
-      "The Robotic Test Fixture is the workhorse of HP Inc.'s commercial validation lab. Each fixture holds a laptop steady and provides a stable platform for the actuator-driven sub-bots — keyboard typers, USB-C plug-in arms, lid-open mechanisms — that exercise the unit under test for thousands of cycles per night. I've designed four generations of the fixture over eight years, with each generation cutting cost and improving deployability.",
+      "The Robotic Test Fixture is the workhorse of HP Inc.'s commercial validation lab. Each fixture holds a laptop steady and provides a stable platform for the actuator-driven sub-bots — keyboard typers, USB-C plug-in arms, lid-open mechanisms — that exercise the unit under test for thousands of cycles per night. The fixture has been through four generations over eight years — I inherited the first and designed the three redesigns that followed, each one cutting cost and improving deployability.",
       "<strong>Generation 4 (current, ~$400/unit).</strong> Moved away from a custom frame entirely. Uses an off-the-shelf lightweight plastic laptop holder modified with MJF-printed brackets that adapt it for our automation rigs. Setup time dropped to under two minutes, deployment density doubled, and the bill of materials hit its lowest point yet.",
       "<strong>Generation 3 (~$1,500/unit).</strong> The 80/20-extruded aluminum Frame Fixture. Replaced the optical-breadboard mounting with a standardized extrusion frame. First generation any technician could rebuild from a printed BOM without machinist support.",
       "<strong>Generation 2 (~$2,500/unit).</strong> Introduced the <strong>$25 set of MJF-printed universal corner brackets</strong>, replacing the $250–$350 per-model FDM cradles — 31 of which had been produced across ~34 laptop platforms before this change. Same optical breadboard base as Gen 1, but no more bespoke cradle per laptop model.",
@@ -33,7 +33,7 @@ window.PROJECT_DATA = {
       { type: "image", src: "img/portfolio/original_fixture_universal.jpg",          caption: "Gen 2 — optical breadboard + universal corner-bracket cradle ($25 MJF set replacing $250–$350 per-model cradles)" },
       { type: "image", src: "img/portfolio/optical_breadboard_cradle.jpg",           caption: "Gen 2 — universal cradle close-up" },
       { type: "image", src: "img/portfolio/original_fixture_lab.jpg",                caption: "Gen 1 (original) — vendor-machined aluminum + per-model 3D-printed cradle" },
-      { type: "image", src: "img/portfolio/original_fixture_cradle_with_laptop.jpg", caption: "Gen 1 — with Brando-variant custom cradle" },
+      { type: "image", src: "img/portfolio/original_fixture_cradle_with_laptop.jpg", caption: "Gen 1 — with a model-specific custom cradle" },
       { type: "image", src: "img/portfolio/original_fixture_cradle_print.jpg",       caption: "Gen 1 — 3D-printed custom cradle (FDM)" }
     ]
   },
