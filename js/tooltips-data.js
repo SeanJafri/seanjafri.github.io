@@ -44,11 +44,6 @@ window.TOOLTIP_DATA = {
     expansion: "Unit Under Test",
     def: "The specific physical product or sub-assembly that a test fixture is currently exercising — for example, a laptop being validated."
   },
-  "bios": {
-    term: "BIOS",
-    expansion: "Basic Input/Output System",
-    def: "The low-level firmware that runs on a PC's motherboard at power-on, before the operating system loads."
-  },
   "pcb": {
     term: "PCB",
     expansion: "Printed Circuit Board",
@@ -85,14 +80,12 @@ window.TOOLTIP_DATA = {
     term: "MJF",
     expansion: "Multi Jet Fusion",
     def: "HP's proprietary powder-bed 3D-printing process. Fuses nylon powder layer-by-layer using infrared lamps and detail-defining inks. Produces strong, isotropic, production-grade parts.",
-    img: "img/tooltip/tooltip-mjf.jpg",
-    imgAlt: "MJF process — simplified functional principle",
     source: "https://www.researchgate.net/figure/Simplified-functional-principle-of-the-MJF-process_fig2_349959347"
   },
   "mjf-4200": {
     term: "HP Multi Jet Fusion 4200",
     expansion: "Industrial 3D printer (HP)",
-    def: "HP's flagship MJF printer for functional prototyping and short-run production. Build volume 380 × 284 × 380 mm. I operate one in-house at HP's Spring, TX lab to print fixture parts on demand.",
+    def: "HP's flagship MJF printer for functional prototyping and short-run production. Build volume 380 × 284 × 380 mm. I operate and maintain one in-house at HP's Spring, TX lab to print fixture parts on demand.",
     img: "img/tooltip/HP-MJF-4200-system.jpg",
     imgAlt: "HP Multi Jet Fusion 4200 3D printer system",
     source: "https://h3d.sk/wp-content/uploads/2023/04/HP-MJF-4200-system.jpg"
@@ -124,11 +117,11 @@ window.TOOLTIP_DATA = {
   "eagle": {
     term: "Eagle",
     expansion: "Autodesk EAGLE (PCB design)",
-    def: "PCB layout software used to design printed circuit boards — schematic capture and board routing. The Mega II, Deep Purple, and Varda boards shown on this site are shields I designed in Eagle.",
+    def: "PCB layout software used to design printed circuit boards — schematic capture and board routing. The Mega II, Deep Purple, and Varda boards shown on this site are shields I designed in Eagle. Autodesk retired EAGLE in June 2026, folding its workflows into Fusion 360 Electronics — I’m migrating my board library there.",
     img: "img/tooltip/tooltip-eagle.jpg",
     imgAlt: "Autodesk EAGLE PCB layout software interface",
     source: [
-      { url: "https://www.autodesk.com/products/eagle/overview", label: "autodesk.com (program)" },
+      { url: "https://www.autodesk.com/products/fusion-360", label: "autodesk.com (program)" },
       { url: "https://learn.sparkfun.com/tutorials/how-to-install-and-setup-eagle/all", label: "sparkfun.com (image)" }
     ]
   },

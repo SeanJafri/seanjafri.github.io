@@ -178,8 +178,8 @@ window.PROJECT_DATA = {
     title: "Texas Mars Rover Team — University Rover Challenge",
     sub: "Led a 40+ member university team designing a planetary rover for The Mars Society's University Rover Challenge.",
     description: [
-      "As President, Vice President, and Team Lead at different points across 2014–2017, I led the University of Texas at Arlington's Mars Rover team — an interdisciplinary group of mechanical, electrical, software, and aerospace students designing and competing with a planetary rover at The Mars Society's <strong>University Rover Challenge</strong> in Utah's desert. The team competed in 2014, 2015, and 2017.",
-      "Beyond hands-on mechanical design — drivetrain, suspension, sample-collection arm — I owned team operations: project planning, sponsorship fundraising (<strong>$19,000+</strong> raised from corporate and academic sponsors), recruiting, and competition logistics. This was the project that taught me everything about leading a hardware team toward a deadline."
+      "As President, Vice President, and Team Lead at different points across 2014–2017, I led the University of Texas at Arlington's Mars Rover team — an interdisciplinary group of mechanical, electrical, software, and aerospace students designing and competing with a planetary rover at The Mars Society's <strong>University Rover Challenge</strong> in Utah's desert. The team competed in 2014, 2015, and 2017 — I joined as a member during the 2014 season and was on-site at URC 2015 and 2017.",
+      "Beyond hands-on mechanical design — drivetrain, suspension, sample-collection arm — I owned team operations: project planning, program fundraising (<strong>$19,000+</strong> secured — university grants from UTARI, the MAE Department, and Student Congress, plus URC’s Protocase machining credit and team outreach events — alongside in-kind sponsor support like Bell Helicopter carbon-fiber panels and Line-X coatings), recruiting, and competition logistics. This was the project that taught me everything about leading a hardware team toward a deadline."
     ],
     media: [
       { type: "image", src: "legacy/img/portfolio/Rover_Sean_URC2017.png",              caption: "URC 2017 — Mars Desert Research Station, Utah" },
@@ -215,17 +215,17 @@ window.PROJECT_DATA = {
 
   "uvs": {
     number: "U · 03",
-    tags: "Robotics · Tracked ground robot · Sensor integration · Wireless telemetry",
+    tags: "Robotics · Six-wheeled UGV · Sensor integration · RC → autonomous",
     title: "UVS — Unmanned Vehicle Systems",
-    sub: "Designed and prototyped a remotely-piloted unmanned ground vehicle at UT Arlington.",
+    sub: "Six-wheeled unmanned ground vehicle built through UT Arlington’s UVS certificate course — from remote control to autonomous navigation.",
     description: [
-      "A team-of-six student project where we designed and built a remotely-piloted Unmanned Vehicle System — a tracked ground robot with onboard sensor suite and wireless telemetry. I owned the mechanical design and chassis: tracked drivetrain, sensor mast, hatch and access mechanisms, and the housing for the electronics package.",
-      "The project was both a technical exercise and a teaching moment — most of the team hadn't built anything tracked before, and getting the drivetrain to reliably navigate uneven terrain pushed everyone past the comfortable bench-prototype phase."
+      "Built through UT Arlington’s <a href=\"https://www.uta.edu/academics/schools-colleges/engineering/academics/certificates/mae-uvs-ug\" target=\"_blank\" rel=\"noopener\">Unmanned Vehicle Systems certificate course</a>: each team assembles a six-wheeled ground vehicle with basic remote control, then progressively integrates GPS, ultrasonic sensing, and camera vision over the semester — finishing with the vehicle navigating a course autonomously at the end of the term.",
+      "My focus was the mechanical side of the build — chassis work and mounting for the growing sensor package — while the team brought the electronics and software online stage by stage. Watching the same vehicle graduate from joystick control to driving the course on its own was the point of the class, and it landed."
     ],
     media: [
-      { type: "image", src: "legacy/img/portfolio/UVS_Final_Design.png", caption: "Final UVS design — SolidWorks render" },
+      { type: "image", src: "legacy/img/portfolio/UVS_Final_Design.png", caption: "Final UVS vehicle — six-wheeled design" },
       { type: "image", src: "legacy/img/portfolio/uvs2.gif",             caption: "UVS rotating view — animated" },
-      { type: "image", src: "legacy/img/portfolio/UVS_Team_6.png",       caption: "UVS team — six engineers across mechanical, electrical, and software" }
+      { type: "image", src: "legacy/img/portfolio/UVS_Team_6.png",       caption: "Team Six — UVS course team" }
     ]
   }
 
